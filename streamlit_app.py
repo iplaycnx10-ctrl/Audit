@@ -73,8 +73,8 @@ st.markdown(
     .ci-frame img{width:100%;height:100%;object-fit:cover;border-radius:13px;display:block;}
     @media(max-width:900px){.tool-grid,.experience-timeline{grid-template-columns:repeat(2,1fr)}.timeline-step:before,.timeline-step:after{display:none}.tool-list{grid-template-columns:repeat(2,minmax(0,1fr));}.cover h1{font-size:42px;white-space:normal;}.metric{min-height:96px;height:96px}.metric-value{font-size:21px}}
     .green{color:var(--green);font-weight:950;}
-    .stTabs [data-baseweb="tab-list"]{gap:6px;flex-wrap:wrap;background:rgba(255,255,255,.025);border:1px solid rgba(82,255,154,.13);border-radius:16px;padding:6px;margin-bottom:10px;}
-    .stTabs [data-baseweb="tab"]{height:34px;border-radius:11px;color:#bfd1c5;background:rgba(255,255,255,.025);font-weight:850;padding:0 11px;font-size:12px;}
+    .stTabs [data-baseweb="tab-list"]{gap:6px;flex-wrap:wrap;justify-content:center;background:rgba(255,255,255,.025);border:1px solid rgba(82,255,154,.13);border-radius:16px;padding:6px;margin-bottom:10px;}
+    .stTabs [data-baseweb="tab"]{height:34px;border-radius:11px;color:#bfd1c5;background:rgba(255,255,255,.025);font-weight:850;padding:0 13px;font-size:12px;}
     .stTabs [aria-selected="true"]{background:rgba(82,255,154,.14);color:#52ff9a;border:1px solid rgba(82,255,154,.30);}
     .stTabs .stTabs [data-baseweb="tab-list"]{gap:5px;border-radius:14px;padding:5px;margin-top:8px;margin-bottom:8px;background:rgba(255,255,255,.018);border-color:rgba(82,255,154,.10);}
     .stTabs .stTabs [data-baseweb="tab"]{height:30px;border-radius:10px;padding:0 10px;font-size:11px;font-weight:780;background:rgba(255,255,255,.018);}
@@ -99,14 +99,14 @@ st.markdown(
 )
 
 t1, t2, t3, t4, t5, t6, t7, t8 = st.tabs([
-    "01 Strategist",
-    "02 Case Study",
-    "03 Experience",
-    "04 Loan Ads",
-    "05 Retail",
-    "06 Automation",
-    "07 Content",
-    "08 Contact",
+    "Strategist",
+    "Case Study",
+    "Experience",
+    "Loan Ads",
+    "Retail",
+    "Automation",
+    "Content",
+    "Contact",
 ])
 
 with t1:
