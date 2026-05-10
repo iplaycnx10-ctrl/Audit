@@ -18,7 +18,6 @@ render_market_positioning = load_component("market_positioning.py", "render_mark
 render_brand_positioning_communication = load_component("brand_positioning_communication.py", "render_brand_positioning_communication")
 render_customer_segment = load_component("customer_segment.py", "render_customer_segment")
 render_communication_strategy = load_component("communication_strategy.py", "render_communication_strategy")
-render_funnel_strategy = load_component("funnel_strategy.py", "render_funnel_strategy")
 
 
 def render():
@@ -42,11 +41,10 @@ def render():
     render_swot_cards()
     render_market_positioning()
 
-    tab1, tab2, tab3, tab4 = st.tabs([
+    tab1, tab2, tab3 = st.tabs([
         "Brand Positioning & Communication",
         "Customer Segment",
-        "Communication Strategy",
-        "Funnel Strategy"
+        "Communication Strategy"
     ])
 
     with tab1:
@@ -57,6 +55,3 @@ def render():
 
     with tab3:
         render_communication_strategy()
-
-    with tab4:
-        render_funnel_strategy()
