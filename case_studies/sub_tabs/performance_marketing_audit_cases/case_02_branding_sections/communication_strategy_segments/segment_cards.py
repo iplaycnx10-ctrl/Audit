@@ -33,11 +33,12 @@ def render_segment_cards():
 
         <div>
           <div style="width:1px;height:24px;background:rgba(82,255,154,.45);margin:0 auto;"></div>
-          <div style="padding:14px 15px;border-radius:15px;background:rgba(82,255,154,.030);border:1px solid rgba(82,255,154,.15);">
-            <div style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#52ff9a;font-weight:950;margin-bottom:8px;">แนวทางการสื่อสาร</div>
-            <div style="font-size:15px;font-weight:950;color:#fff;margin-bottom:8px;">3. General Space / Short-Term Rental</div>
-            <div style="font-size:13px;line-height:1.62;color:#d7e8dd;margin-bottom:8px;">ทำการตลาดแบบเน้น <b>“พื้นที่พร้อมใช้ ปิดง่าย เริ่มไว”</b> ให้ผู้เช่าเห็นว่าสามารถนำพื้นที่ไปใช้ขายของ ออกบูธ ทำกิจกรรม หรือทดลองตลาดได้ทันที โดยไม่ต้องผูกมัดระยะยาว</div>
-            <div style="font-size:12.5px;line-height:1.55;color:#d9ffe8;background:rgba(82,255,154,.065);padding:10px 11px;border-radius:12px;">“พื้นที่เช่าพร้อมขาย เหมาะสำหรับร้านค้า บูธ กิจกรรม และแบรนด์ที่ต้องการทดลองตลาดหรือเพิ่มจุดขายแบบเริ่มได้ทันที”</div>
+          <div style="padding:16px 17px;border-radius:16px;background:rgba(82,255,154,.030);border:1px solid rgba(82,255,154,.15);">
+            <div style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#52ff9a;font-weight:950;margin-bottom:8px;">กลยุทธ์</div>
+            <div style="font-size:16px;font-weight:950;color:#fff;margin-bottom:10px;">Lead Capture Segment</div>
+            <div style="font-size:13px;line-height:1.62;color:#d7e8dd;margin-bottom:10px;">กลุ่มนี้ควรใช้โฆษณาแบบ <b>Lead Focus</b> เพราะเป็นกลุ่มที่ตัดสินใจได้เร็วกว่า ต้นทุนในการเริ่มเช่าหรือทดลองพื้นที่ไม่สูงเท่ากลุ่มเช่าตึก จึงควรสื่อสารให้เข้าใจง่าย เห็นราคา เห็นพื้นที่ และทักสอบถามได้ทันที</div>
+            <div style="font-size:13px;line-height:1.62;color:#d7e8dd;margin-bottom:10px;">สามารถใช้ <b>LINE OA / Inbox Flow</b> ช่วยตอบคำถามเบื้องต้น เช่น ราคา พื้นที่ว่าง เงื่อนไขการเช่า และวันเริ่มใช้งาน เพื่อคัดกรอง Lead และลดภาระการตอบซ้ำ</div>
+            <div style="font-size:13px;line-height:1.62;color:#d9ffe8;background:rgba(82,255,154,.065);padding:10px 11px;border-radius:12px;"><b>3. General Space / Short-Term Rental</b><br>ทำการตลาดแบบเน้น <b>“พื้นที่พร้อมใช้ ปิดง่าย เริ่มไว”</b> ให้ผู้เช่าเห็นว่าสามารถนำพื้นที่ไปใช้ขายของ ออกบูธ ทำกิจกรรม หรือทดลองตลาดได้ทันที โดยไม่ต้องผูกมัดระยะยาว<br><br>“พื้นที่เช่าพร้อมขาย เหมาะสำหรับร้านค้า บูธ กิจกรรม และแบรนด์ที่ต้องการทดลองตลาดหรือเพิ่มจุดขายแบบเริ่มได้ทันที”</div>
           </div>
         </div>
       </div>
