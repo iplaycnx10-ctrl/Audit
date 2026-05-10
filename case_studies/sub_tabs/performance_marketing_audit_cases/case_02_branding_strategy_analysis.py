@@ -14,6 +14,7 @@ def load_component(filename: str, function_name: str):
 
 
 render_swot_cards = load_component("swot_cards.py", "render_swot_cards")
+render_market_positioning = load_component("market_positioning.py", "render_market_positioning")
 
 
 def render():
@@ -36,3 +37,4 @@ def render():
     )
 
     render_swot_cards()
+    render_market_positioning()
