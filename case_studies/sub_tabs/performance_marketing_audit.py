@@ -25,7 +25,27 @@ render_case_01 = load_render(
     "case_01_performance_marketing_audit",
 )
 
+render_case_02 = load_render(
+    BASE_DIR,
+    "performance_marketing_audit_cases/case_02_branding_strategy_analysis.py",
+    "case_02_branding_strategy_analysis",
+)
+
+render_case_03 = load_render(
+    BASE_DIR,
+    "performance_marketing_audit_cases/case_03_journey_traffic_leak_analysis.py",
+    "case_03_journey_traffic_leak_analysis",
+)
+
 
 def render():
-    render_case_nav()
-    render_case_01()
+    selected_case = render_case_nav()
+
+    if selected_case == "case_01":
+        render_case_01()
+
+    elif selected_case == "case_02":
+        render_case_02()
+
+    elif selected_case == "case_03":
+        render_case_03()
