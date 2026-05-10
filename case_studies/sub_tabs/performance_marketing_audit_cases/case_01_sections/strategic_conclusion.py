@@ -2,7 +2,8 @@ import streamlit as st
 
 
 def render():
-    image_url = "https://drive.google.com/uc?export=view&id=1aJZc22ss8ZUAsXy6Kv2o0tpRaDF7Z-PP"
+    file_id = "1aJZc22ss8ZUAsXy6Kv2o0tpRaDF7Z-PP"
+    image_url = f"https://drive.google.com/thumbnail?id={file_id}&sz=w1600"
 
     st.markdown(
         """
