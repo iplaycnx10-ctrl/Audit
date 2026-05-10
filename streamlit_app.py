@@ -34,9 +34,9 @@ st.markdown(
     .metric-label{font-size:11px;color:var(--muted);font-weight:900;text-transform:uppercase;letter-spacing:.13em;margin-bottom:8px;}
     .metric-value{font-size:28px;color:#fff;font-weight:950;line-height:1.05;}
     .metric-note{font-size:12px;color:#9fb5a8;margin-top:8px;font-weight:750;line-height:1.4;}
-    .skill-card{min-height:190px;border:1px solid rgba(82,255,154,.18);border-radius:20px;padding:20px;background:rgba(255,255,255,.035);box-sizing:border-box;margin-bottom:12px;}
-    .skill-card h3{margin:0 0 10px 0;color:#fff;font-size:19px;line-height:1.2;}
-    .skill-card p{color:#bfd1c5;font-size:14.5px;line-height:1.6;margin:0;}
+    .skill-card{height:210px;border:1px solid rgba(82,255,154,.18);border-radius:18px;padding:18px;background:rgba(255,255,255,.035);box-sizing:border-box;margin-bottom:12px;overflow:hidden;}
+    .skill-card h3{margin:0 0 9px 0;color:#fff;font-size:17px;line-height:1.2;}
+    .skill-card p{color:#bfd1c5;font-size:13.5px;line-height:1.55;margin:0;}
     .tool-pill{display:inline-block;margin:5px 5px 0 0;padding:8px 11px;border:1px solid rgba(82,255,154,.20);border-radius:999px;background:rgba(82,255,154,.07);color:#d7ffe6;font-size:13px;font-weight:850;}
     .green{color:var(--green);font-weight:950;}
     .stTabs [data-baseweb="tab-list"]{gap:8px;flex-wrap:wrap;background:rgba(255,255,255,.035);border:1px solid rgba(82,255,154,.18);border-radius:20px;padding:10px;margin-bottom:18px;}
@@ -77,16 +77,15 @@ with t1:
     )
 
     st.markdown("<div class='num' style='margin-top:6px;'>TECHNICAL EXPERTISE</div>", unsafe_allow_html=True)
-    s1, s2 = st.columns(2)
+    s1, s2, s3, s4 = st.columns(4)
     with s1:
-        st.markdown("<div class='skill-card'><h3>Advanced Media Buying</h3><p>วางโครงสร้างแคมเปญ Meta & TikTok แบบเน้นยอดขาย Conversion พร้อมกลยุทธ์การสเกลงบอย่างเป็นระบบ เพื่อรักษา ROAS และคุณภาพผลลัพธ์ให้มีประสิทธิภาพสูงสุด</p></div>", unsafe_allow_html=True)
+        st.markdown("<div class='skill-card'><h3>Advanced Media Buying</h3><p>วางโครงสร้างแคมเปญ Meta & TikTok แบบเน้นยอดขาย Conversion พร้อมกลยุทธ์การสเกลงบอย่างเป็นระบบ เพื่อรักษา ROAS และคุณภาพผลลัพธ์</p></div>", unsafe_allow_html=True)
     with s2:
-        st.markdown("<div class='skill-card'><h3>Marketing Automation</h3><p>ออกแบบและเชื่อมต่อ Workflow ข้ามแพลตฟอร์มด้วย n8n และ Make เพื่อลดงาน Manual เพิ่มความเร็วในการจัดการข้อมูล และทำให้ระบบการตลาดทำงานซ้ำได้</p></div>", unsafe_allow_html=True)
-    s3, s4 = st.columns(2)
+        st.markdown("<div class='skill-card'><h3>Marketing Automation</h3><p>ออกแบบและเชื่อมต่อ Workflow ข้ามแพลตฟอร์มด้วย n8n และ Make เพื่อลดงาน Manual เพิ่มความเร็ว และทำให้ระบบการตลาดทำซ้ำได้</p></div>", unsafe_allow_html=True)
     with s3:
-        st.markdown("<div class='skill-card'><h3>AI-Driven Content & Strategy</h3><p>ใช้ Prompt Engineering ในการสร้าง Hook, Script และ Creative Angle สำหรับวิดีโอสั้น TikTok/Reels ที่เน้นหยุดนิ้ว เพิ่มความสนใจ และต่อยอดไปสู่การสั่งซื้อ</p></div>", unsafe_allow_html=True)
+        st.markdown("<div class='skill-card'><h3>AI-Driven Content & Strategy</h3><p>ใช้ Prompt Engineering สร้าง Hook, Script และ Creative Angle สำหรับ TikTok/Reels ที่เน้นหยุดนิ้ว เพิ่มความสนใจ และต่อยอดการซื้อ</p></div>", unsafe_allow_html=True)
     with s4:
-        st.markdown("<div class='skill-card'><h3>Data-Actionable Insights</h3><p>สร้าง Dashboard ด้วย Looker Studio และอ่านจุดหลุดของลูกค้า Drop-off points เพื่อแปลงข้อมูลเป็น Action ที่แก้ปัญหายอดขายได้ตรงจุด</p></div>", unsafe_allow_html=True)
+        st.markdown("<div class='skill-card'><h3>Data-Actionable Insights</h3><p>สร้าง Dashboard ด้วย Looker Studio อ่านจุดหลุด Drop-off points และแปลงข้อมูลเป็น Action ที่แก้ปัญหายอดขายได้ตรงจุด</p></div>", unsafe_allow_html=True)
 
     st.markdown("<div class='section'><div class='num'>TECH STACK & TOOLS</div><div class='title'>Tool Stack ที่ใช้ทำงานจริง</div>", unsafe_allow_html=True)
     c1, c2, c3, c4 = st.columns(4)
