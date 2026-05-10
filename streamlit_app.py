@@ -22,22 +22,22 @@ st.markdown(
     .cover h1{font-size:78px;line-height:.92;margin:0;color:#fff;letter-spacing:-3px;max-width:760px;position:relative;z-index:2;}
     .role{font-size:24px;line-height:1.35;color:#d7ffe6;font-weight:800;margin-top:24px;max-width:620px;position:relative;z-index:2;}
     .est{position:absolute;left:48px;bottom:42px;color:var(--green);font-size:12px;font-weight:950;letter-spacing:.24em;z-index:2;}
-    .section{border:1px solid var(--line);border-radius:32px;padding:34px;background:rgba(11,26,18,.72);box-shadow:0 20px 70px rgba(0,0,0,.22);margin:18px 0 24px 0;}
-    .num{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--green);font-weight:950;margin-bottom:10px;}
-    .title{font-size:34px;font-weight:950;color:#fff;letter-spacing:-.7px;margin-bottom:18px;}
-    .body{font-size:17px;line-height:1.82;color:#d7e8dd;}
-    .quote{margin-top:20px;padding:20px 22px;border-left:4px solid var(--green);background:rgba(82,255,154,.08);border-radius:18px;color:#effff5;font-size:17px;font-weight:850;line-height:1.65;}
+    .section{border:1px solid var(--line);border-radius:28px;padding:28px;background:rgba(11,26,18,.72);box-shadow:0 20px 70px rgba(0,0,0,.22);margin:16px 0 20px 0;}
+    .num{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--green);font-weight:950;margin-bottom:10px;}
+    .title{font-size:30px;font-weight:950;color:#fff;letter-spacing:-.7px;margin-bottom:14px;}
+    .body{font-size:16px;line-height:1.7;color:#d7e8dd;}
+    .quote{margin-top:18px;padding:16px 20px;border-left:4px solid var(--green);background:rgba(82,255,154,.08);border-radius:16px;color:#effff5;font-size:16px;font-weight:850;line-height:1.55;}
     .card{height:240px;min-height:240px;border:1px solid rgba(82,255,154,.18);border-radius:24px;padding:24px;background:rgba(255,255,255,.035);box-sizing:border-box;display:flex;flex-direction:column;justify-content:flex-start;}
     .card h3{margin:0 0 16px 0;color:#fff;font-size:22px;line-height:1.25;min-height:58px;}
     .card p,.card li{color:#bfd1c5;font-size:15.5px;line-height:1.72;margin:0;}
-    .metric{border:1px solid rgba(82,255,154,.22);border-radius:22px;padding:20px;background:rgba(82,255,154,.06);height:160px;min-height:160px;box-sizing:border-box;}
-    .metric-label{font-size:12px;color:var(--muted);font-weight:900;text-transform:uppercase;letter-spacing:.13em;margin-bottom:8px;}
-    .metric-value{font-size:32px;color:#fff;font-weight:950;line-height:1.05;}
-    .metric-note{font-size:13px;color:#9fb5a8;margin-top:8px;font-weight:750;line-height:1.45;}
-    .skill-card{min-height:255px;border:1px solid rgba(82,255,154,.18);border-radius:24px;padding:24px;background:rgba(255,255,255,.035);box-sizing:border-box;}
-    .skill-card h3{margin:0 0 12px 0;color:#fff;font-size:21px;line-height:1.25;}
-    .skill-card p{color:#bfd1c5;font-size:15.5px;line-height:1.75;margin:0;}
-    .tool-pill{display:inline-block;margin:6px 6px 0 0;padding:10px 13px;border:1px solid rgba(82,255,154,.20);border-radius:999px;background:rgba(82,255,154,.07);color:#d7ffe6;font-size:14px;font-weight:850;}
+    .metric{border:1px solid rgba(82,255,154,.22);border-radius:20px;padding:16px;background:rgba(82,255,154,.06);height:130px;min-height:130px;box-sizing:border-box;}
+    .metric-label{font-size:11px;color:var(--muted);font-weight:900;text-transform:uppercase;letter-spacing:.13em;margin-bottom:8px;}
+    .metric-value{font-size:28px;color:#fff;font-weight:950;line-height:1.05;}
+    .metric-note{font-size:12px;color:#9fb5a8;margin-top:8px;font-weight:750;line-height:1.4;}
+    .skill-card{min-height:190px;border:1px solid rgba(82,255,154,.18);border-radius:20px;padding:20px;background:rgba(255,255,255,.035);box-sizing:border-box;margin-bottom:12px;}
+    .skill-card h3{margin:0 0 10px 0;color:#fff;font-size:19px;line-height:1.2;}
+    .skill-card p{color:#bfd1c5;font-size:14.5px;line-height:1.6;margin:0;}
+    .tool-pill{display:inline-block;margin:5px 5px 0 0;padding:8px 11px;border:1px solid rgba(82,255,154,.20);border-radius:999px;background:rgba(82,255,154,.07);color:#d7ffe6;font-size:13px;font-weight:850;}
     .green{color:var(--green);font-weight:950;}
     .stTabs [data-baseweb="tab-list"]{gap:8px;flex-wrap:wrap;background:rgba(255,255,255,.035);border:1px solid rgba(82,255,154,.18);border-radius:20px;padding:10px;margin-bottom:18px;}
     .stTabs [data-baseweb="tab"]{height:44px;border-radius:14px;color:#bfd1c5;background:rgba(255,255,255,.035);font-weight:900;padding:0 14px;}
@@ -76,7 +76,7 @@ with t1:
         "ผมวางตัวเองเป็นสาย Performance Marketer ที่เชื่อมระหว่าง <span class='green'>Media Buying, Automation, AI Content และ Data Insight</span> เพื่อเปลี่ยนตัวเลขโฆษณาให้กลายเป็นการตัดสินใจทางธุรกิจที่เร็วและแม่นขึ้น"
     )
 
-    st.markdown("<div class='num'>TECHNICAL EXPERTISE</div>", unsafe_allow_html=True)
+    st.markdown("<div class='num' style='margin-top:6px;'>TECHNICAL EXPERTISE</div>", unsafe_allow_html=True)
     s1, s2 = st.columns(2)
     with s1:
         st.markdown("<div class='skill-card'><h3>Advanced Media Buying</h3><p>วางโครงสร้างแคมเปญ Meta & TikTok แบบเน้นยอดขาย Conversion พร้อมกลยุทธ์การสเกลงบอย่างเป็นระบบ เพื่อรักษา ROAS และคุณภาพผลลัพธ์ให้มีประสิทธิภาพสูงสุด</p></div>", unsafe_allow_html=True)
