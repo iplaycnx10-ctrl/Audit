@@ -6,21 +6,48 @@ def render_swot_cards():
         """
         <style>
         div[data-testid="stExpander"]{
+            min-height: 352px !important;
             border-radius:18px !important;
             border:1px solid rgba(255,255,255,.12) !important;
             background:linear-gradient(135deg,rgba(255,255,255,.045),rgba(255,255,255,.018)) !important;
             overflow:hidden !important;
+            box-shadow:0 14px 34px rgba(0,0,0,.10) !important;
+        }
+        div[data-testid="stExpander"] details{
+            min-height: 352px !important;
         }
         div[data-testid="stExpander"] summary{
+            min-height: 42px !important;
+            background:rgba(255,255,255,.035) !important;
+            border-bottom:1px solid rgba(255,255,255,.08) !important;
             font-size:13px !important;
             font-weight:900 !important;
-            color:#fff !important;
+            color:#f8fafc !important;
+        }
+        div[data-testid="stExpander"] summary:hover{
+            background:rgba(250,204,21,.075) !important;
+            color:#facc15 !important;
+        }
+        div[data-testid="stExpander"] summary p,
+        div[data-testid="stExpander"] summary span,
+        div[data-testid="stExpander"] summary svg{
+            color:#f8fafc !important;
+            fill:#f8fafc !important;
+        }
+        div[data-testid="stExpander"] summary:hover p,
+        div[data-testid="stExpander"] summary:hover span,
+        div[data-testid="stExpander"] summary:hover svg{
+            color:#facc15 !important;
+            fill:#facc15 !important;
         }
         div[data-testid="stExpander"] div[data-testid="stMarkdownContainer"] p,
         div[data-testid="stExpander"] div[data-testid="stMarkdownContainer"] li{
             font-size:12.5px !important;
             line-height:1.7 !important;
             color:#d7e8dd !important;
+        }
+        div[data-testid="stExpander"] ul{
+            padding-left:18px !important;
         }
         </style>
         """,
@@ -30,7 +57,7 @@ def render_swot_cards():
     col1, col2, col3, col4 = st.columns(4, gap="small")
 
     with col1:
-        with st.expander("✅ Strengths"):
+        with st.expander("✅ Strengths", expanded=True):
             st.markdown(
                 """
                 - แบรนด์อสังหาคอมมูนิตี้เชิงพาณิชย์ที่คนเชียงใหม่รู้จักดี มีหลายโครงการทั่วเมือง
@@ -42,7 +69,7 @@ def render_swot_cards():
             )
 
     with col2:
-        with st.expander("❌ Weaknesses"):
+        with st.expander("❌ Weaknesses", expanded=True):
             st.markdown(
                 """
                 - คนยังมองว่าเป็น “โครงการอาคารพาณิชย์” มากกว่า Lifestyle Brand
@@ -53,7 +80,7 @@ def render_swot_cards():
             )
 
     with col3:
-        with st.expander("🔥 Opportunities"):
+        with st.expander("🔥 Opportunities", expanded=True):
             st.markdown(
                 """
                 - เชียงใหม่กำลังโตด้าน Lifestyle, Wellness, Cafe และ Digital Nomad
@@ -65,7 +92,7 @@ def render_swot_cards():
             )
 
     with col4:
-        with st.expander("⚠️ Threats"):
+        with st.expander("⚠️ Threats", expanded=True):
             st.markdown(
                 """
                 - คู่แข่งอสังหายุคใหม่เริ่มเล่น Branding + Experience มากขึ้น
