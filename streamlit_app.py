@@ -65,6 +65,22 @@ sample = pd.DataFrame([
     {"Campaign": "Hotel Booking Push", "Spend": 18000, "Leads": 52, "Signal": "Seasonal Demand", "Decision": "Hold / Burst"},
 ])
 
+appliance_meta = pd.DataFrame([
+    {"Campaign": "CP 1", "Spend": 3767.21, "Purchase": 1, "ROAS": 1.01, "CPR": 3767.21, "CTR Click": 2.72, "CPM": 104.87, "Frequency": 1.80},
+    {"Campaign": "CP2 Retarget", "Spend": 1123.96, "Purchase": 4, "ROAS": 54.47, "CPR": 280.99, "CTR Click": 4.04, "CPM": 129.59, "Frequency": 1.73},
+    {"Campaign": "CP 3", "Spend": 57971.25, "Purchase": 31, "ROAS": 4.50, "CPR": 2147.08, "CTR Click": 1.06, "CPM": 70.45, "Frequency": 3.86},
+    {"Campaign": "CP 4 Retarget", "Spend": 20500.00, "Purchase": 10, "ROAS": 5.90, "CPR": 2050.00, "CTR Click": 3.30, "CPM": 93.85, "Frequency": 3.90},
+    {"Campaign": "CP 5", "Spend": 19999.79, "Purchase": 1, "ROAS": 0.80, "CPR": 19999.79, "CTR Click": 1.26, "CPM": 143.49, "Frequency": 3.06},
+    {"Campaign": "CP 6", "Spend": 20000.00, "Purchase": 2, "ROAS": 1.19, "CPR": 10000.00, "CTR Click": 0.86, "CPM": 64.24, "Frequency": 2.56},
+    {"Campaign": "CP 7", "Spend": 4997.85, "Purchase": 2, "ROAS": 9.03, "CPR": 2498.93, "CTR Click": 0.70, "CPM": 133.61, "Frequency": 2.78},
+    {"Campaign": "CP 8", "Spend": 29994.23, "Purchase": 13, "ROAS": 9.45, "CPR": 2726.75, "CTR Click": 1.44, "CPM": 52.06, "Frequency": 2.77},
+    {"Campaign": "CP 9", "Spend": 25494.69, "Purchase": 17, "ROAS": 11.43, "CPR": 1593.42, "CTR Click": 1.08, "CPM": 53.47, "Frequency": 2.66},
+    {"Campaign": "CP 10", "Spend": 1828.19, "Purchase": 1, "ROAS": 13.59, "CPR": 1828.19, "CTR Click": 1.34, "CPM": 69.18, "Frequency": 2.30},
+    {"Campaign": "CP 11", "Spend": 47746.11, "Purchase": 19, "ROAS": 7.92, "CPR": 2808.59, "CTR Click": 1.28, "CPM": 58.01, "Frequency": 4.08},
+    {"Campaign": "CP 12", "Spend": 11737.26, "Purchase": 7, "ROAS": 5.26, "CPR": 1676.75, "CTR Click": 1.44, "CPM": 51.21, "Frequency": 2.18},
+    {"Campaign": "CP 13", "Spend": 22210.44, "Purchase": 3, "ROAS": 2.33, "CPR": 7403.48, "CTR Click": 1.22, "CPM": 39.92, "Frequency": 3.43},
+])
+
 st.markdown(
     """
     <div class="cover">
@@ -117,6 +133,47 @@ with t4:
     with r3:
         st.markdown("<div class='card'><h3>AOV Optimization</h3><p>วิเคราะห์โอกาสเพิ่มยอดขายต่อหัวผ่าน bundle, set, warranty และ value-added offer</p></div>", unsafe_allow_html=True)
     st.markdown("</div>", unsafe_allow_html=True)
+
+    st.markdown("<div class='section'><div class='num'>META ADS REPORT · APPLIANCE RETAIL</div><div class='title'>กราฟแพทเทิร์นแคมเปญเครื่องใช้ไฟฟ้า</div><div class='body'>ตัวอย่างรายงาน Meta Ads ฝั่งบริษัทเครื่องใช้ไฟฟ้า แปลงตัวเลขเป็นกราฟแท่งเปรียบเทียบเพื่อดู Pattern ของแต่ละแคมเปญง่ายขึ้น เช่น งบที่ใช้ ยอดซื้อ ROAS CPR CTR CPM และ Frequency</div></div>", unsafe_allow_html=True)
+
+    k1, k2, k3, k4 = st.columns(4)
+    with k1: metric("Total Spend", f"฿{appliance_meta['Spend'].sum():,.0f}", "รวมงบโฆษณาจาก 13 แคมเปญ")
+    with k2: metric("Total Purchase", f"{appliance_meta['Purchase'].sum():,.0f}", "จำนวน Purchase รวม")
+    with k3: metric("Avg ROAS", f"{appliance_meta['ROAS'].mean():.2f}x", "ค่าเฉลี่ย ROAS รายแคมเปญ")
+    with k4: metric("Avg CTR Click", f"{appliance_meta['CTR Click'].mean():.2f}%", "ค่าเฉลี่ย CTR Click")
+
+    chart_metric = st.selectbox(
+        "เลือกกราฟแท่งที่ต้องการดู",
+        ["Spend", "Purchase", "ROAS", "CPR", "CTR Click", "CPM", "Frequency"],
+        index=2,
+        key="appliance_chart_metric",
+    )
+    sorted_appliance = appliance_meta.sort_values(chart_metric, ascending=False)
+    fig_appliance = px.bar(
+        sorted_appliance,
+        x="Campaign",
+        y=chart_metric,
+        text=chart_metric,
+        title=f"Appliance Retail Meta Ads Pattern · {chart_metric} by Campaign",
+        hover_data=["Spend", "Purchase", "ROAS", "CPR", "CTR Click", "CPM", "Frequency"],
+    )
+    fig_appliance.update_traces(texttemplate="%{text:.2s}", textposition="outside")
+    fig_appliance.update_layout(height=460, paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)", font_color="#d7e8dd", margin=dict(l=10, r=10, t=58, b=10))
+    st.plotly_chart(fig_appliance, use_container_width=True)
+
+    compare_col1, compare_col2 = st.columns(2)
+    with compare_col1:
+        fig_roas = px.bar(appliance_meta.sort_values("ROAS", ascending=False), x="Campaign", y="ROAS", text="ROAS", title="ROAS Pattern")
+        fig_roas.update_traces(texttemplate="%{text:.2f}x", textposition="outside")
+        fig_roas.update_layout(height=360, paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)", font_color="#d7e8dd", margin=dict(l=10, r=10, t=50, b=10))
+        st.plotly_chart(fig_roas, use_container_width=True)
+    with compare_col2:
+        fig_cpr = px.bar(appliance_meta.sort_values("CPR", ascending=True), x="Campaign", y="CPR", text="CPR", title="CPR Pattern · Lower is Better")
+        fig_cpr.update_traces(texttemplate="฿%{text:,.0f}", textposition="outside")
+        fig_cpr.update_layout(height=360, paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)", font_color="#d7e8dd", margin=dict(l=10, r=10, t=50, b=10))
+        st.plotly_chart(fig_cpr, use_container_width=True)
+
+    st.dataframe(appliance_meta, use_container_width=True, hide_index=True)
 
 with t5:
     st.markdown("<div class='section'><div class='num'>05. AUTOMATION ARCHITECTURE</div><div class='title'>Marketing Brain with AI Agent Workflows</div>", unsafe_allow_html=True)
