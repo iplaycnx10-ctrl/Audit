@@ -3,15 +3,22 @@ from pathlib import Path
 import streamlit as st
 
 BASE_DIR = Path(__file__).resolve().parent
+ROOT_DIR = BASE_DIR.parent.parent
 
 
-def load_render(relative_path: str, module_key: str):
-    module_path = BASE_DIR / relative_path
+def load_render(relative_path: str, module_key: str, root_dir=BASE_DIR):
+    module_path = root_dir / relative_path
     spec = importlib.util.spec_from_file_location(module_key, module_path)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module.render
 
+
+render_section_nav = load_render(
+    "navigation/case_section_nav.py",
+    "case_section_nav",
+    ROOT_DIR,
+)
 
 render_strategic_audit = load_render(
     "case_01_sections/strategic_audit_process.py",
@@ -71,25 +78,19 @@ def render():
         unsafe_allow_html=True,
     )
 
-    t1, t2, t3, t4, t5 = st.tabs([
-        "Strategic Audit Process",
-        "KPI Framework",
-        "Dashboard Preview",
-        "AI Insight Layer",
-        "Strategic Conclusion",
-    ])
+    selected_section = render_section_nav()
 
-    with t1:
+    if selected_section == "strategic_audit":
         render_strategic_audit()
 
-    with t2:
+    elif selected_section == "kpi_framework":
         render_kpi()
 
-    with t3:
+    elif selected_section == "dashboard_preview":
         render_dashboard()
 
-    with t4:
+    elif selected_section == "ai_insight":
         render_ai()
 
-    with t5:
+    elif selected_section == "strategic_conclusion":
         render_conclusion()
