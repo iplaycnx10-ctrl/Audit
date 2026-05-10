@@ -52,6 +52,18 @@ def render():
           <div style="font-size:13px;color:#facc15;font-weight:950;letter-spacing:.08em;text-transform:uppercase;margin:16px 0 8px 0;">🎯 เป้าหมาย</div>
           <div style="font-size:14px;color:#bfd1c5;line-height:1.75;">ลดการใช้งบกับ Lead ที่ไม่มีคุณภาพ และเพิ่มสัดส่วนงบที่ถูกใช้ไปกับกลุ่มที่มีโอกาสจองหรือเป็นลูกค้าจริงมากขึ้น.</div>
         </div>
+
+        <div style="border-radius:22px;border:1px solid rgba(82,255,154,.18);background:linear-gradient(135deg,rgba(255,255,255,.045),rgba(255,255,255,.018));padding:22px 24px;margin:0 0 22px 0;box-sizing:border-box;box-shadow:0 14px 34px rgba(0,0,0,.10);">
+          <div style="font-size:15px;color:#fff;font-weight:950;margin-bottom:14px;">4. CRM & LTV Signal Check</div>
+          <div style="font-size:14px;color:#d7e8dd;line-height:1.8;margin-bottom:16px;">หลังจากดึงลูกค้าเข้าสู่ LINE OA แล้ว จะวัดว่าระบบสามารถเปลี่ยน Lead ให้กลายเป็นฐานลูกค้าที่ติดตามซ้ำและสร้างมูลค่าระยะยาวได้จริงหรือไม่</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px;">
+            <div style="padding:14px 16px;border-radius:16px;border:1px solid rgba(82,255,154,.16);background:rgba(82,255,154,.04);"><div style="font-size:12px;color:#52ff9a;font-weight:950;letter-spacing:.10em;text-transform:uppercase;margin-bottom:8px;">KPI หลัก</div><div style="font-size:13.5px;color:#d7e8dd;line-height:1.65;">CRM Retention Signal<br><span style="color:#9fb5a8;">สัดส่วนของ Lead ที่เข้าสู่ LINE แล้วเกิด Action ต่อ เช่น ตอบกลับข้อความ, รับโปรโมชัน, จองซ้ำ หรือกลับมาใช้บริการเพิ่มเติม</span></div></div>
+            <div style="padding:14px 16px;border-radius:16px;border:1px solid rgba(250,204,21,.18);background:rgba(250,204,21,.045);"><div style="font-size:12px;color:#facc15;font-weight:950;letter-spacing:.10em;text-transform:uppercase;margin-bottom:8px;">เกณฑ์ตัดสิน</div><div style="font-size:13.5px;color:#d7e8dd;line-height:1.65;">30 วัน<br><span style="color:#9fb5a8;">ตอบกลับ / จองซ้ำ / กลับมาใช้บริการต้องเพิ่มขึ้นอย่างน้อย 15–25%</span></div></div>
+            <div style="padding:14px 16px;border-radius:16px;border:1px solid rgba(239,68,68,.18);background:rgba(239,68,68,.045);"><div style="font-size:12px;color:#ffb4b4;font-weight:950;letter-spacing:.10em;text-transform:uppercase;margin-bottom:8px;">Action ถ้าไม่ผ่าน</div><div style="font-size:13.5px;color:#d7e8dd;line-height:1.65;">ปรับ CRM Flow / Follow-up Message / Offer หลังการขายใหม่<br><span style="color:#9fb5a8;">ยังไม่สามารถสร้าง LTV ได้ดีพอ</span></div></div>
+          </div>
+          <div style="font-size:13px;color:#facc15;font-weight:950;letter-spacing:.08em;text-transform:uppercase;margin:16px 0 8px 0;">🎯 เป้าหมาย</div>
+          <div style="font-size:14px;color:#bfd1c5;line-height:1.75;">ลดการปล่อย Lead ให้หายหลังจากสนใจครั้งแรก สร้างฐานลูกค้าที่ติดตามต่อได้ และเพิ่มโอกาสสร้างรายได้ซ้ำโดยไม่ต้องพึ่งการยิงแอดหาลูกค้าใหม่ตลอดเวลา.</div>
+        </div>
         """,
         unsafe_allow_html=True,
     )
