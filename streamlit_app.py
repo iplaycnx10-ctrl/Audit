@@ -14,6 +14,7 @@ def load_render(relative_path: str, module_key: str):
 
 
 render_strategist = load_render("pages_section/page_01_strategist.py", "page_01_strategist")
+render_case_study = load_render("case_studies/page_02_case_study.py", "page_02_case_study")
 render_experience = load_render("pages_section/page_02_experience.py", "page_02_experience")
 render_loan_ads = load_render("pages_section/page_03_loan_ads.py", "page_03_loan_ads")
 render_retail = load_render("pages_section/page_04_retail.py", "page_04_retail")
@@ -92,33 +93,37 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-t1, t2, t3, t4, t5, t6, t7 = st.tabs([
+t1, t2, t3, t4, t5, t6, t7, t8 = st.tabs([
     "01 Strategist",
-    "02 Experience",
-    "03 Loan Ads",
-    "04 Retail",
-    "05 Automation",
-    "06 Content",
-    "07 Contact",
+    "02 Case Study",
+    "03 Experience",
+    "04 Loan Ads",
+    "05 Retail",
+    "06 Automation",
+    "07 Content",
+    "08 Contact",
 ])
 
 with t1:
     render_strategist()
 
 with t2:
-    render_experience()
+    render_case_study()
 
 with t3:
-    render_loan_ads()
+    render_experience()
 
 with t4:
-    render_retail()
+    render_loan_ads()
 
 with t5:
-    render_automation()
+    render_retail()
 
 with t6:
-    render_content()
+    render_automation()
 
 with t7:
+    render_content()
+
+with t8:
     render_contact()
