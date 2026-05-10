@@ -88,10 +88,10 @@ def ci_showcase(title, url, note):
         link = "<span class='ci-link'>Waiting for Drive link</span>"
     st.markdown(f"<div class='ci-card'><div class='ci-frame'>{frame}</div><h3>{title}</h3><p class='ci-desc'>{note}</p>{link}</div>", unsafe_allow_html=True)
 
-CI_DESIGN_LINK_1 = ""
-CI_DESIGN_LINK_2 = ""
-CI_DESIGN_LINK_3 = ""
-CI_DESIGN_LINK_4 = ""
+CI_DESIGN_LINK_1 = "https://drive.google.com/file/d/1rbL0PhE85Pu2Y_VjCY7RzWBAuDjG8jEM/view?usp=sharing"
+CI_DESIGN_LINK_2 = "https://drive.google.com/file/d/1rgcXSo4Z-7HGjNfNBY8ni2vb1HKZM7OT/view?usp=sharing"
+CI_DESIGN_LINK_3 = "https://drive.google.com/file/d/1NFSGbKlcF51OHJ29vPYchoOXh9GDkfyq/view?usp=sharing"
+CI_DESIGN_LINK_4 = "https://drive.google.com/file/d/1_fOiOGm8v3qBLntLcSYGH87gBQcmgJsQ/view?usp=sharing"
 
 loan_data = pd.DataFrame([
     {"Campaign": "Campaign A", "Messages": 4902, "Spend": 38217.12, "Cost/Message": 7.80},
@@ -182,26 +182,18 @@ with t2:
         st.markdown("<div class='card'><h3>Streamer & Gaming Content Creator</h3><p>มีประสบการณ์ทำคอนเทนต์และไลฟ์สตรีมบน TikTok ในนาม <b>KhunlunGamer</b> เข้าใจ Real-time Engagement และ Audience Relationship</p><p style='margin-top:12px;'><a href='https://www.tiktok.com/@khunlungamer?is_from_webapp=1&sender_device=pc' target='_blank' style='color:#52ff9a;font-weight:900;text-decoration:none;'>View TikTok Profile →</a></p></div>", unsafe_allow_html=True)
     st.markdown("</div>", unsafe_allow_html=True)
 
-    st.markdown("<div class='section'><div class='num'>CREATIVE DESIGN SHOWCASE</div><div class='title'>CI ที่เคยออกแบบ</div><div class='body'>วางลิงก์ Google Drive ในช่องด้านล่าง ระบบจะแสดงรูปทันทีใน session นี้ หากต้องการให้ค้างถาวร ให้ใส่ลิงก์ไว้ในโค้ดหรือ secrets ภายหลัง</div>", unsafe_allow_html=True)
-    st.markdown("<div class='ci-input-note'>ตั้งค่าไฟล์ Drive เป็น Anyone with the link can view ก่อนวางลิงก์</div>", unsafe_allow_html=True)
-    link_col1, link_col2 = st.columns(2)
-    with link_col1:
-        ci_input_1 = st.text_input("CI Design 01 Google Drive link", value=CI_DESIGN_LINK_1, key="ci_design_link_1")
-        ci_input_3 = st.text_input("CI Design 03 Google Drive link", value=CI_DESIGN_LINK_3, key="ci_design_link_3")
-    with link_col2:
-        ci_input_2 = st.text_input("CI Design 02 Google Drive link", value=CI_DESIGN_LINK_2, key="ci_design_link_2")
-        ci_input_4 = st.text_input("CI Design 04 Google Drive link", value=CI_DESIGN_LINK_4, key="ci_design_link_4")
+    st.markdown("<div class='section'><div class='num'>CREATIVE DESIGN SHOWCASE</div><div class='title'>CI ที่เคยออกแบบ</div><div class='body'>รูปตัวอย่างงาน CI / Creative Direction ถูกฝังไว้ในเว็บแล้ว เพื่อให้คนอื่นเปิด Portfolio แล้วเห็นรูปเหมือนกัน</div>", unsafe_allow_html=True)
 
     row1_col1, row1_col2 = st.columns(2)
     with row1_col1:
-        ci_showcase("CI Design 01", ci_input_1, "Key Visual / Brand Direction")
+        ci_showcase("CI Design 01", CI_DESIGN_LINK_1, "Key Visual / Brand Direction")
     with row1_col2:
-        ci_showcase("CI Design 02", ci_input_2, "Creative Layout / Campaign Visual")
+        ci_showcase("CI Design 02", CI_DESIGN_LINK_2, "Creative Layout / Campaign Visual")
     row2_col1, row2_col2 = st.columns(2)
     with row2_col1:
-        ci_showcase("CI Design 03", ci_input_3, "Social Visual / Content Design")
+        ci_showcase("CI Design 03", CI_DESIGN_LINK_3, "Social Visual / Content Design")
     with row2_col2:
-        ci_showcase("CI Design 04", ci_input_4, "Ad Creative / Performance Visual")
+        ci_showcase("CI Design 04", CI_DESIGN_LINK_4, "Ad Creative / Performance Visual")
     st.markdown("</div>", unsafe_allow_html=True)
 
 with t3:
