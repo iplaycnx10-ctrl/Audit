@@ -21,25 +21,13 @@ def render_segment_cards():
       <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;">
         <div>
           <div style="width:1px;height:24px;background:rgba(250,204,21,.55);margin:0 auto;"></div>
-          <div style="width:50%;height:1px;background:rgba(250,204,21,.45);margin:0 auto;"></div>
-          <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;">
-            <div style="width:1px;height:22px;background:rgba(250,204,21,.45);margin:0 auto;"></div>
-            <div style="width:1px;height:22px;background:rgba(250,204,21,.45);margin:0 auto;"></div>
-          </div>
-          <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;">
-            <div style="padding:14px 15px;border-radius:15px;background:rgba(250,204,21,.035);border:1px solid rgba(250,204,21,.16);">
-              <div style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#facc15;font-weight:950;margin-bottom:8px;">แนวทางการสื่อสาร</div>
-              <div style="font-size:15px;font-weight:950;color:#fff;margin-bottom:8px;">1. Location-Based Business</div>
-              <div style="font-size:13px;line-height:1.62;color:#d7e8dd;margin-bottom:8px;">ทำการตลาดแบบเน้น <b>“ทำเลสร้างโอกาส”</b> ให้ผู้เช่าเห็นว่าพื้นที่นี้ช่วยเพิ่มโอกาสเจอลูกค้าใหม่และสร้างยอดขายจากคนผ่านจริง</div>
-              <div style="font-size:12.5px;line-height:1.55;color:#fef3c7;background:rgba(250,204,21,.075);padding:10px 11px;border-radius:12px;">“ทำเลพร้อมเปิดหน้าร้าน เหมาะกับธุรกิจที่ต้องการคนเห็นจริง เดินผ่านจริง และมีโอกาสเปลี่ยนเป็นยอดขายจริง”</div>
-            </div>
-
-            <div style="padding:14px 15px;border-radius:15px;background:rgba(250,204,21,.035);border:1px solid rgba(250,204,21,.16);">
-              <div style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#facc15;font-weight:950;margin-bottom:8px;">แนวทางการสื่อสาร</div>
-              <div style="font-size:15px;font-weight:950;color:#fff;margin-bottom:8px;">2. Office / Online-Based Business</div>
-              <div style="font-size:13px;line-height:1.62;color:#d7e8dd;margin-bottom:8px;">ทำการตลาดแบบเน้น <b>“ฐานธุรกิจที่น่าเชื่อถือ”</b> ให้ผู้เช่าเห็นว่าพื้นที่นี้ช่วยเสริมภาพลักษณ์ ความเป็นมืออาชีพ และรองรับการเติบโตของธุรกิจ</div>
-              <div style="font-size:12.5px;line-height:1.55;color:#fef3c7;background:rgba(250,204,21,.075);padding:10px 11px;border-radius:12px;">“พื้นที่สำหรับออฟฟิศหรือฐานธุรกิจออนไลน์ ที่ช่วยให้ธุรกิจดูน่าเชื่อถือ เป็นระบบ และพร้อมเติบโตระยะยาว”</div>
-            </div>
+          <div style="padding:16px 17px;border-radius:16px;background:rgba(250,204,21,.035);border:1px solid rgba(250,204,21,.16);">
+            <div style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#facc15;font-weight:950;margin-bottom:8px;">กลยุทธ์</div>
+            <div style="font-size:16px;font-weight:950;color:#fff;margin-bottom:10px;">Motivation & Trust Segment</div>
+            <div style="font-size:13px;line-height:1.62;color:#d7e8dd;margin-bottom:10px;">กลุ่มนี้ควรใช้โฆษณาแบบ <b>2 Funnel</b> คือใช้คอนเทนต์ช่วงบนเพื่อสร้างการรับรู้ ความน่าเชื่อถือ และทำให้เห็นโอกาสทางธุรกิจ ก่อนตามด้วยคอนเทนต์ช่วงล่างเพื่อกระตุ้นให้กลับมาพิจารณาและติดต่อสอบถาม</div>
+            <div style="font-size:13px;line-height:1.62;color:#d7e8dd;margin-bottom:10px;">แนวทางหลักคือ <b>เห็นซ้ำ → เข้าใจมากขึ้น → เชื่อมั่นมากขึ้น → พร้อมทักมากขึ้น</b> เพราะกลุ่มเช่าตึกมักไม่ได้ตัดสินใจทันที แต่ต้องใช้เวลาในการเห็นความคุ้มค่าและความน่าเชื่อถือของพื้นที่</div>
+            <div style="font-size:13px;line-height:1.62;color:#fef3c7;background:rgba(250,204,21,.070);padding:10px 11px;border-radius:12px;margin-bottom:8px;"><b>1. Location-Based Business</b><br>ใช้กลยุทธ์สื่อสารแบบ <b>Location Opportunity</b> เน้นทำเล คนผ่าน การมองเห็น และโอกาสในการสร้างยอดขายจากหน้าร้าน<br><br><b>Hook:</b> “ทำเลที่ไม่ได้แค่ตั้งร้าน แต่ช่วยเพิ่มโอกาสให้คนเห็นและเข้าถึงธุรกิจมากขึ้น”</div>
+            <div style="font-size:13px;line-height:1.62;color:#fef3c7;background:rgba(250,204,21,.070);padding:10px 11px;border-radius:12px;"><b>2. Office / Online-Based Business</b><br>ใช้กลยุทธ์สื่อสารแบบ <b>Business Base & Trust</b> เน้นภาพลักษณ์ ความน่าเชื่อถือ ความคุ้มค่า และการใช้พื้นที่เป็นฐานรองรับการเติบโต<br><br><b>Hook:</b> “พื้นที่ที่ช่วยให้ธุรกิจดูเป็นระบบ น่าเชื่อถือ และพร้อมเติบโตในระยะยาว”</div>
           </div>
         </div>
 
