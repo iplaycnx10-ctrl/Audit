@@ -176,7 +176,7 @@ with t2:
         st.markdown("<div class='card'><h3>Streamer & Gaming Content Creator</h3><p>มีประสบการณ์ทำคอนเทนต์และไลฟ์สตรีมบน TikTok ในนาม <b>KhunlunGamer</b> เข้าใจ Real-time Engagement และ Audience Relationship</p><p style='margin-top:12px;'><a href='https://www.tiktok.com/@khunlungamer?is_from_webapp=1&sender_device=pc' target='_blank' style='color:#52ff9a;font-weight:900;text-decoration:none;'>View TikTok Profile →</a></p></div>", unsafe_allow_html=True)
     st.markdown("</div>", unsafe_allow_html=True)
 
-    st.markdown("<div class='section'><div class='num'>CREATIVE DESIGN SHOWCASE</div><div class='title'>CI ที่เคยออกแบบ</div><div class='body'>รูปตัวอย่างงาน CI / Creative Direction ถูกฝังไว้ในเว็บแล้ว เพื่อให้คนอื่นเปิด Portfolio แล้วเห็นรูปเหมือนกัน</div>", unsafe_allow_html=True)
+    st.markdown("<div class='section'><div class='num'>CREATIVE DESIGN SHOWCASE</div><div class='title'>CI ที่เคยออกแบบ</div>", unsafe_allow_html=True)
 
     row1_col1, row1_col2 = st.columns(2)
     with row1_col1:
