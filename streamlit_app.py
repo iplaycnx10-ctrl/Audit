@@ -40,9 +40,10 @@ st.markdown(
     .tool-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:6px;}
     .tool-card{min-height:118px;border:1px solid rgba(82,255,154,.22);border-radius:20px;padding:16px;background:rgba(82,255,154,.055);box-sizing:border-box;}
     .tool-card-title{font-size:11px;color:var(--muted);font-weight:950;text-transform:uppercase;letter-spacing:.13em;margin-bottom:12px;}
-    .tool-list{display:flex;flex-wrap:wrap;gap:8px;align-items:flex-start;}
-    .tool-pill{display:inline-flex;align-items:center;justify-content:center;padding:8px 11px;border:1px solid rgba(82,255,154,.22);border-radius:999px;background:rgba(82,255,154,.075);color:#d7ffe6;font-size:12.5px;font-weight:850;line-height:1;white-space:nowrap;}
-    @media(max-width:900px){.tool-grid{grid-template-columns:repeat(2,1fr)}}
+    .tool-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;align-items:center;}
+    .tool-card.analytics .tool-list{grid-template-columns:repeat(2,minmax(0,1fr));}
+    .tool-pill{display:flex;align-items:center;justify-content:center;height:34px;padding:0 10px;border:1px solid rgba(82,255,154,.22);border-radius:999px;background:rgba(82,255,154,.075);color:#d7ffe6;font-size:12px;font-weight:850;line-height:1;text-align:center;white-space:nowrap;box-sizing:border-box;}
+    @media(max-width:900px){.tool-grid{grid-template-columns:repeat(2,1fr)}.tool-list{grid-template-columns:repeat(2,minmax(0,1fr));}}
     .green{color:var(--green);font-weight:950;}
     .stTabs [data-baseweb="tab-list"]{gap:8px;flex-wrap:wrap;background:rgba(255,255,255,.035);border:1px solid rgba(82,255,154,.18);border-radius:20px;padding:10px;margin-bottom:18px;}
     .stTabs [data-baseweb="tab"]{height:44px;border-radius:14px;color:#bfd1c5;background:rgba(255,255,255,.035);font-weight:900;padding:0 14px;}
@@ -110,7 +111,7 @@ with t1:
               <div class='tool-card-title'>AI TOOLS</div>
               <div class='tool-list'><span class='tool-pill'>Gemini API</span><span class='tool-pill'>ChatGPT</span><span class='tool-pill'>Midjourney</span></div>
             </div>
-            <div class='tool-card'>
+            <div class='tool-card analytics'>
               <div class='tool-card-title'>ANALYTICS</div>
               <div class='tool-list'><span class='tool-pill'>Looker Studio</span><span class='tool-pill'>GA4</span></div>
             </div>
