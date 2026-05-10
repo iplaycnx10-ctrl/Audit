@@ -1,6 +1,7 @@
 import streamlit as st
 
 from data.loan_data import loan_data, loan_summary
+from data.retail_data import retail_data, retail_summary
 from pages_section.page_01_strategist import render as render_strategist
 from pages_section.page_02_experience import render as render_experience
 from pages_section.page_03_loan_ads import render as render_loan_ads
@@ -101,7 +102,7 @@ with t3:
     render_loan_ads(loan_summary, loan_data)
 
 with t4:
-    render_retail()
+    render_retail(retail_summary, retail_data)
 
 with t5:
     render_automation()
