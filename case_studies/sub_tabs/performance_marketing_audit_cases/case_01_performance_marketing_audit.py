@@ -13,22 +13,22 @@ def render():
           </div>
         </div>
 
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px;margin-bottom:18px;">
-          <div class="card" style="height:142px;min-height:142px;padding:15px;overflow:visible;">
-            <h3 style="font-size:14px;min-height:auto;margin-bottom:9px;line-height:1.28;">❌ High Lead Cost</h3>
-            <p style="font-size:12px;color:#9fb5a8;line-height:1.5;">ค่า Lead สูง แต่คุณภาพไม่สม่ำเสมอ</p>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:14px;margin-bottom:22px;">
+          <div style="height:112px;min-height:112px;padding:14px 15px;border-radius:20px;border:1px solid rgba(239,68,68,.42);background:linear-gradient(135deg,rgba(127,29,29,.42),rgba(11,26,18,.55));box-sizing:border-box;overflow:hidden;">
+            <div style="font-size:13px;font-weight:900;color:#fff;line-height:1.3;margin-bottom:18px;">❌ High Lead Cost</div>
+            <div style="font-size:11.5px;color:#ffd5d5;line-height:1.55;">ค่า Lead สูง แต่คุณภาพไม่สม่ำเสมอ</div>
           </div>
-          <div class="card" style="height:142px;min-height:142px;padding:15px;overflow:visible;">
-            <h3 style="font-size:14px;min-height:auto;margin-bottom:9px;line-height:1.28;">❌ Weak Retargeting Structure</h3>
-            <p style="font-size:12px;color:#9fb5a8;line-height:1.5;">ไม่มีระบบ Follow-up สำหรับคนที่สนใจบริการ</p>
+          <div style="height:112px;min-height:112px;padding:14px 15px;border-radius:20px;border:1px solid rgba(249,115,22,.38);background:linear-gradient(135deg,rgba(154,52,18,.34),rgba(11,26,18,.55));box-sizing:border-box;overflow:hidden;">
+            <div style="font-size:13px;font-weight:900;color:#fff;line-height:1.3;margin-bottom:18px;">❌ Weak Retargeting Structure</div>
+            <div style="font-size:11.5px;color:#ffe1c7;line-height:1.55;">ไม่มีระบบ Follow-up สำหรับคนที่สนใจบริการ</div>
           </div>
-          <div class="card" style="height:142px;min-height:142px;padding:15px;overflow:visible;">
-            <h3 style="font-size:14px;min-height:auto;margin-bottom:9px;line-height:1.28;">❌ Creative Fatigue</h3>
-            <p style="font-size:12px;color:#9fb5a8;line-height:1.5;">ยิงโปรเดิมซ้ำจน CTR ตก และ Frequency สูง</p>
+          <div style="height:112px;min-height:112px;padding:14px 15px;border-radius:20px;border:1px solid rgba(245,158,11,.36);background:linear-gradient(135deg,rgba(146,64,14,.30),rgba(11,26,18,.55));box-sizing:border-box;overflow:hidden;">
+            <div style="font-size:13px;font-weight:900;color:#fff;line-height:1.3;margin-bottom:18px;">❌ Creative Fatigue</div>
+            <div style="font-size:11.5px;color:#ffe9bd;line-height:1.55;">ยิงโปรเดิมซ้ำจน CTR ตก และ Frequency สูง</div>
           </div>
-          <div class="card" style="height:142px;min-height:142px;padding:15px;overflow:visible;">
-            <h3 style="font-size:14px;min-height:auto;margin-bottom:9px;line-height:1.28;">❌ Poor Conversion Journey</h3>
-            <p style="font-size:12px;color:#9fb5a8;line-height:1.5;">คนทักเยอะ แต่ไม่จองคิว</p>
+          <div style="height:112px;min-height:112px;padding:14px 15px;border-radius:20px;border:1px solid rgba(234,179,8,.32);background:linear-gradient(135deg,rgba(113,63,18,.26),rgba(11,26,18,.55));box-sizing:border-box;overflow:hidden;">
+            <div style="font-size:13px;font-weight:900;color:#fff;line-height:1.3;margin-bottom:18px;">❌ Poor Conversion Journey</div>
+            <div style="font-size:11.5px;color:#fff1bd;line-height:1.55;">คนทักเยอะ แต่ไม่จองคิว</div>
           </div>
         </div>
         """,
