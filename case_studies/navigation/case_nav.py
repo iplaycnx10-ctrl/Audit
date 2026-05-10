@@ -4,12 +4,14 @@ import streamlit as st
 CASES = {
     "case_01": "CASE 1 — Performance Marketing Audit",
     "case_02": "CASE 2 — Branding Strategy Analysis",
-    "case_03": "CASE 3 — Journey Traffic Leak Analysis",
 }
 
 
 def render():
     if "selected_case_study" not in st.session_state:
+        st.session_state["selected_case_study"] = "case_01"
+
+    if st.session_state["selected_case_study"] == "case_03":
         st.session_state["selected_case_study"] = "case_01"
 
     st.markdown(
@@ -51,7 +53,7 @@ def render():
         unsafe_allow_html=True,
     )
 
-    col1, col2, col3 = st.columns([1, 1, 1], gap="small")
+    col1, col2 = st.columns([1, 1], gap="small")
 
     with col1:
         label = CASES["case_01"]
@@ -67,14 +69,6 @@ def render():
             label = "🟡 " + label
         if st.button(label, key="case_nav_02", use_container_width=True):
             st.session_state["selected_case_study"] = "case_02"
-            st.rerun()
-
-    with col3:
-        label = CASES["case_03"]
-        if st.session_state["selected_case_study"] == "case_03":
-            label = "🟡 " + label
-        if st.button(label, key="case_nav_03", use_container_width=True):
-            st.session_state["selected_case_study"] = "case_03"
             st.rerun()
 
     return st.session_state["selected_case_study"]
