@@ -13,6 +13,37 @@ APP_IMAGE_LINKS = [
 ]
 
 
+def app_image_card(link, alt="APP Preview"):
+    img = drive_image_url(link)
+    st.markdown(
+        f"""
+        <div style="
+            border:1px solid rgba(82,255,154,.20);
+            border-radius:22px;
+            padding:10px;
+            background:rgba(255,255,255,.035);
+            box-shadow:0 18px 54px rgba(0,0,0,.20);
+            height:250px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            overflow:hidden;
+            box-sizing:border-box;
+            margin-bottom:18px;
+        ">
+            <img src="{img}" alt="{alt}" referrerpolicy="no-referrer" style="
+                width:100%;
+                height:100%;
+                object-fit:cover;
+                border-radius:15px;
+                display:block;
+            " />
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
 def render_app_gallery():
     st.markdown(
         """
@@ -25,15 +56,29 @@ def render_app_gallery():
         unsafe_allow_html=True,
     )
 
-    row1 = st.columns(3, gap="medium")
+    row1 = st.columns(3, gap="large")
     for col, link in zip(row1, APP_IMAGE_LINKS[:3]):
         with col:
-            st.image(drive_image_url(link), use_container_width=True)
+            app_image_card(link)
 
-    row2 = st.columns(2, gap="medium")
-    for col, link in zip(row2, APP_IMAGE_LINKS[3:]):
+    row2 = st.columns(3, gap="large")
+    for index, col in enumerate(row2):
         with col:
-            st.image(drive_image_url(link), use_container_width=True)
+            if index < 2:
+                app_image_card(APP_IMAGE_LINKS[index + 3])
+            else:
+                st.markdown(
+                    """
+                    <div style="
+                        border:1px dashed rgba(82,255,154,.18);
+                        border-radius:22px;
+                        height:250px;
+                        background:rgba(255,255,255,.018);
+                        margin-bottom:18px;
+                    "></div>
+                    """,
+                    unsafe_allow_html=True,
+                )
 
 
 def render():
