@@ -135,8 +135,8 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-t1, t2, t3, t4, t5, t6, t7, t8, t9 = st.tabs([
-    "01 Strategist", "02 Experience", "03 Loan Ads", "04 Retail", "05 Automation", "06 Content", "07 Tech Stack", "08 Dashboard", "09 Contact"
+t1, t2, t3, t4, t5, t6, = st.tabs([
+    "01 Strategist", "02 Experience", "03 Loan Ads", "04 Retail", "05 Automation", "06 Content", 
 ])
 
 with t1:
@@ -281,11 +281,4 @@ with t6:
     with c2: metric("Content", "Organic 100%", "พิสูจน์ความเข้าใจ Algorithm")
     with c3: metric("Workflow", "AI + API", "วางโครงสร้างสคริปต์และ video automation")
 
-with t7:
-    section("07. TECH STACK", "Tools & Platforms", "Meta Ads, TikTok Ads, Google Ads, GA4, Looker Studio, Google Sheets, n8n, Webhooks, Gemini API, Prompt Engineering")
 
-with t8:
-    section("08. DASHBOARD THINKING", "Demo Performance Intelligence", "ออกแบบ Dashboard เพื่ออ่าน Funnel, Campaign Pattern, Cost Efficiency และ Business Signal ให้เจ้าของธุรกิจเข้าใจง่าย")
-
-with t9:
-    section("09. PORTFOLIO NOTE", "Built for Recruiter Review", "หน้าเว็บนี้ใช้เป็นลิงก์ Portfolio สำหรับสมัครงาน แสดงวิธีคิดด้าน Performance Marketing, Dashboard, AI Automation และการแปลงข้อมูลให้เป็น Action โดยใช้ข้อมูลตัวอย่างเพื่อไม่เปิดเผยข้อมูลลูกค้าจริง")
