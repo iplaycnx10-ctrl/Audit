@@ -1,4 +1,23 @@
+import importlib.util
+from pathlib import Path
 import streamlit as st
+
+BASE_DIR = Path(__file__).resolve().parent
+
+
+def load_render_function(relative_path: str, function_name: str, module_key: str):
+    module_path = BASE_DIR / relative_path
+    spec = importlib.util.spec_from_file_location(module_key, module_path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return getattr(module, function_name)
+
+
+render_tracking_validation = load_render_function(
+    "measurement_tracking_validation.py",
+    "render_tracking_validation",
+    "measurement_tracking_validation",
+)
 
 
 def render():
@@ -67,3 +86,5 @@ def render():
         """,
         unsafe_allow_html=True,
     )
+
+    render_tracking_validation()
