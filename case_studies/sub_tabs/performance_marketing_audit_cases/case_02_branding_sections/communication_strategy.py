@@ -1,4 +1,23 @@
+import importlib.util
+from pathlib import Path
 import streamlit as st
+
+BASE_DIR = Path(__file__).resolve().parent
+
+
+def load_component(relative_path: str, module_key: str, function_name: str):
+    module_path = BASE_DIR / relative_path
+    spec = importlib.util.spec_from_file_location(module_key, module_path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return getattr(module, function_name)
+
+
+render_segment_cards = load_component(
+    "communication_strategy_segments/segment_cards.py",
+    "segment_cards",
+    "render_segment_cards"
+)
 
 
 def render_communication_strategy():
@@ -20,13 +39,7 @@ def render_communication_strategy():
               การทำการตลาดสำหรับพื้นที่เช่าไม่ควรมองผู้เช่าทุกกลุ่มเป็นกลุ่มเดียวกัน เพราะแต่ละกลุ่มมีมูลค่าทางธุรกิจ เหตุผลในการตัดสินใจ และระยะเวลาปิดการขายไม่เหมือนกัน
             </p>
             <p style="font-size:14px;line-height:1.72;color:#d7e8dd;margin:0 0 10px 0;">
-              กลุ่มเช่าตึก / ตึกพาณิชย์ เป็นกลุ่มที่มีมูลค่าระยะยาวสูงกว่า แต่ต้องใช้เวลาในการสร้างความเชื่อมั่นมากกว่า การสื่อสารจึงไม่ควรเป็นเพียงการลงรูปพื้นที่ว่าง แต่ควรนำเสนอให้เห็นว่า <b>“ทำเลนี้เหมาะกับธุรกิจของเขาอย่างไร”</b> เช่น โอกาสจาก Location ความคุ้มค่าระยะยาว และศักยภาพในการสร้างรายได้
-            </p>
-            <p style="font-size:14px;line-height:1.72;color:#d7e8dd;margin:0 0 10px 0;">
-              ในกลุ่มตึกพาณิชย์เองยังสามารถแยกมุมสื่อสารได้อีก 2 แบบ คือ <b>ธุรกิจที่ต้องการหน้าร้าน</b> ซึ่งควรเน้นทำเล คนผ่าน และโอกาสจากพื้นที่จริง กับ <b>ธุรกิจที่ใช้ตึกเป็นออฟฟิศหรือฐานออนไลน์</b> ซึ่งควรเน้นภาพลักษณ์ ความสะดวก ความคุ้มค่า และการรองรับการเติบโต
-            </p>
-            <p style="font-size:14px;line-height:1.72;color:#d7e8dd;margin:0 0 10px 0;">
-              ขณะเดียวกัน ยังมีกลุ่มร้านค้า บูธ รถเข็น Pop-up Store และลานกิจกรรม ซึ่งทำหน้าที่เป็น <b>Cashflow Support Segment</b> ช่วยสร้างรายได้ระหว่างทาง ลดพื้นที่ว่าง และทำให้พื้นที่มีความเคลื่อนไหวระหว่างรอผู้เช่ารายใหญ่
+              กลุ่มเช่าตึก / ตึกพาณิชย์ เป็นกลุ่มที่มีมูลค่าระยะยาวสูงกว่า แต่ต้องใช้เวลาในการสร้างความเชื่อมั่นมากกว่า การสื่อสารจึงไม่ควรเป็นเพียงการลงรูปพื้นที่ว่าง แต่ควรนำเสนอให้เห็นว่า <b>“ทำเลนี้เหมาะกับธุรกิจของเขาอย่างไร”</b>
             </p>
             <p style="font-size:14px;line-height:1.72;color:#d7e8dd;margin:0;">
               ดังนั้นแนวทางการซื้อสื่อควรทำมากกว่าการประกาศว่า <b>“มีพื้นที่ให้เช่า”</b> แต่ควรออกแบบ Message ให้ตรงกับบทบาทของผู้เช่าแต่ละกลุ่ม ทั้งกลุ่มที่สร้าง LTV ระยะยาว และกลุ่มที่ช่วยเติม Cashflow ระหว่างทาง
@@ -40,3 +53,5 @@ def render_communication_strategy():
         """,
         unsafe_allow_html=True,
     )
+
+    render_segment_cards()
