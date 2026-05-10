@@ -22,12 +22,11 @@ def render():
     st.markdown(
         """
         <div style="text-align:center;padding:18px 12px 8px 12px;margin-top:6px;">
-            <div class="num" style="margin-bottom:10px;">CASE 1</div>
             <div style="font-size:15px;color:#facc15;font-weight:900;margin-bottom:12px;">
                 โจทย์: สร้าง Branding + หา Lead จริง
             </div>
             <div class="title" style="font-size:34px;margin-bottom:14px;">
-                Medical บริษัทอสังหาริมทรัพย์
+                บริษัทอสังหาริมทรัพย์
             </div>
             <div class="body" style="font-size:15px;color:#d7e8dd;max-width:760px;margin:0 auto;line-height:1.8;">
                 <b>กิจการ:</b> Real Estate
