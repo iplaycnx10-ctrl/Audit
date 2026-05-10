@@ -78,8 +78,9 @@ st.markdown(
     .stTabs [aria-selected="true"]{background:rgba(82,255,154,.14);color:#52ff9a;border:1px solid rgba(82,255,154,.30);}
     .stTabs .stTabs [data-baseweb="tab-list"]{gap:5px;border-radius:14px;padding:5px;margin-top:8px;margin-bottom:8px;background:rgba(255,255,255,.018);border-color:rgba(82,255,154,.10);}
     .stTabs .stTabs [data-baseweb="tab"]{height:30px;border-radius:10px;padding:0 10px;font-size:11px;font-weight:780;background:rgba(255,255,255,.018);}
-    .stTabs .stTabs .stTabs [data-baseweb="tab-list"]{gap:4px;border-radius:12px;padding:4px;margin-top:6px;margin-bottom:6px;background:transparent;border-color:rgba(82,255,154,.08);}
-    .stTabs .stTabs .stTabs [data-baseweb="tab"]{height:28px;border-radius:9px;padding:0 9px;font-size:10.5px;font-weight:760;}
+    .stTabs .stTabs .stTabs [data-baseweb="tab-list"]{justify-content:center;gap:6px;border-radius:14px;padding:6px 8px;margin:8px auto 10px auto;background:#030504;border:1px solid rgba(82,255,154,.12);max-width:760px;}
+    .stTabs .stTabs .stTabs [data-baseweb="tab"]{height:28px;border-radius:9px;padding:0 10px;font-size:10.8px;font-weight:800;background:#07110c;color:#facc15;}
+    .stTabs .stTabs .stTabs [aria-selected="true"]{background:#0b1a12;color:#facc15;border:1px solid rgba(82,255,154,.42);box-shadow:0 1px 0 #ff3b7a;}
     </style>
     """,
     unsafe_allow_html=True,
