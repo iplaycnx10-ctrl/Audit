@@ -262,11 +262,10 @@ with t4:
     section("04. STRATEGY: HIGH-VALUE RETAIL", "The Hybrid Closing Model", "วางระบบ Multi-touchpoint Funnel สำหรับสินค้ากลุ่มเครื่องใช้ไฟฟ้ามูลค่าสูง เชื่อมจากแอด → แชท → เว็บไซต์/หน้าร้าน และใช้ข้อมูลเพื่อดู Pattern ของแคมเปญ")
 
 with t5:
-    section(
-        "05. AUTOMATION ARCHITECTURE",
+    section("05. AUTOMATION ARCHITECTURE",
         "Marketing Brain with AI Agent Workflows",
-        "ออกแบบ Workflow เชื่อม n8n, AI API, Google Sheets และ Dashboard เพื่อเปลี่ยนข้อมูลโฆษณาเป็น Insight และ Action แบบอัตโนมัติ"
-    )
+        "ออกแบบ Workflow เชื่อม n8n, AI API, Google Sheets และ Dashboard เพื่อเปลี่ยนข้อมูลโฆษณาเป็น Insight และ Action แบบอัตโนมัติ")
+with t6:
     section("06. CONTENT FACTORY", "Organic Growth & TikTok Strategy", "ประสบการณ์ทำ TikTok / Streaming / Content Workflow เพื่อเข้าใจ Attention, Engagement, Hook และ Audience Retention")
     c1, c2, c3 = st.columns(3)
     with c1: metric("TikTok Growth", "0 → 8,000+", "Followers ภายใน 9 เดือน")
