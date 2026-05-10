@@ -264,26 +264,11 @@ with t4:
 with t5:
     automation_img = drive_image_url(AUTOMATION_ARCHITECTURE_LINK)
     with t5:
+    with t5:
     section(
         "05. AUTOMATION ARCHITECTURE",
         "Marketing Brain with AI Agent Workflows",
         "ออกแบบ Workflow เชื่อม n8n, AI API, Google Sheets และ Dashboard เพื่อเปลี่ยนข้อมูลโฆษณาเป็น Insight และ Action แบบอัตโนมัติ"
-    )
-
-    automation_img = drive_image_url(AUTOMATION_ARCHITECTURE_LINK)
-
-    st.markdown(
-        f"""
-        <div class='section'>
-            <div class='num'>WORKFLOW ARCHITECTURE</div>
-            <div class='title'>AI Agent Workflow Structure</div>
-
-            <div style='margin-top:20px;border-radius:24px;overflow:hidden;border:1px solid rgba(82,255,154,.18);'>
-                <img src='{automation_img}' style='width:100%;display:block;' />
-            </div>
-        </div>
-        """,
-        unsafe_allow_html=True
     )
 
 with t6:
