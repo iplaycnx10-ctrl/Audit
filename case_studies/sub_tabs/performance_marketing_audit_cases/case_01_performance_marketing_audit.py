@@ -48,6 +48,7 @@ def render():
         <div style="display:grid;grid-template-columns:0.95fr 1.05fr;gap:28px;align-items:start;margin-top:10px;margin-bottom:18px;">
           <div style="padding:8px 2px 6px 2px;">
             <div class="num" style="margin-bottom:8px;">CASE 1</div>
+            <div style="font-size:13px;color:#facc15;font-weight:900;margin-bottom:10px;line-height:1.45;">โจทย์: ทำไม Reach ดีแต่ยอดไม่มา</div>
             <div class="title" style="font-size:25px;margin-bottom:10px;">Medical Aesthetic Funnel Analysis</div>
             <div class="body" style="font-size:14px;line-height:1.65;color:#d7e8dd;max-width:500px;">
               <b>กิจการ:</b> Medical Aesthetic<br><br>
