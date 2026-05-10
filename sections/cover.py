@@ -30,7 +30,7 @@ def render():
     with right:
         st.markdown(
             """
-            <div style="height:500px;display:flex;align-items:flex-end;justify-content:center;overflow:visible;padding:0 10px;margin-top:8px;">
+            <div style="height:430px;display:flex;align-items:flex-start;justify-content:center;overflow:visible;padding:0 10px;margin-top:0;">
             """,
             unsafe_allow_html=True,
         )
