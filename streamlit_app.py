@@ -34,6 +34,10 @@ st.markdown(
     .metric-label{font-size:12px;color:var(--muted);font-weight:900;text-transform:uppercase;letter-spacing:.13em;margin-bottom:8px;}
     .metric-value{font-size:32px;color:#fff;font-weight:950;line-height:1.05;}
     .metric-note{font-size:13px;color:#9fb5a8;margin-top:8px;font-weight:750;line-height:1.45;}
+    .skill-card{min-height:255px;border:1px solid rgba(82,255,154,.18);border-radius:24px;padding:24px;background:rgba(255,255,255,.035);box-sizing:border-box;}
+    .skill-card h3{margin:0 0 12px 0;color:#fff;font-size:21px;line-height:1.25;}
+    .skill-card p{color:#bfd1c5;font-size:15.5px;line-height:1.75;margin:0;}
+    .tool-pill{display:inline-block;margin:6px 6px 0 0;padding:10px 13px;border:1px solid rgba(82,255,154,.20);border-radius:999px;background:rgba(82,255,154,.07);color:#d7ffe6;font-size:14px;font-weight:850;}
     .green{color:var(--green);font-weight:950;}
     .stTabs [data-baseweb="tab-list"]{gap:8px;flex-wrap:wrap;background:rgba(255,255,255,.035);border:1px solid rgba(82,255,154,.18);border-radius:20px;padding:10px;margin-bottom:18px;}
     .stTabs [data-baseweb="tab"]{height:44px;border-radius:14px;color:#bfd1c5;background:rgba(255,255,255,.035);font-weight:900;padding:0 14px;}
@@ -66,7 +70,35 @@ t1, t2, t3, t4, t5, t6, t7, t8, t9 = st.tabs([
 ])
 
 with t1:
-    section("01. THE STRATEGIST", "Performance Marketer Who Builds Revenue Engine", "ผมคือ Performance Marketer ที่เชี่ยวชาญการใช้ <span class='green'>AI และ Automation</span> มาแก้ปัญหาธุรกิจในระดับโครงสร้าง ไม่ได้มองโฆษณาเป็นแค่การจ่ายเงินซื้อคลิก แต่มองเป็น Revenue Engine ที่ต้องปรับจูนด้วยข้อมูล พฤติกรรมลูกค้า และสัญญาณความต้องการจริง<div class='quote'>“Efficiency is Intelligent Laziness.” ผมสร้างระบบอัตโนมัติเพื่อให้คนทำงานน้อยลง แต่ได้ผลลัพธ์ที่แม่นยำและเสถียรกว่าเดิม</div>")
+    section(
+        "01. STRATEGIST",
+        "Technical & Performance Marketing",
+        "ผมวางตัวเองเป็นสาย Performance Marketer ที่เชื่อมระหว่าง <span class='green'>Media Buying, Automation, AI Content และ Data Insight</span> เพื่อเปลี่ยนตัวเลขโฆษณาให้กลายเป็นการตัดสินใจทางธุรกิจที่เร็วและแม่นขึ้น"
+    )
+
+    st.markdown("<div class='num'>TECHNICAL EXPERTISE</div>", unsafe_allow_html=True)
+    s1, s2 = st.columns(2)
+    with s1:
+        st.markdown("<div class='skill-card'><h3>Advanced Media Buying</h3><p>วางโครงสร้างแคมเปญ Meta & TikTok แบบเน้นยอดขาย Conversion พร้อมกลยุทธ์การสเกลงบอย่างเป็นระบบ เพื่อรักษา ROAS และคุณภาพผลลัพธ์ให้มีประสิทธิภาพสูงสุด</p></div>", unsafe_allow_html=True)
+    with s2:
+        st.markdown("<div class='skill-card'><h3>Marketing Automation</h3><p>ออกแบบและเชื่อมต่อ Workflow ข้ามแพลตฟอร์มด้วย n8n และ Make เพื่อลดงาน Manual เพิ่มความเร็วในการจัดการข้อมูล และทำให้ระบบการตลาดทำงานซ้ำได้</p></div>", unsafe_allow_html=True)
+    s3, s4 = st.columns(2)
+    with s3:
+        st.markdown("<div class='skill-card'><h3>AI-Driven Content & Strategy</h3><p>ใช้ Prompt Engineering ในการสร้าง Hook, Script และ Creative Angle สำหรับวิดีโอสั้น TikTok/Reels ที่เน้นหยุดนิ้ว เพิ่มความสนใจ และต่อยอดไปสู่การสั่งซื้อ</p></div>", unsafe_allow_html=True)
+    with s4:
+        st.markdown("<div class='skill-card'><h3>Data-Actionable Insights</h3><p>สร้าง Dashboard ด้วย Looker Studio และอ่านจุดหลุดของลูกค้า Drop-off points เพื่อแปลงข้อมูลเป็น Action ที่แก้ปัญหายอดขายได้ตรงจุด</p></div>", unsafe_allow_html=True)
+
+    st.markdown("<div class='section'><div class='num'>TECH STACK & TOOLS</div><div class='title'>Tool Stack ที่ใช้ทำงานจริง</div>", unsafe_allow_html=True)
+    c1, c2, c3, c4 = st.columns(4)
+    with c1:
+        st.markdown("<div class='metric'><div class='metric-label'>AD PLATFORMS</div><span class='tool-pill'>Meta Ads</span><span class='tool-pill'>TikTok Ads</span><span class='tool-pill'>Google Ads</span></div>", unsafe_allow_html=True)
+    with c2:
+        st.markdown("<div class='metric'><div class='metric-label'>AUTOMATION</div><span class='tool-pill'>n8n</span><span class='tool-pill'>Make</span><span class='tool-pill'>Zapier</span></div>", unsafe_allow_html=True)
+    with c3:
+        st.markdown("<div class='metric'><div class='metric-label'>AI TOOLS</div><span class='tool-pill'>Gemini API</span><span class='tool-pill'>ChatGPT</span><span class='tool-pill'>Midjourney</span></div>", unsafe_allow_html=True)
+    with c4:
+        st.markdown("<div class='metric'><div class='metric-label'>ANALYTICS</div><span class='tool-pill'>Looker Studio</span><span class='tool-pill'>GA4</span></div>", unsafe_allow_html=True)
+    st.markdown("<div class='quote'>“Efficiency is Intelligent Laziness”</div></div>", unsafe_allow_html=True)
 
 with t2:
     st.markdown("<div class='section'><div class='num'>02. INDUSTRY EXPERIENCE</div><div class='title'>Industry Experience</div>", unsafe_allow_html=True)
