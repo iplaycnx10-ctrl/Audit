@@ -73,9 +73,13 @@ st.markdown(
     .ci-frame img{width:100%;height:100%;object-fit:cover;border-radius:13px;display:block;}
     @media(max-width:900px){.tool-grid,.experience-timeline{grid-template-columns:repeat(2,1fr)}.timeline-step:before,.timeline-step:after{display:none}.tool-list{grid-template-columns:repeat(2,minmax(0,1fr));}.cover h1{font-size:42px;white-space:normal;}.metric{min-height:96px;height:96px}.metric-value{font-size:21px}}
     .green{color:var(--green);font-weight:950;}
-    .stTabs [data-baseweb="tab-list"]{gap:8px;flex-wrap:wrap;background:rgba(255,255,255,.035);border:1px solid rgba(82,255,154,.18);border-radius:20px;padding:10px;margin-bottom:18px;}
-    .stTabs [data-baseweb="tab"]{height:44px;border-radius:14px;color:#bfd1c5;background:rgba(255,255,255,.035);font-weight:900;padding:0 14px;}
-    .stTabs [aria-selected="true"]{background:rgba(82,255,154,.16);color:#52ff9a;border:1px solid rgba(82,255,154,.28);}
+    .stTabs [data-baseweb="tab-list"]{gap:6px;flex-wrap:wrap;background:rgba(255,255,255,.025);border:1px solid rgba(82,255,154,.13);border-radius:16px;padding:6px;margin-bottom:10px;}
+    .stTabs [data-baseweb="tab"]{height:34px;border-radius:11px;color:#bfd1c5;background:rgba(255,255,255,.025);font-weight:850;padding:0 11px;font-size:12px;}
+    .stTabs [aria-selected="true"]{background:rgba(82,255,154,.14);color:#52ff9a;border:1px solid rgba(82,255,154,.30);}
+    .stTabs .stTabs [data-baseweb="tab-list"]{gap:5px;border-radius:14px;padding:5px;margin-top:8px;margin-bottom:8px;background:rgba(255,255,255,.018);border-color:rgba(82,255,154,.10);}
+    .stTabs .stTabs [data-baseweb="tab"]{height:30px;border-radius:10px;padding:0 10px;font-size:11px;font-weight:780;background:rgba(255,255,255,.018);}
+    .stTabs .stTabs .stTabs [data-baseweb="tab-list"]{gap:4px;border-radius:12px;padding:4px;margin-top:6px;margin-bottom:6px;background:transparent;border-color:rgba(82,255,154,.08);}
+    .stTabs .stTabs .stTabs [data-baseweb="tab"]{height:28px;border-radius:9px;padding:0 9px;font-size:10.5px;font-weight:760;}
     </style>
     """,
     unsafe_allow_html=True,
