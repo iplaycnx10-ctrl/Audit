@@ -43,12 +43,12 @@ st.markdown(
     .tool-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;align-items:center;}
     .tool-card.analytics .tool-list{grid-template-columns:repeat(2,minmax(0,1fr));}
     .tool-pill{display:flex;align-items:center;justify-content:center;height:34px;padding:0 10px;border:1px solid rgba(82,255,154,.22);border-radius:999px;background:rgba(82,255,154,.075);color:#d7ffe6;font-size:12px;font-weight:850;line-height:1;text-align:center;white-space:nowrap;box-sizing:border-box;}
-    .ci-card{border:1px solid rgba(82,255,154,.20);border-radius:20px;padding:14px;background:rgba(255,255,255,.035);height:255px;box-sizing:border-box;overflow:hidden;}
-    .ci-card h3{font-size:15px;color:#fff;margin:0 0 8px 0;line-height:1.2;}
-    .ci-frame{height:135px;border:1px dashed rgba(82,255,154,.28);border-radius:14px;background:rgba(82,255,154,.045);display:flex;align-items:center;justify-content:center;text-align:center;color:#9fb5a8;font-size:11px;font-weight:800;line-height:1.35;padding:10px;box-sizing:border-box;overflow:hidden;margin-bottom:10px;}
-    .ci-frame img{width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;}
-    .ci-desc{color:#bfd1c5;font-size:12.5px;line-height:1.42;margin:0 0 8px 0;}
-    .ci-link{color:#52ff9a;font-size:12.5px;font-weight:900;text-decoration:none;}
+    .ci-card{border:1px solid rgba(82,255,154,.20);border-radius:22px;padding:16px;background:rgba(255,255,255,.035);height:390px;box-sizing:border-box;overflow:hidden;margin-bottom:18px;}
+    .ci-card h3{font-size:18px;color:#fff;margin:0 0 10px 0;line-height:1.2;}
+    .ci-frame{height:250px;border:1px dashed rgba(82,255,154,.28);border-radius:16px;background:rgba(82,255,154,.045);display:flex;align-items:center;justify-content:center;text-align:center;color:#9fb5a8;font-size:12px;font-weight:800;line-height:1.4;padding:12px;box-sizing:border-box;overflow:hidden;margin-bottom:12px;}
+    .ci-frame img{width:100%;height:100%;object-fit:cover;border-radius:13px;display:block;}
+    .ci-desc{color:#bfd1c5;font-size:13px;line-height:1.45;margin:0 0 10px 0;}
+    .ci-link{color:#52ff9a;font-size:13px;font-weight:900;text-decoration:none;}
     @media(max-width:900px){.tool-grid{grid-template-columns:repeat(2,1fr)}.tool-list{grid-template-columns:repeat(2,minmax(0,1fr));}.cover h1{font-size:42px;white-space:normal;}}
     .green{color:var(--green);font-weight:950;}
     .stTabs [data-baseweb="tab-list"]{gap:8px;flex-wrap:wrap;background:rgba(255,255,255,.035);border:1px solid rgba(82,255,154,.18);border-radius:20px;padding:10px;margin-bottom:18px;}
@@ -169,14 +169,15 @@ with t2:
     st.markdown("</div>", unsafe_allow_html=True)
 
     st.markdown("<div class='section'><div class='num'>CREATIVE DESIGN SHOWCASE</div><div class='title'>CI ที่เคยออกแบบ</div><div class='body'>พื้นที่สำหรับแสดงตัวอย่างงานออกแบบ CI / Key Visual / Creative Direction จาก Google Drive</div>", unsafe_allow_html=True)
-    c1, c2, c3, c4 = st.columns(4)
-    with c1:
+    row1_col1, row1_col2 = st.columns(2)
+    with row1_col1:
         ci_showcase("CI Design 01", CI_DESIGN_LINK_1, "Key Visual / Brand Direction")
-    with c2:
+    with row1_col2:
         ci_showcase("CI Design 02", CI_DESIGN_LINK_2, "Creative Layout / Campaign Visual")
-    with c3:
+    row2_col1, row2_col2 = st.columns(2)
+    with row2_col1:
         ci_showcase("CI Design 03", CI_DESIGN_LINK_3, "Social Visual / Content Design")
-    with c4:
+    with row2_col2:
         ci_showcase("CI Design 04", CI_DESIGN_LINK_4, "Ad Creative / Performance Visual")
     st.markdown("</div>", unsafe_allow_html=True)
 
