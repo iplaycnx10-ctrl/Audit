@@ -38,4 +38,7 @@ def render():
 
     render_swot_cards()
     render_market_positioning()
-    render_brand_positioning_communication()
+
+    brand_tab = st.tabs(["Brand Positioning & Communication"])[0]
+    with brand_tab:
+        render_brand_positioning_communication()
