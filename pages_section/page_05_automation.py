@@ -26,6 +26,8 @@ def inject_gallery_style():
         .app-zoom-card:active img{object-fit:contain;transform:none;}
         .app-demo-btn{display:inline-flex;align-items:center;gap:10px;margin-top:18px;padding:12px 18px;border:1px solid rgba(82,255,154,.35);border-radius:999px;background:rgba(82,255,154,.10);color:#52ff9a!important;font-weight:950;text-decoration:none!important;box-shadow:0 14px 40px rgba(82,255,154,.08);}
         .app-demo-btn:hover{background:rgba(82,255,154,.16);border-color:rgba(82,255,154,.65);}
+        .workflow-image-wrap{margin-top:34px;border:1px solid rgba(82,255,154,.18);border-radius:24px;padding:10px;background:rgba(255,255,255,.025);overflow:hidden;}
+        .workflow-image-wrap img{width:100%;border-radius:16px;display:block;}
         @media(max-width:900px){.app-zoom-card{height:210px;}.app-zoom-card:active{inset:6vh 4vw;width:92vw;height:88vh;}}
         </style>
         """,
@@ -46,8 +48,6 @@ def app_image_card(link, alt="APP Preview"):
 
 
 def render_app_gallery():
-    inject_gallery_style()
-
     st.markdown(
         f"""
         <div class='section' style='margin-top:28px;'>
@@ -80,6 +80,10 @@ def render_app_gallery():
 
 
 def render():
+    inject_gallery_style()
+
+    render_app_gallery()
+
     section(
         "05. AUTOMATION ARCHITECTURE",
         "Marketing Brain with AI Agent Workflows",
@@ -87,6 +91,11 @@ def render():
     )
 
     automation_img = drive_image_url(AUTOMATION_LINK)
-    st.image(automation_img, use_container_width=True)
-
-    render_app_gallery()
+    st.markdown(
+        f"""
+        <div class="workflow-image-wrap">
+            <img src="{automation_img}" alt="Automation Architecture" referrerpolicy="no-referrer" />
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
