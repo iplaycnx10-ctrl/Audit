@@ -53,7 +53,7 @@ def render():
             </div>
           </div>
 
-          <div style="padding:16px 18px;border-radius:18px;border:1px solid rgba(82,255,154,.18);background:rgba(82,255,154,.045);">
+          <div style="padding:16px 18px;border-radius:18px;border:1px solid rgba(82,255,154,.18);background:rgba(82,255,154,.045);margin-bottom:14px;">
             <div style="font-size:12px;color:#facc15;font-weight:950;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;">ข้อ 3</div>
             <div style="font-size:13px;color:#52ff9a;font-weight:950;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;">✅ LINE CRM Capture</div>
             <div style="font-size:13px;color:#ffb4b4;font-weight:900;margin-bottom:10px;">❌ Weak Retargeting Structure</div>
@@ -63,6 +63,32 @@ def render():
             <div style="font-size:13px;color:#facc15;font-weight:950;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;">🎯 เป้าหมาย</div>
             <div style="font-size:14px;color:#bfd1c5;line-height:1.75;">
               เพิ่มโอกาสสร้าง LTV ที่สม่ำเสมอ ลดการปล่อย Lead ให้หลุดหาย และลดต้นทุนจากการต้องยิงแอดหาลูกค้าใหม่ตลอดเวลา.
+            </div>
+          </div>
+
+          <div style="padding:16px 18px;border-radius:18px;border:1px solid rgba(82,255,154,.18);background:rgba(82,255,154,.045);">
+            <div style="font-size:12px;color:#facc15;font-weight:950;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;">ข้อ 4</div>
+            <div style="font-size:13px;color:#52ff9a;font-weight:950;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;">✅ Video Creative Intent Capture</div>
+            <div style="font-size:13px;color:#9fb5a8;font-weight:900;margin-bottom:10px;">ระหว่างรอ Pixel / Website / GA4</div>
+            <div style="font-size:14px;color:#d7e8dd;line-height:1.8;margin-bottom:14px;">
+              ในช่วงที่ลูกค้ายังไม่มี Website, Pixel หรือ GA4 ให้เก็บข้อมูลเต็มระบบ เราสามารถใช้ Video Creative 2 ตัวเพื่อคัดกรองลูกค้าระหว่างทางก่อนได้
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:14px;">
+              <div style="font-size:13px;color:#bfd1c5;line-height:1.7;padding:12px 14px;border-radius:14px;border:1px solid rgba(82,255,154,.14);background:rgba(255,255,255,.025);">
+                <b style="color:#fff;">1. VDO ตัวแรก: หา Traffic</b><br>
+                ใช้ดึงคนเข้ามาดูและสร้างกลุ่มผู้ชมวิดีโอเบื้องต้น เพื่อดูว่าตลาดตอบสนองกับมุมขายไหน
+              </div>
+              <div style="font-size:13px;color:#bfd1c5;line-height:1.7;padding:12px 14px;border-radius:14px;border:1px solid rgba(82,255,154,.14);background:rgba(255,255,255,.025);">
+                <b style="color:#fff;">2. VDO ตัวที่สอง: กระตุ้น Interest</b><br>
+                ใช้ยิงย้ำคนที่เคยดูวิดีโอแรก เพื่อคัดกลุ่มที่มีความสนใจจริงมากขึ้น ก่อนนำไปทำ Retarget ต่อ
+              </div>
+            </div>
+            <div style="font-size:13px;color:#d7e8dd;line-height:1.75;margin-bottom:14px;padding:12px 14px;border-radius:14px;border:1px solid rgba(250,204,21,.16);background:rgba(250,204,21,.04);">
+              พูดง่าย ๆ คือ ยังไม่มีกล้องวงจรปิดทั้งบ้าน เราก็ใช้ “คนเฝ้าหน้าประตู 2 ด่าน” ก่อน ด่านแรกดูว่าใครเดินผ่าน ด่านสองดูว่าใครเริ่มทำท่าจะเข้าร้าน 😂
+            </div>
+            <div style="font-size:13px;color:#facc15;font-weight:950;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;">🎯 เป้าหมาย</div>
+            <div style="font-size:14px;color:#bfd1c5;line-height:1.75;">
+              ใช้วิดีโอเป็นระบบคัด Intent ชั่วคราวระหว่างรอติด Website, Pixel และ GA4 เพื่อสร้างกลุ่ม Retarget ที่มีคุณภาพ และนำพฤติกรรมการดูวิดีโอกลับมาปรับ Message / Offer ให้แม่นขึ้น
             </div>
           </div>
         </div>
