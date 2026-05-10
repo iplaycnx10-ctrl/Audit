@@ -93,6 +93,19 @@ CI_DESIGN_LINK_2 = ""
 CI_DESIGN_LINK_3 = ""
 CI_DESIGN_LINK_4 = ""
 
+loan_data = pd.DataFrame([
+    {"Campaign": "Campaign A", "Messages": 4902, "Spend": 38217.12, "Cost/Message": 7.80},
+    {"Campaign": "Campaign B", "Messages": 1523, "Spend": 12559.22, "Cost/Message": 8.25},
+    {"Campaign": "Campaign C", "Messages": 2181, "Spend": 18188.88, "Cost/Message": 8.34},
+    {"Campaign": "Campaign D", "Messages": 867, "Spend": 7534.37, "Cost/Message": 8.69},
+    {"Campaign": "Campaign E", "Messages": 1497, "Spend": 13322.62, "Cost/Message": 8.90},
+    {"Campaign": "Campaign F", "Messages": 17480, "Spend": 212.27, "Cost/Message": 12.14},
+    {"Campaign": "Campaign G", "Messages": 469, "Spend": 4648.82, "Cost/Message": 9.91},
+    {"Campaign": "Campaign H", "Messages": 10902, "Spend": 140.64, "Cost/Message": 12.90},
+    {"Campaign": "Campaign I", "Messages": 542, "Spend": 5698.00, "Cost/Message": 10.51},
+    {"Campaign": "Campaign J", "Messages": 69, "Spend": 811.32, "Cost/Message": 11.76},
+])
+
 st.markdown(
     """
     <div class="cover">
@@ -198,6 +211,21 @@ with t3:
     with m2: metric("Total Spend", "฿106,776", "ยอดจ่ายรวมโดยประมาณ")
     with m3: metric("Avg Cost / Message", "฿2.72", "ต้นทุนเฉลี่ยต่อข้อความทัก")
     with m4: metric("Best Cost / Message", "฿7.80", "แคมเปญที่คุมต้นทุนดีที่สุด")
+
+    st.markdown("<div class='section'><div class='num'>LOAN ADS PATTERN</div><div class='title'>ข้อความทักและยอดจ่ายรวม</div><div class='body'>กราฟแท่งสำหรับพรีเซนต์ Pattern ของแคมเปญสินเชื่อธุรกิจ โดยดูทั้ง Volume ของข้อความทักและ Cost Efficiency</div></div>", unsafe_allow_html=True)
+    chart_col1, chart_col2 = st.columns(2)
+    with chart_col1:
+        fig_msg = px.bar(loan_data.sort_values('Messages', ascending=False), x='Campaign', y='Messages', text='Messages', title='Message Volume by Campaign')
+        fig_msg.update_traces(textposition='outside')
+        fig_msg.update_layout(height=430, template='plotly_dark', margin=dict(l=20, r=20, t=60, b=40))
+        st.plotly_chart(fig_msg, use_container_width=True)
+    with chart_col2:
+        fig_cost = px.bar(loan_data.sort_values('Cost/Message'), x='Campaign', y='Cost/Message', text='Cost/Message', title='Cost per Message • Lower is Better')
+        fig_cost.update_traces(texttemplate='฿%{text:.2f}', textposition='outside')
+        fig_cost.update_layout(height=430, template='plotly_dark', margin=dict(l=20, r=20, t=60, b=40))
+        st.plotly_chart(fig_cost, use_container_width=True)
+
+    st.dataframe(loan_data, use_container_width=True, hide_index=True)
 
 with t4:
     section("04. STRATEGY: HIGH-VALUE RETAIL", "The Hybrid Closing Model", "วางระบบ Multi-touchpoint Funnel สำหรับสินค้ากลุ่มเครื่องใช้ไฟฟ้ามูลค่าสูง เชื่อมจากแอด → แชท → เว็บไซต์/หน้าร้าน และใช้ข้อมูลเพื่อดู Pattern ของแคมเปญ")
