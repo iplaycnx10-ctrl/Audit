@@ -269,7 +269,7 @@ with t5:
     )
 
     automation_img = drive_image_url(
-        "https://drive.google.com/file/d/1AbMY2zz7NsRYsRKRFssASMMRsJycO_Z2/view?usp=sharing"
+        "https://drive.google.com/file/d/1IpqUubvu9G4xOnWd_XKIbz00XAMwzyG7/view?usp=sharing"
     )
 
     st.image(automation_img, use_container_width=True)
