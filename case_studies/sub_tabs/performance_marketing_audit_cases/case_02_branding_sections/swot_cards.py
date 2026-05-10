@@ -5,19 +5,29 @@ def render_swot_cards():
     st.markdown(
         """
         <style>
-        div[data-testid="stExpander"]{
-            min-height: 352px !important;
+        div[data-testid="column"] > div:has(div[data-testid="stExpander"]){
+            height: 100% !important;
+        }
+        div[data-testid="column"] div[data-testid="stExpander"]{
+            height: 450px !important;
+            min-height: 450px !important;
+            max-height: 450px !important;
             border-radius:18px !important;
             border:1px solid rgba(255,255,255,.12) !important;
             background:linear-gradient(135deg,rgba(255,255,255,.045),rgba(255,255,255,.018)) !important;
             overflow:hidden !important;
             box-shadow:0 14px 34px rgba(0,0,0,.10) !important;
         }
-        div[data-testid="stExpander"] details{
-            min-height: 352px !important;
+        div[data-testid="column"] div[data-testid="stExpander"] details{
+            height: 450px !important;
+            min-height: 450px !important;
+        }
+        div[data-testid="column"] div[data-testid="stExpander"] details > div{
+            height: 392px !important;
+            overflow-y:auto !important;
         }
         div[data-testid="stExpander"] summary{
-            min-height: 42px !important;
+            min-height: 44px !important;
             background:rgba(255,255,255,.035) !important;
             border-bottom:1px solid rgba(255,255,255,.08) !important;
             font-size:13px !important;
