@@ -3,7 +3,7 @@ import plotly.express as px
 import streamlit as st
 
 st.set_page_config(
-    page_title="Strategic Portfolio | Chayanon Nantavijan",
+    page_title="Strategic Portfolio | Chayanon Nantawijan",
     page_icon="⚡",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -19,7 +19,7 @@ st.markdown(
     .cover{min-height:420px;border:1px solid var(--line);border-radius:32px;padding:44px 44px;background:linear-gradient(135deg,rgba(9,28,18,.96),rgba(3,8,5,.96));box-shadow:0 24px 70px rgba(0,0,0,.34);position:relative;overflow:hidden;margin-bottom:24px;}
     .cover:after{content:"";position:absolute;width:360px;height:360px;border-radius:999px;background:rgba(82,255,154,.10);right:-140px;top:-120px;filter:blur(10px);}
     .kicker{font-size:12px;letter-spacing:.42em;text-transform:uppercase;font-weight:950;color:var(--green);margin-bottom:74px;position:relative;z-index:2;}
-    .cover h1{font-size:64px;line-height:.94;margin:0;color:#fff;letter-spacing:-2.5px;max-width:720px;position:relative;z-index:2;}
+    .cover h1{font-size:56px;line-height:1;margin:0;color:#fff;letter-spacing:-2px;max-width:900px;position:relative;z-index:2;white-space:nowrap;}
     .role{font-size:21px;line-height:1.35;color:#d7ffe6;font-weight:800;margin-top:22px;max-width:620px;position:relative;z-index:2;}
     .est{position:absolute;left:44px;bottom:36px;color:var(--green);font-size:11px;font-weight:950;letter-spacing:.24em;z-index:2;}
     .section{border:1px solid var(--line);border-radius:28px;padding:28px;background:rgba(11,26,18,.72);box-shadow:0 20px 70px rgba(0,0,0,.22);margin:16px 0 20px 0;}
@@ -43,7 +43,7 @@ st.markdown(
     .tool-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;align-items:center;}
     .tool-card.analytics .tool-list{grid-template-columns:repeat(2,minmax(0,1fr));}
     .tool-pill{display:flex;align-items:center;justify-content:center;height:34px;padding:0 10px;border:1px solid rgba(82,255,154,.22);border-radius:999px;background:rgba(82,255,154,.075);color:#d7ffe6;font-size:12px;font-weight:850;line-height:1;text-align:center;white-space:nowrap;box-sizing:border-box;}
-    @media(max-width:900px){.tool-grid{grid-template-columns:repeat(2,1fr)}.tool-list{grid-template-columns:repeat(2,minmax(0,1fr));}}
+    @media(max-width:900px){.tool-grid{grid-template-columns:repeat(2,1fr)}.tool-list{grid-template-columns:repeat(2,minmax(0,1fr));}.cover h1{font-size:42px;white-space:normal;}}
     .green{color:var(--green);font-weight:950;}
     .stTabs [data-baseweb="tab-list"]{gap:8px;flex-wrap:wrap;background:rgba(255,255,255,.035);border:1px solid rgba(82,255,154,.18);border-radius:20px;padding:10px;margin-bottom:18px;}
     .stTabs [data-baseweb="tab"]{height:44px;border-radius:14px;color:#bfd1c5;background:rgba(255,255,255,.035);font-weight:900;padding:0 14px;}
@@ -63,7 +63,7 @@ st.markdown(
     """
     <div class="cover">
       <div class="kicker">Strategic Portfolio</div>
-      <h1>CHAYANON<br>NANTAVIJAN</h1>
+      <h1>CHAYANON NANTAWIJAN</h1>
       <div class="role">Performance Marketing &<br>AI Automation Specialist</div>
       <div class="est">ESTABLISHED 2026 | PERFORMANCE-DRIVEN</div>
     </div>
