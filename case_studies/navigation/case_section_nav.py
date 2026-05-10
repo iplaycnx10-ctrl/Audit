@@ -4,8 +4,7 @@ import streamlit as st
 SECTIONS = {
     "strategic_audit": "Strategic Audit Process",
     "kpi_framework": "Strategic Conclusion",
-    "dashboard_preview": "Dashboard Preview",
-    "ai_insight": "AI Insight Layer",
+    "dashboard_preview": "Measurement & Optimization Phase",
 }
 
 
@@ -13,7 +12,7 @@ def render():
     if "selected_case_section" not in st.session_state:
         st.session_state["selected_case_section"] = "strategic_audit"
 
-    if st.session_state["selected_case_section"] == "strategic_conclusion":
+    if st.session_state["selected_case_section"] in ["strategic_conclusion", "ai_insight"]:
         st.session_state["selected_case_section"] = "kpi_framework"
 
     st.markdown(
@@ -55,7 +54,7 @@ def render():
         unsafe_allow_html=True,
     )
 
-    cols = st.columns([1, 1, 1, 1], gap="small")
+    cols = st.columns([1, 1, 1], gap="small")
     keys = list(SECTIONS.keys())
 
     for col, section_key in zip(cols, keys):
