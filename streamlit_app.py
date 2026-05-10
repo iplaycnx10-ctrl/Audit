@@ -72,16 +72,16 @@ def drive_image_url(url):
         return url
     if '/file/d/' in url:
         file_id = url.split('/file/d/')[1].split('/')[0]
-        return f'https://drive.google.com/uc?export=view&id={file_id}'
+        return f'https://drive.google.com/thumbnail?id={file_id}&sz=w1600'
     if 'id=' in url:
         file_id = url.split('id=')[1].split('&')[0]
-        return f'https://drive.google.com/uc?export=view&id={file_id}'
+        return f'https://drive.google.com/thumbnail?id={file_id}&sz=w1600'
     return url
 
 def ci_showcase(title, url, note):
     img_url = drive_image_url(url)
     if img_url:
-        frame = f"<img src='{img_url}' alt='{title}' />"
+        frame = f"<img src='{img_url}' alt='{title}' referrerpolicy='no-referrer' />"
         link = f"<a class='ci-link' href='{url}' target='_blank'>Open design →</a>"
     else:
         frame = "วาง Google Drive image link<br>ในช่องด้านบน แล้วกด Enter"
