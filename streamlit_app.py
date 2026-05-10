@@ -65,6 +65,20 @@ sample = pd.DataFrame([
     {"Campaign": "Hotel Booking Push", "Spend": 18000, "Leads": 52, "Signal": "Seasonal Demand", "Decision": "Hold / Burst"},
 ])
 
+loan_meta = pd.DataFrame([
+    {"Campaign": "Loan CP 1", "Messages": 4902, "Spend": 38217.12, "Cost / Message": 7.80, "Reach": 84774, "Impressions": 261303},
+    {"Campaign": "Loan CP 2", "Messages": 1523, "Spend": 12559.22, "Cost / Message": 8.25, "Reach": 33642, "Impressions": 89869},
+    {"Campaign": "Loan CP 3", "Messages": 2181, "Spend": 18188.88, "Cost / Message": 8.34, "Reach": 24193, "Impressions": 84516},
+    {"Campaign": "Loan CP 4", "Messages": 867, "Spend": 7534.37, "Cost / Message": 8.69, "Reach": 23080, "Impressions": 47283},
+    {"Campaign": "Loan CP 5", "Messages": 1497, "Spend": 13322.62, "Cost / Message": 8.90, "Reach": 19891, "Impressions": 46390},
+    {"Campaign": "Loan CP 6", "Messages": 17480, "Spend": 212.27, "Cost / Message": 12.14, "Reach": 17480, "Impressions": 17480},
+    {"Campaign": "Loan CP 7", "Messages": 469, "Spend": 4648.82, "Cost / Message": 9.91, "Reach": 17321, "Impressions": 30289},
+    {"Campaign": "Loan CP 8", "Messages": 10902, "Spend": 140.64, "Cost / Message": 12.90, "Reach": 10902, "Impressions": 10902},
+    {"Campaign": "Loan CP 9", "Messages": 542, "Spend": 5698.00, "Cost / Message": 10.51, "Reach": 10026, "Impressions": 23721},
+    {"Campaign": "Loan CP 10", "Messages": 69, "Spend": 811.32, "Cost / Message": 11.76, "Reach": 9133, "Impressions": 11788},
+    {"Campaign": "Loan CP 11", "Messages": 322, "Spend": 3443.48, "Cost / Message": 10.69, "Reach": 8020, "Impressions": 15390},
+])
+
 appliance_meta = pd.DataFrame([
     {"Campaign": "CP 1", "Spend": 3767.21, "Purchase": 1, "ROAS": 1.01, "CPR": 3767.21, "CTR Click": 2.72, "CPM": 104.87, "Frequency": 1.80},
     {"Campaign": "CP2 Retarget", "Spend": 1123.96, "Purchase": 4, "ROAS": 54.47, "CPR": 280.99, "CTR Click": 4.04, "CPM": 129.59, "Frequency": 1.73},
@@ -116,12 +130,40 @@ with t2:
     st.markdown("</div>", unsafe_allow_html=True)
 
 with t3:
-    st.markdown("<div class='section'><div class='num'>03. PERFORMANCE: LOAN ADS</div><div class='title'>Data-Driven Lead Acquisition</div>", unsafe_allow_html=True)
-    m1, m2, m3 = st.columns(3)
-    with m1: metric("Focus", "Qualified Leads", "เน้นคุณภาพ Lead มากกว่าจำนวนคลิก")
-    with m2: metric("Method", "Chat Signal", "ใช้พฤติกรรมการทักแชทประเมิน intent")
-    with m3: metric("Action", "Scale Control", "ขยายงบเมื่อ signal และคุณภาพ lead รองรับ")
-    st.markdown("<div class='body' style='margin-top:18px;'>บริหารแคมเปญที่มีความท้าทายสูงในกลุ่ม Financial Services โดยแยก Audience Intent ตามความต้องการสินเชื่อ และใช้ข้อมูลเชิงพฤติกรรมเพื่อประเมินว่าควร Scale, Hold หรือ Rebuild</div></div>", unsafe_allow_html=True)
+    st.markdown("<div class='section'><div class='num'>03. PERFORMANCE: BUSINESS LOAN ADS</div><div class='title'>Message Funnel Performance Dashboard</div><div class='body'>แปลงรายงาน Meta ฝั่งสินเชื่อธุรกิจให้เป็นชาร์ตพรีเซนต์ โดยเน้น 2 ตัวเลขสำคัญ: จำนวนข้อความทัก และยอดจ่ายรวม เพื่อแสดงความสามารถในการอ่านสัญญาณ Lead Quality จาก Message Funnel</div></div>", unsafe_allow_html=True)
+    m1, m2, m3, m4 = st.columns(4)
+    total_messages = loan_meta["Messages"].sum()
+    total_spend = loan_meta["Spend"].sum()
+    avg_cost_msg = total_spend / total_messages if total_messages else 0
+    best_cost = loan_meta["Cost / Message"].min()
+    with m1: metric("Total Messages", f"{total_messages:,.0f}", "ข้อความทักรวมจากแคมเปญสินเชื่อ")
+    with m2: metric("Total Spend", f"฿{total_spend:,.0f}", "ยอดจ่ายรวมของชุดแคมเปญ")
+    with m3: metric("Avg Cost / Message", f"฿{avg_cost_msg:.2f}", "ต้นทุนเฉลี่ยต่อข้อความทัก")
+    with m4: metric("Best Cost / Message", f"฿{best_cost:.2f}", "แคมเปญที่มีต้นทุนต่อทักต่ำสุด")
+
+    loan_metric = st.selectbox(
+        "เลือกกราฟแท่ง Business Loan ที่ต้องการดู",
+        ["Messages", "Spend", "Cost / Message", "Reach", "Impressions"],
+        index=0,
+        key="loan_chart_metric",
+    )
+    sorted_loan = loan_meta.sort_values(loan_metric, ascending=False if loan_metric != "Cost / Message" else True)
+    fig_loan = px.bar(
+        sorted_loan,
+        x="Campaign",
+        y=loan_metric,
+        text=loan_metric,
+        title=f"Business Loan Meta Ads · {loan_metric} by Campaign",
+        hover_data=["Messages", "Spend", "Cost / Message", "Reach", "Impressions"],
+    )
+    if loan_metric in ["Spend", "Cost / Message"]:
+        fig_loan.update_traces(texttemplate="฿%{text:,.0f}", textposition="outside")
+    else:
+        fig_loan.update_traces(texttemplate="%{text:,.0f}", textposition="outside")
+    fig_loan.update_layout(height=470, paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)", font_color="#d7e8dd", margin=dict(l=10, r=10, t=58, b=10))
+    st.plotly_chart(fig_loan, use_container_width=True)
+
+    st.markdown("<div class='quote'>Portfolio Insight: จุดแข็งของงานนี้ไม่ใช่แค่ยิงให้มีคนทัก แต่คือการดูว่าแคมเปญไหนสร้าง Message Volume ได้คุ้มงบ และแคมเปญไหนควรใช้เป็นฐานในการ Scale หรือคัดกรอง Lead ต่อ</div>", unsafe_allow_html=True)
 
 with t4:
     st.markdown("<div class='section'><div class='num'>04. STRATEGY: HIGH-VALUE RETAIL</div><div class='title'>The Hybrid Closing Model</div>", unsafe_allow_html=True)
