@@ -1,6 +1,7 @@
 import plotly.express as px
 import streamlit as st
 from components.common import metric, section
+from data.loan_data import loan_data, loan_summary
 
 
 CHART_BG = "rgba(11,26,18,0)"
@@ -25,7 +26,7 @@ def style_chart(fig, height=430):
     return fig
 
 
-def render(loan_summary, loan_data):
+def render():
     section("03. PERFORMANCE: BUSINESS LOAN ADS", "Message Funnel Performance Dashboard", "พอร์ตผลงานแคมเปญสินเชื่อธุรกิจจากข้อมูล Meta Ads รวม 2 ชุด ใช้เพื่อโชว์การอ่านภาพรวม Funnel, Cost Efficiency และ Volume Pattern")
     m1, m2, m3, m4 = st.columns(4)
     with m1: metric("Total Spend", f"฿{loan_summary['total_spend']:,.0f}", "งบประมาณรวมจาก 2 ชุดข้อมูล")
