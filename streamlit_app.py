@@ -40,7 +40,6 @@ st.markdown(
     .timeline-step{position:relative;min-height:46px;display:flex;align-items:center;justify-content:center;}
     .timeline-badge{width:34px;height:34px;border-radius:999px;background:rgba(82,255,154,.13);border:1px solid rgba(82,255,154,.55);color:#52ff9a;font-weight:950;display:flex;align-items:center;justify-content:center;box-shadow:0 0 24px rgba(82,255,154,.18);z-index:2;}
     .timeline-step:not(:last-child)::after{content:"";position:absolute;left:calc(50% + 20px);right:calc(-50% - 24px);top:50%;height:1px;background:linear-gradient(90deg,rgba(82,255,154,.8),rgba(82,255,154,.18));}
-    .timeline-step:not(:last-child)::before{content:"›";position:absolute;right:calc(-50% - 34px);top:calc(50% - 17px);color:#52ff9a;font-size:30px;font-weight:950;line-height:1;}
     .timeline-year{position:absolute;top:-10px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.12em;color:#9fb5a8;font-weight:950;white-space:nowrap;text-transform:uppercase;}
     .metric{border:1px solid rgba(82,255,154,.18);border-radius:18px;padding:13px 14px;background:rgba(82,255,154,.045);min-height:102px;height:102px;box-sizing:border-box;}
     .metric-label{font-size:9.5px;color:var(--muted);font-weight:900;text-transform:uppercase;letter-spacing:.12em;margin-bottom:7px;line-height:1.2;}
