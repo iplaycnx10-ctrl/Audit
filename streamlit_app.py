@@ -273,17 +273,16 @@ with t5:
     )
 
     st.markdown(
-        f"""
+        """
         <div class='section'>
             <div class='num'>WORKFLOW ARCHITECTURE</div>
             <div class='title'>AI Agent Workflow Structure</div>
-
-            <div style='margin-top:20px;border-radius:24px;overflow:hidden;border:1px solid rgba(82,255,154,.18);'>
-                <img src='{automation_img}' style='width:100%;display:block;' referrerpolicy='no-referrer' />
-            </div>
         </div>
         """,
         unsafe_allow_html=True
+    )
+
+    st.image(automation_img, use_container_width=True)
     )
 with t6:
     section("06. CONTENT FACTORY", "Organic Growth & TikTok Strategy", "ประสบการณ์ทำ TikTok / Streaming / Content Workflow เพื่อเข้าใจ Attention, Engagement, Hook และ Audience Retention")
