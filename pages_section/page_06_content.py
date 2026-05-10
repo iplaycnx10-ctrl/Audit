@@ -28,7 +28,7 @@ def render():
     section(
         "06. CONTENT FACTORY",
         "Organic Growth & TikTok Strategy",
-        "ประสบการณ์ทำ TikTok / Streaming / Content Workflow เพื่อเข้าใจ Attention, Engagement, Hook และ Audience Retention"
+        "เป็น Partner ค่าเกมส์แห่งนึงในประเทศไทย และเป็น Partner กับบริษัทเกมส์ต่างชาติในช่วงที่ทำ พร้อมประสบการณ์ทำ TikTok / Streaming / Content Workflow เพื่อเข้าใจ Attention, Engagement, Hook และ Audience Retention"
     )
 
     c1, c2, c3 = st.columns(3)
