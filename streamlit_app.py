@@ -283,7 +283,7 @@ with t5:
     )
 
     st.image(automation_img, use_container_width=True)
-    )
+    
 with t6:
     section("06. CONTENT FACTORY", "Organic Growth & TikTok Strategy", "ประสบการณ์ทำ TikTok / Streaming / Content Workflow เพื่อเข้าใจ Attention, Engagement, Hook และ Audience Retention")
     c1, c2, c3 = st.columns(3)
