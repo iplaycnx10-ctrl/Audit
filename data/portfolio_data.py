@@ -7,6 +7,8 @@ CI_DESIGN_LINKS = [
     "https://drive.google.com/file/d/1_fOiOGm8v3qBLntLcSYGH87gBQcmgJsQ/view?usp=sharing",
 ]
 
+AUTOMATION_ARCHITECTURE_LINK = "https://drive.google.com/file/d/1AbMY2zz7NsRYsRKRFssASMMRsJycO_Z2/view?usp=sharing"
+
 LOAN_SUMMARY = {
     "total_spend": 283904.06,
     "total_messages": 36023,
