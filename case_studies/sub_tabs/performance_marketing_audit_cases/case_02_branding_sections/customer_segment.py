@@ -1,112 +1,63 @@
 import streamlit as st
 
 
-def render_customer_segment():
+def _mini_block(label, text, label_color="#52ff9a"):
     st.markdown(
-        """
-        <style>
-        .customer-segment-grid{
-            display:grid;
-            grid-template-columns:repeat(2,minmax(0,1fr));
-            gap:16px;
-            margin-top:18px;
-            margin-bottom:22px;
-        }
-        .customer-segment-card{
-            border-radius:22px;
-            padding:22px 24px;
-            box-sizing:border-box;
-            box-shadow:0 14px 34px rgba(0,0,0,.10);
-            overflow:hidden;
-        }
-        .customer-segment-card.green{
-            border:1px solid rgba(82,255,154,.20);
-            background:linear-gradient(135deg,rgba(82,255,154,.055),rgba(255,255,255,.018));
-        }
-        .customer-segment-card.gold{
-            border:1px solid rgba(250,204,21,.20);
-            background:linear-gradient(135deg,rgba(250,204,21,.055),rgba(255,255,255,.018));
-        }
-        .segment-mini{
-            padding:13px 14px;
-            border-radius:15px;
-            background:rgba(255,255,255,.026);
-            border:1px solid rgba(255,255,255,.08);
-            margin-bottom:12px;
-        }
-        .segment-label{
-            font-size:11px;
-            font-weight:950;
-            letter-spacing:.10em;
-            text-transform:uppercase;
-            margin-bottom:7px;
-        }
-        .segment-text{
-            font-size:13.5px;
-            color:#d7e8dd;
-            line-height:1.65;
-        }
-        @media(max-width:900px){
-            .customer-segment-grid{grid-template-columns:1fr;}
-        }
-        </style>
-
-        <div style="margin-top:20px;text-align:center;margin-bottom:18px;">
-          <div style="font-size:13px;font-weight:950;letter-spacing:.16em;text-transform:uppercase;color:#52ff9a;margin-bottom:10px;">
-            Customer Segment
-          </div>
-          <div style="font-size:24px;color:#fff;font-weight:950;letter-spacing:-.4px;">
-            แยกกลุ่มลูกค้าตามรูปแบบพื้นที่และแรงจูงใจในการเช่า
-          </div>
-        </div>
-
-        <div class="customer-segment-grid">
-          <div class="customer-segment-card green">
-            <div style="font-size:12px;color:#52ff9a;font-weight:950;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;">Card 1</div>
-            <div style="font-size:18px;color:#fff;font-weight:950;line-height:1.45;margin-bottom:6px;">Commercial Building Tenant</div>
-            <div style="font-size:13px;color:#9fb5a8;font-weight:850;margin-bottom:18px;">ผู้เช่าตึก / ตึกพาณิชย์</div>
-
-            <div class="segment-mini">
-              <div class="segment-label" style="color:#52ff9a;">Profile</div>
-              <div class="segment-text">เจ้าของธุรกิจ, SME, ร้านอาหารจริงจัง, ธุรกิจบริการ หรือร้านที่ต้องการขยายสาขา</div>
-            </div>
-            <div class="segment-mini">
-              <div class="segment-label" style="color:#facc15;">Need</div>
-              <div class="segment-text">ต้องการทำเลที่คุ้มค่า มีโอกาสสร้างรายได้ และเหมาะกับการเติบโตระยะยาว</div>
-            </div>
-            <div class="segment-mini">
-              <div class="segment-label" style="color:#52ff9a;">Decision Factor</div>
-              <div class="segment-text">ทำเล, ค่าเช่า, ความน่าเชื่อถือ, จำนวนคนผ่าน, ศักยภาพทำกำไร</div>
-            </div>
-            <div style="padding:14px 15px;border-radius:16px;background:rgba(82,255,154,.055);border:1px solid rgba(82,255,154,.16);">
-              <div class="segment-label" style="color:#52ff9a;">Key Message</div>
-              <div style="font-size:14px;color:#fff;line-height:1.65;font-weight:850;">พื้นที่เช่าที่ไม่ใช่แค่ตึกว่าง แต่เป็นโอกาสในการขยายธุรกิจ</div>
-            </div>
-          </div>
-
-          <div class="customer-segment-card gold">
-            <div style="font-size:12px;color:#facc15;font-weight:950;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;">Card 2</div>
-            <div style="font-size:18px;color:#fff;font-weight:950;line-height:1.45;margin-bottom:6px;">Retail & Event Space Tenant</div>
-            <div style="font-size:13px;color:#9fb5a8;font-weight:850;margin-bottom:18px;">ร้านค้า / ร้านอาหาร / รถเข็น / บูธ / ลานกิจกรรม</div>
-
-            <div class="segment-mini">
-              <div class="segment-label" style="color:#52ff9a;">Profile</div>
-              <div class="segment-text">ร้านอาหารเล็ก, ร้านเครื่องดื่ม, รถเข็น, บูธขายของ, Pop-up Store หรือร้านค้าที่ต้องการเพิ่มจุดขาย</div>
-            </div>
-            <div class="segment-mini">
-              <div class="segment-label" style="color:#facc15;">Need</div>
-              <div class="segment-text">ต้องการพื้นที่ขายที่เริ่มง่าย เห็นภาพชัด ค่าเช่าเข้าใจง่าย และเข้าถึงลูกค้าได้เร็ว</div>
-            </div>
-            <div class="segment-mini">
-              <div class="segment-label" style="color:#52ff9a;">Decision Factor</div>
-              <div class="segment-text">คนเดิน, ค่าเช่า, ความง่ายในการจอง, ภาพพื้นที่, ความพร้อมในการเริ่มขาย</div>
-            </div>
-            <div style="padding:14px 15px;border-radius:16px;background:rgba(250,204,21,.055);border:1px solid rgba(250,204,21,.16);">
-              <div class="segment-label" style="color:#facc15;">Key Message</div>
-              <div style="font-size:14px;color:#fff;line-height:1.65;font-weight:850;">พื้นที่พร้อมขาย สำหรับร้านค้าที่อยากเริ่มหรือเพิ่มจุดขายทันที</div>
-            </div>
-          </div>
+        f"""
+        <div style="padding:13px 14px;border-radius:15px;background:rgba(255,255,255,.026);border:1px solid rgba(255,255,255,.08);margin-bottom:12px;">
+          <div style="font-size:11px;color:{label_color};font-weight:950;letter-spacing:.10em;text-transform:uppercase;margin-bottom:7px;">{label}</div>
+          <div style="font-size:13.5px;color:#d7e8dd;line-height:1.65;">{text}</div>
         </div>
         """,
         unsafe_allow_html=True,
     )
+
+
+def _key_message(text, color="#52ff9a"):
+    st.markdown(
+        f"""
+        <div style="padding:14px 15px;border-radius:16px;background:rgba(82,255,154,.055);border:1px solid rgba(82,255,154,.16);">
+          <div style="font-size:11px;color:{color};font-weight:950;letter-spacing:.10em;text-transform:uppercase;margin-bottom:7px;">Key Message</div>
+          <div style="font-size:14px;color:#fff;line-height:1.65;font-weight:850;">{text}</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
+def render_customer_segment():
+    st.markdown(
+        """
+        <div style="margin-top:20px;text-align:center;margin-bottom:18px;">
+          <div style="font-size:13px;font-weight:950;letter-spacing:.16em;text-transform:uppercase;color:#52ff9a;margin-bottom:10px;">Customer Segment</div>
+          <div style="font-size:24px;color:#fff;font-weight:950;letter-spacing:-.4px;">แยกกลุ่มลูกค้าตามรูปแบบพื้นที่และแรงจูงใจในการเช่า</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    col1, col2 = st.columns(2, gap="large")
+
+    with col1:
+        with st.container(border=True):
+            st.markdown("""
+            <div style="font-size:12px;color:#52ff9a;font-weight:950;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;">Card 1</div>
+            <div style="font-size:18px;color:#fff;font-weight:950;line-height:1.45;margin-bottom:6px;">Commercial Building Tenant</div>
+            <div style="font-size:13px;color:#9fb5a8;font-weight:850;margin-bottom:18px;">ผู้เช่าตึก / ตึกพาณิชย์</div>
+            """, unsafe_allow_html=True)
+            _mini_block("Profile", "เจ้าของธุรกิจ, SME, ร้านอาหารจริงจัง, ธุรกิจบริการ หรือร้านที่ต้องการขยายสาขา")
+            _mini_block("Need", "ต้องการทำเลที่คุ้มค่า มีโอกาสสร้างรายได้ และเหมาะกับการเติบโตระยะยาว", "#facc15")
+            _mini_block("Decision Factor", "ทำเล, ค่าเช่า, ความน่าเชื่อถือ, จำนวนคนผ่าน, ศักยภาพทำกำไร")
+            _key_message("พื้นที่เช่าที่ไม่ใช่แค่ตึกว่าง แต่เป็นโอกาสในการขยายธุรกิจ")
+
+    with col2:
+        with st.container(border=True):
+            st.markdown("""
+            <div style="font-size:12px;color:#facc15;font-weight:950;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;">Card 2</div>
+            <div style="font-size:18px;color:#fff;font-weight:950;line-height:1.45;margin-bottom:6px;">Retail & Event Space Tenant</div>
+            <div style="font-size:13px;color:#9fb5a8;font-weight:850;margin-bottom:18px;">ร้านค้า / ร้านอาหาร / รถเข็น / บูธ / ลานกิจกรรม</div>
+            """, unsafe_allow_html=True)
+            _mini_block("Profile", "ร้านอาหารเล็ก, ร้านเครื่องดื่ม, รถเข็น, บูธขายของ, Pop-up Store หรือร้านค้าที่ต้องการเพิ่มจุดขาย")
+            _mini_block("Need", "ต้องการพื้นที่ขายที่เริ่มง่าย เห็นภาพชัด ค่าเช่าเข้าใจง่าย และเข้าถึงลูกค้าได้เร็ว", "#facc15")
+            _mini_block("Decision Factor", "คนเดิน, ค่าเช่า, ความง่ายในการจอง, ภาพพื้นที่, ความพร้อมในการเริ่มขาย")
+            _key_message("พื้นที่พร้อมขาย สำหรับร้านค้าที่อยากเริ่มหรือเพิ่มจุดขายทันที", "#facc15")
