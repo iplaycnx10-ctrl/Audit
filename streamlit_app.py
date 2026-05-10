@@ -3,7 +3,7 @@ import plotly.express as px
 import streamlit as st
 
 st.set_page_config(
-    page_title="Strategic Portfolio | Chayanon Nantavicharn",
+    page_title="Strategic Portfolio | Chayanon Nantavijan",
     page_icon="⚡",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -63,7 +63,7 @@ st.markdown(
     """
     <div class="cover">
       <div class="kicker">Strategic Portfolio</div>
-      <h1>CHAYANON<br>NANTAVICHARN</h1>
+      <h1>CHAYANON<br>NANTAVIJAN</h1>
       <div class="role">Performance Marketing &<br>AI Automation Specialist</div>
       <div class="est">ESTABLISHED 2026 | PERFORMANCE-DRIVEN</div>
     </div>
