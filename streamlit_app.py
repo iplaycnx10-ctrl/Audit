@@ -161,20 +161,6 @@ with t4:
     fig_appliance.update_layout(height=460, paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)", font_color="#d7e8dd", margin=dict(l=10, r=10, t=58, b=10))
     st.plotly_chart(fig_appliance, use_container_width=True)
 
-    compare_col1, compare_col2 = st.columns(2)
-    with compare_col1:
-        fig_roas = px.bar(appliance_meta.sort_values("ROAS", ascending=False), x="Campaign", y="ROAS", text="ROAS", title="ROAS Pattern")
-        fig_roas.update_traces(texttemplate="%{text:.2f}x", textposition="outside")
-        fig_roas.update_layout(height=360, paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)", font_color="#d7e8dd", margin=dict(l=10, r=10, t=50, b=10))
-        st.plotly_chart(fig_roas, use_container_width=True)
-    with compare_col2:
-        fig_cpr = px.bar(appliance_meta.sort_values("CPR", ascending=True), x="Campaign", y="CPR", text="CPR", title="CPR Pattern · Lower is Better")
-        fig_cpr.update_traces(texttemplate="฿%{text:,.0f}", textposition="outside")
-        fig_cpr.update_layout(height=360, paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)", font_color="#d7e8dd", margin=dict(l=10, r=10, t=50, b=10))
-        st.plotly_chart(fig_cpr, use_container_width=True)
-
-    st.dataframe(appliance_meta, use_container_width=True, hide_index=True)
-
 with t5:
     st.markdown("<div class='section'><div class='num'>05. AUTOMATION ARCHITECTURE</div><div class='title'>Marketing Brain with AI Agent Workflows</div>", unsafe_allow_html=True)
     a1, a2 = st.columns([1, 1])
