@@ -225,8 +225,6 @@ with t3:
         fig_cost.update_layout(height=430, template='plotly_dark', margin=dict(l=20, r=20, t=60, b=40))
         st.plotly_chart(fig_cost, use_container_width=True)
 
-    st.dataframe(loan_data, use_container_width=True, hide_index=True)
-
 with t4:
     section("04. STRATEGY: HIGH-VALUE RETAIL", "The Hybrid Closing Model", "วางระบบ Multi-touchpoint Funnel สำหรับสินค้ากลุ่มเครื่องใช้ไฟฟ้ามูลค่าสูง เชื่อมจากแอด → แชท → เว็บไซต์/หน้าร้าน และใช้ข้อมูลเพื่อดู Pattern ของแคมเปญ")
 
