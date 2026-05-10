@@ -18,21 +18,26 @@ def render_segment_cards():
         </div>
       </div>
 
-      <div style="width:1px;height:26px;background:linear-gradient(180deg,rgba(250,204,21,.70),rgba(250,204,21,.10));margin:0 0 0 calc(25% - 0.5px);"></div>
+      <div style="width:1px;height:24px;background:rgba(250,204,21,.55);margin:0 0 0 calc(25% - 0.5px);"></div>
+      <div style="width:calc(50% - 14px);height:1px;background:rgba(250,204,21,.45);margin:0 0 0 calc(25% - 25% + 24px);"></div>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:0;max-width:calc(50% - 7px);">
+        <div style="width:1px;height:22px;background:rgba(250,204,21,.45);margin:0 auto;"></div>
+        <div style="width:1px;height:22px;background:rgba(250,204,21,.45);margin:0 auto;"></div>
+      </div>
 
-      <div style="max-width:415px;margin:0 auto 0 0;padding:16px;border-radius:18px;border:1px solid rgba(250,204,21,.18);background:rgba(250,204,21,.035);">
-        <div style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#facc15;font-weight:950;margin-bottom:12px;">แนวทางการสื่อสาร</div>
-
-        <div style="padding:14px 15px;border-radius:15px;background:rgba(255,255,255,.030);border:1px solid rgba(250,204,21,.13);margin-bottom:10px;">
+      <div style="max-width:calc(50% - 7px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;">
+        <div style="padding:14px 15px;border-radius:15px;background:rgba(250,204,21,.035);border:1px solid rgba(250,204,21,.16);">
+          <div style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#facc15;font-weight:950;margin-bottom:8px;">แนวทางการสื่อสาร</div>
           <div style="font-size:15px;font-weight:950;color:#fff;margin-bottom:8px;">1. Location-Based Business</div>
           <div style="font-size:13px;line-height:1.62;color:#d7e8dd;margin-bottom:8px;">ทำการตลาดแบบเน้น <b>“ทำเลสร้างโอกาส”</b> ให้ผู้เช่าเห็นว่าพื้นที่นี้ช่วยเพิ่มโอกาสเจอลูกค้าใหม่และสร้างยอดขายจากคนผ่านจริง</div>
-          <div style="font-size:12.5px;line-height:1.55;color:#fef3c7;background:rgba(250,204,21,.075);padding:10px 11px;border-radius:12px;">ตัวอย่างสาร: “ทำเลพร้อมเปิดหน้าร้าน เหมาะกับธุรกิจที่ต้องการคนเห็นจริง เดินผ่านจริง และมีโอกาสเปลี่ยนเป็นยอดขายจริง”</div>
+          <div style="font-size:12.5px;line-height:1.55;color:#fef3c7;background:rgba(250,204,21,.075);padding:10px 11px;border-radius:12px;">“ทำเลพร้อมเปิดหน้าร้าน เหมาะกับธุรกิจที่ต้องการคนเห็นจริง เดินผ่านจริง และมีโอกาสเปลี่ยนเป็นยอดขายจริง”</div>
         </div>
 
-        <div style="padding:14px 15px;border-radius:15px;background:rgba(255,255,255,.030);border:1px solid rgba(250,204,21,.13);">
+        <div style="padding:14px 15px;border-radius:15px;background:rgba(250,204,21,.035);border:1px solid rgba(250,204,21,.16);">
+          <div style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#facc15;font-weight:950;margin-bottom:8px;">แนวทางการสื่อสาร</div>
           <div style="font-size:15px;font-weight:950;color:#fff;margin-bottom:8px;">2. Office / Online-Based Business</div>
           <div style="font-size:13px;line-height:1.62;color:#d7e8dd;margin-bottom:8px;">ทำการตลาดแบบเน้น <b>“ฐานธุรกิจที่น่าเชื่อถือ”</b> ให้ผู้เช่าเห็นว่าพื้นที่นี้ช่วยเสริมภาพลักษณ์ ความเป็นมืออาชีพ และรองรับการเติบโตของธุรกิจ</div>
-          <div style="font-size:12.5px;line-height:1.55;color:#fef3c7;background:rgba(250,204,21,.075);padding:10px 11px;border-radius:12px;">ตัวอย่างสาร: “พื้นที่สำหรับออฟฟิศหรือฐานธุรกิจออนไลน์ ที่ช่วยให้ธุรกิจดูน่าเชื่อถือ เป็นระบบ และพร้อมเติบโตระยะยาว”</div>
+          <div style="font-size:12.5px;line-height:1.55;color:#fef3c7;background:rgba(250,204,21,.075);padding:10px 11px;border-radius:12px;">“พื้นที่สำหรับออฟฟิศหรือฐานธุรกิจออนไลน์ ที่ช่วยให้ธุรกิจดูน่าเชื่อถือ เป็นระบบ และพร้อมเติบโตระยะยาว”</div>
         </div>
       </div>
     </div>
