@@ -16,12 +16,12 @@ st.markdown(
     .stApp{background:radial-gradient(circle at top right,rgba(82,255,154,.12),transparent 26%),linear-gradient(180deg,#050806 0%,#07110c 42%,#030504 100%);color:var(--text);}
     .block-container{padding-top:2.2rem;max-width:1180px;}
     [data-testid="stHeader"]{background:transparent;}
-    .cover{min-height:520px;border:1px solid var(--line);border-radius:36px;padding:54px 48px;background:linear-gradient(135deg,rgba(9,28,18,.96),rgba(3,8,5,.96));box-shadow:0 28px 90px rgba(0,0,0,.38);position:relative;overflow:hidden;margin-bottom:28px;}
-    .cover:after{content:"";position:absolute;width:420px;height:420px;border-radius:999px;background:rgba(82,255,154,.10);right:-150px;top:-130px;filter:blur(10px);}
-    .kicker{font-size:13px;letter-spacing:.42em;text-transform:uppercase;font-weight:950;color:var(--green);margin-bottom:96px;position:relative;z-index:2;}
-    .cover h1{font-size:78px;line-height:.92;margin:0;color:#fff;letter-spacing:-3px;max-width:760px;position:relative;z-index:2;}
-    .role{font-size:24px;line-height:1.35;color:#d7ffe6;font-weight:800;margin-top:24px;max-width:620px;position:relative;z-index:2;}
-    .est{position:absolute;left:48px;bottom:42px;color:var(--green);font-size:12px;font-weight:950;letter-spacing:.24em;z-index:2;}
+    .cover{min-height:420px;border:1px solid var(--line);border-radius:32px;padding:44px 44px;background:linear-gradient(135deg,rgba(9,28,18,.96),rgba(3,8,5,.96));box-shadow:0 24px 70px rgba(0,0,0,.34);position:relative;overflow:hidden;margin-bottom:24px;}
+    .cover:after{content:"";position:absolute;width:360px;height:360px;border-radius:999px;background:rgba(82,255,154,.10);right:-140px;top:-120px;filter:blur(10px);}
+    .kicker{font-size:12px;letter-spacing:.42em;text-transform:uppercase;font-weight:950;color:var(--green);margin-bottom:74px;position:relative;z-index:2;}
+    .cover h1{font-size:64px;line-height:.94;margin:0;color:#fff;letter-spacing:-2.5px;max-width:720px;position:relative;z-index:2;}
+    .role{font-size:21px;line-height:1.35;color:#d7ffe6;font-weight:800;margin-top:22px;max-width:620px;position:relative;z-index:2;}
+    .est{position:absolute;left:44px;bottom:36px;color:var(--green);font-size:11px;font-weight:950;letter-spacing:.24em;z-index:2;}
     .section{border:1px solid var(--line);border-radius:28px;padding:28px;background:rgba(11,26,18,.72);box-shadow:0 20px 70px rgba(0,0,0,.22);margin:16px 0 20px 0;}
     .num{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--green);font-weight:950;margin-bottom:10px;}
     .title{font-size:30px;font-weight:950;color:#fff;letter-spacing:-.7px;margin-bottom:14px;}
