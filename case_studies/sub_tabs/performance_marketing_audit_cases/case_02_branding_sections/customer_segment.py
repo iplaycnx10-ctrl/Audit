@@ -4,7 +4,7 @@ import streamlit as st
 def _segment_card(card_no, title, subtitle, profile, need, decision, key_message, accent="#52ff9a"):
     st.markdown(
         f"""
-        <div style="height:100%;border-radius:22px;border:1px solid rgba(255,255,255,.10);background:linear-gradient(135deg,rgba(255,255,255,.045),rgba(255,255,255,.018));padding:22px 24px;box-sizing:border-box;box-shadow:0 14px 34px rgba(0,0,0,.10);">
+        <div style="min-height:445px;height:445px;border-radius:22px;border:1px solid rgba(255,255,255,.10);background:linear-gradient(135deg,rgba(255,255,255,.045),rgba(255,255,255,.018));padding:22px 24px;box-sizing:border-box;box-shadow:0 14px 34px rgba(0,0,0,.10);overflow:hidden;">
           <div style="font-size:12px;color:{accent};font-weight:950;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;">{card_no}</div>
           <div style="font-size:18px;color:#fff;font-weight:950;line-height:1.45;margin-bottom:6px;">{title}</div>
           <div style="font-size:13px;color:#9fb5a8;font-weight:850;margin-bottom:18px;">{subtitle}</div>
