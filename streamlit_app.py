@@ -264,7 +264,6 @@ with t4:
 with t5:
     section(
         "05. AUTOMATION ARCHITECTURE",
-        "Marketing Brain with AI Agent Workflows",
         "ออกแบบ Workflow เชื่อม n8n, AI API, Google Sheets และ Dashboard เพื่อเปลี่ยนข้อมูลโฆษณาเป็น Insight และ Action แบบอัตโนมัติ"
     )
 
