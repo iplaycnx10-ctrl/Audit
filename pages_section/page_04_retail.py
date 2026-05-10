@@ -1,6 +1,7 @@
 import plotly.express as px
 import streamlit as st
 from components.common import metric, section
+from data.retail_data import retail_data, retail_summary
 
 CHART_BG = "rgba(11,26,18,0)"
 PAPER_BG = "rgba(11,26,18,0)"
@@ -24,7 +25,7 @@ def style_chart(fig, height=430):
     return fig
 
 
-def render(retail_summary, retail_data):
+def render():
     section(
         "04. STRATEGY: HIGH-VALUE RETAIL",
         "The Hybrid Closing Model",
