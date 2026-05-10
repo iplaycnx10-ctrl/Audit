@@ -43,13 +43,9 @@ st.markdown(
     .tool-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;align-items:center;}
     .tool-card.analytics .tool-list{grid-template-columns:repeat(2,minmax(0,1fr));}
     .tool-pill{display:flex;align-items:center;justify-content:center;height:34px;padding:0 10px;border:1px solid rgba(82,255,154,.22);border-radius:999px;background:rgba(82,255,154,.075);color:#d7ffe6;font-size:12px;font-weight:850;line-height:1;text-align:center;white-space:nowrap;box-sizing:border-box;}
-    .ci-card{border:1px solid rgba(82,255,154,.20);border-radius:22px;padding:16px;background:rgba(255,255,255,.035);height:390px;box-sizing:border-box;overflow:hidden;margin-bottom:18px;}
-    .ci-card h3{font-size:18px;color:#fff;margin:0 0 10px 0;line-height:1.2;}
-    .ci-frame{height:250px;border:1px dashed rgba(82,255,154,.28);border-radius:16px;background:rgba(82,255,154,.045);display:flex;align-items:center;justify-content:center;text-align:center;color:#9fb5a8;font-size:12px;font-weight:800;line-height:1.4;padding:12px;box-sizing:border-box;overflow:hidden;margin-bottom:12px;}
+    .ci-card{border:1px solid rgba(82,255,154,.20);border-radius:22px;padding:12px;background:rgba(255,255,255,.035);height:300px;box-sizing:border-box;overflow:hidden;margin-bottom:18px;}
+    .ci-frame{height:274px;border:1px dashed rgba(82,255,154,.28);border-radius:16px;background:rgba(82,255,154,.045);display:flex;align-items:center;justify-content:center;box-sizing:border-box;overflow:hidden;}
     .ci-frame img{width:100%;height:100%;object-fit:cover;border-radius:13px;display:block;}
-    .ci-desc{color:#bfd1c5;font-size:13px;line-height:1.45;margin:0 0 10px 0;}
-    .ci-link{color:#52ff9a;font-size:13px;font-weight:900;text-decoration:none;}
-    .ci-input-note{font-size:13px;color:#9fb5a8;margin:8px 0 14px 0;line-height:1.6;}
     @media(max-width:900px){.tool-grid{grid-template-columns:repeat(2,1fr)}.tool-list{grid-template-columns:repeat(2,minmax(0,1fr));}.cover h1{font-size:42px;white-space:normal;}}
     .green{color:var(--green);font-weight:950;}
     .stTabs [data-baseweb="tab-list"]{gap:8px;flex-wrap:wrap;background:rgba(255,255,255,.035);border:1px solid rgba(82,255,154,.18);border-radius:20px;padding:10px;margin-bottom:18px;}
@@ -82,11 +78,9 @@ def ci_showcase(title, url, note):
     img_url = drive_image_url(url)
     if img_url:
         frame = f"<img src='{img_url}' alt='{title}' referrerpolicy='no-referrer' />"
-        link = f"<a class='ci-link' href='{url}' target='_blank'>Open design →</a>"
     else:
-        frame = "วาง Google Drive image link<br>ในช่องด้านบน แล้วกด Enter"
-        link = "<span class='ci-link'>Waiting for Drive link</span>"
-    st.markdown(f"<div class='ci-card'><div class='ci-frame'>{frame}</div><h3>{title}</h3><p class='ci-desc'>{note}</p>{link}</div>", unsafe_allow_html=True)
+        frame = ""
+    st.markdown(f"<div class='ci-card'><div class='ci-frame'>{frame}</div></div>", unsafe_allow_html=True)
 
 CI_DESIGN_LINK_1 = "https://drive.google.com/file/d/1rbL0PhE85Pu2Y_VjCY7RzWBAuDjG8jEM/view?usp=sharing"
 CI_DESIGN_LINK_2 = "https://drive.google.com/file/d/1rgcXSo4Z-7HGjNfNBY8ni2vb1HKZM7OT/view?usp=sharing"
