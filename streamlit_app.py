@@ -262,23 +262,15 @@ with t4:
     section("04. STRATEGY: HIGH-VALUE RETAIL", "The Hybrid Closing Model", "วางระบบ Multi-touchpoint Funnel สำหรับสินค้ากลุ่มเครื่องใช้ไฟฟ้ามูลค่าสูง เชื่อมจากแอด → แชท → เว็บไซต์/หน้าร้าน และใช้ข้อมูลเพื่อดู Pattern ของแคมเปญ")
 
 with t5:
+    with t5:
     section(
         "05. AUTOMATION ARCHITECTURE",
+        "Marketing Brain with AI Agent Workflows",
         "ออกแบบ Workflow เชื่อม n8n, AI API, Google Sheets และ Dashboard เพื่อเปลี่ยนข้อมูลโฆษณาเป็น Insight และ Action แบบอัตโนมัติ"
     )
 
     automation_img = drive_image_url(
         "https://drive.google.com/file/d/1AbMY2zz7NsRYsRKRFssASMMRsJycO_Z2/view?usp=sharing"
-    )
-
-    st.markdown(
-        """
-        <div class='section'>
-            <div class='num'>WORKFLOW ARCHITECTURE</div>
-            <div class='title'>AI Agent Workflow Structure</div>
-        </div>
-        """,
-        unsafe_allow_html=True
     )
 
     st.image(automation_img, use_container_width=True)
