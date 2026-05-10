@@ -28,11 +28,11 @@ st.markdown(
     .title{font-size:34px;font-weight:950;color:#fff;letter-spacing:-.7px;margin-bottom:18px;}
     .body{font-size:17px;line-height:1.82;color:#d7e8dd;}
     .quote{margin-top:20px;padding:20px 22px;border-left:4px solid var(--green);background:rgba(82,255,154,.08);border-radius:18px;color:#effff5;font-size:17px;font-weight:850;line-height:1.65;}
-    .card{height:100%;border:1px solid rgba(82,255,154,.18);border-radius:24px;padding:24px;background:rgba(255,255,255,.035);}
-    .card h3{margin:0 0 10px 0;color:#fff;font-size:22px;line-height:1.25;}
+    .card{height:240px;min-height:240px;border:1px solid rgba(82,255,154,.18);border-radius:24px;padding:24px;background:rgba(255,255,255,.035);box-sizing:border-box;display:flex;flex-direction:column;justify-content:flex-start;}
+    .card h3{margin:0 0 16px 0;color:#fff;font-size:22px;line-height:1.25;min-height:58px;}
     .card p,.card li{color:#bfd1c5;font-size:15.5px;line-height:1.72;margin:0;}
     .bullet{margin:0;padding-left:20px;}
-    .metric{border:1px solid rgba(82,255,154,.22);border-radius:22px;padding:20px;background:rgba(82,255,154,.06);height:100%;}
+    .metric{border:1px solid rgba(82,255,154,.22);border-radius:22px;padding:20px;background:rgba(82,255,154,.06);height:160px;min-height:160px;box-sizing:border-box;}
     .metric-label{font-size:12px;color:var(--muted);font-weight:900;text-transform:uppercase;letter-spacing:.13em;margin-bottom:8px;}
     .metric-value{font-size:32px;color:#fff;font-weight:950;line-height:1.05;}
     .metric-note{font-size:13px;color:#9fb5a8;margin-top:8px;font-weight:750;line-height:1.45;}
@@ -96,7 +96,7 @@ with t2:
     with c2:
         st.markdown("<div class='card'><h3>Financial Services</h3><p>Lead Generation สำหรับสินเชื่อธุรกิจ วางระบบคัดกรองผ่าน Message Funnel และอ่านสัญญาณความพร้อมจากพฤติกรรมแชท</p></div>", unsafe_allow_html=True)
     with c3:
-        st.markdown("<div class='card'><h3>Hospitality & Tourism</h3><p>วางแผนการสื่อสารและกระตุ้นยอดจองห้องพักโดยใช้ดาต้าเพื่อหาช่วงเวลาที่ Demand ตลาดสูงที่สุด</p></div>", unsafe_allow_html=True)
+        st.markdown("<div class='card'><h3>Hotel & Hospitality Marketing</h3><p>วางแผนการสื่อสารและกระตุ้นยอดจองห้องพักสำหรับธุรกิจโรงแรม โดยใช้ดาต้าเพื่อหาช่วงเวลาที่ Demand ตลาดสูงที่สุด</p></div>", unsafe_allow_html=True)
     st.markdown("</div>", unsafe_allow_html=True)
 
 with t3:
