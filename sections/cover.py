@@ -12,7 +12,7 @@ def render():
         unsafe_allow_html=True,
     )
 
-    left, right = st.columns([1.05, 0.95], vertical_alignment="top")
+    left, right = st.columns([1.08, 0.92], vertical_alignment="top")
 
     with left:
         st.markdown(
@@ -30,9 +30,9 @@ def render():
     with right:
         st.markdown(
             """
-            <div style="height:430px;display:flex;align-items:flex-start;justify-content:center;overflow:visible;padding:0 10px;margin-top:0;">
+            <div style="height:430px;display:flex;align-items:flex-start;justify-content:center;overflow:visible;padding:0 28px;margin-top:0;">
             """,
             unsafe_allow_html=True,
         )
-        st.image(HERO_IMAGE_PATH, use_container_width=True)
+        st.image(HERO_IMAGE_PATH, width=360)
         st.markdown("</div>", unsafe_allow_html=True)
