@@ -1,4 +1,38 @@
+import importlib.util
+from pathlib import Path
 import streamlit as st
+
+BASE_DIR = Path(__file__).resolve().parent
+
+
+def load_render(relative_path: str, module_key: str):
+    module_path = BASE_DIR / relative_path
+    spec = importlib.util.spec_from_file_location(module_key, module_path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module.render
+
+
+render_strategic_audit = load_render(
+    "case_01_sections/strategic_audit_process.py",
+    "strategic_audit_process",
+)
+render_kpi = load_render(
+    "case_01_sections/kpi_framework.py",
+    "kpi_framework",
+)
+render_dashboard = load_render(
+    "case_01_sections/dashboard_preview.py",
+    "dashboard_preview",
+)
+render_ai = load_render(
+    "case_01_sections/ai_insight_layer.py",
+    "ai_insight_layer",
+)
+render_conclusion = load_render(
+    "case_01_sections/strategic_conclusion.py",
+    "strategic_conclusion",
+)
 
 
 def render():
@@ -13,7 +47,7 @@ def render():
           </div>
         </div>
 
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:14px;margin-bottom:22px;">
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:14px;margin-bottom:18px;">
           <div style="height:112px;min-height:112px;padding:14px 15px;border-radius:20px;border:1px solid rgba(239,68,68,.42);background:linear-gradient(135deg,rgba(127,29,29,.42),rgba(11,26,18,.55));box-sizing:border-box;overflow:hidden;">
             <div style="font-size:13px;font-weight:900;color:#fff;line-height:1.3;margin-bottom:18px;">❌ High Lead Cost</div>
             <div style="font-size:11.5px;color:#ffd5d5;line-height:1.55;">ค่า Lead สูง แต่คุณภาพไม่สม่ำเสมอ</div>
@@ -34,3 +68,26 @@ def render():
         """,
         unsafe_allow_html=True,
     )
+
+    t1, t2, t3, t4, t5 = st.tabs([
+        "Strategic Audit Process",
+        "KPI Framework",
+        "Dashboard Preview",
+        "AI Insight Layer",
+        "Strategic Conclusion",
+    ])
+
+    with t1:
+        render_strategic_audit()
+
+    with t2:
+        render_kpi()
+
+    with t3:
+        render_dashboard()
+
+    with t4:
+        render_ai()
+
+    with t5:
+        render_conclusion()
