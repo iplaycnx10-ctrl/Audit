@@ -99,17 +99,28 @@ CI_DESIGN_LINK_2 = "https://drive.google.com/file/d/1rgcXSo4Z-7HGjNfNBY8ni2vb1HK
 CI_DESIGN_LINK_3 = "https://drive.google.com/file/d/1NFSGbKlcF51OHJ29vPYchoOXh9GDkfyq/view?usp=sharing"
 CI_DESIGN_LINK_4 = "https://drive.google.com/file/d/1_fOiOGm8v3qBLntLcSYGH87gBQcmgJsQ/view?usp=sharing"
 
+loan_summary = {
+    "total_spend": 283904.06,
+    "total_messages": 36023,
+    "total_reach": 323081,
+    "total_impressions": 1385069,
+    "avg_ctr": 11.30,
+    "avg_cpm": 204.36,
+    "avg_cpc": 6.71,
+}
+loan_summary["avg_cost"] = loan_summary["total_spend"] / loan_summary["total_messages"]
+
 loan_data = pd.DataFrame([
-    {"Campaign": "Campaign A", "Messages": 4902, "Spend": 38217.12, "Cost/Message": 7.80},
-    {"Campaign": "Campaign B", "Messages": 1523, "Spend": 12559.22, "Cost/Message": 8.25},
-    {"Campaign": "Campaign C", "Messages": 2181, "Spend": 18188.88, "Cost/Message": 8.34},
-    {"Campaign": "Campaign D", "Messages": 867, "Spend": 7534.37, "Cost/Message": 8.69},
-    {"Campaign": "Campaign E", "Messages": 1497, "Spend": 13322.62, "Cost/Message": 8.90},
-    {"Campaign": "Campaign F", "Messages": 17480, "Spend": 212.27, "Cost/Message": 12.14},
-    {"Campaign": "Campaign G", "Messages": 469, "Spend": 4648.82, "Cost/Message": 9.91},
-    {"Campaign": "Campaign H", "Messages": 10902, "Spend": 140.64, "Cost/Message": 12.90},
-    {"Campaign": "Campaign I", "Messages": 542, "Spend": 5698.00, "Cost/Message": 10.51},
-    {"Campaign": "Campaign J", "Messages": 69, "Spend": 811.32, "Cost/Message": 11.76},
+    {"Ad": "A", "Messages": 5359, "Spend": 42093.85, "Cost/Message": 7.85, "Reach": 87347, "Impressions": 277656, "CTR": 11.70, "CPM": 151.60, "CPC": 5.04, "Frequency": 3.18},
+    {"Ad": "B", "Messages": 4902, "Spend": 38217.12, "Cost/Message": 7.80, "Reach": 84774, "Impressions": 261303, "CTR": 13.44, "CPM": 146.25, "CPC": 4.82, "Frequency": 3.08},
+    {"Ad": "C", "Messages": 1523, "Spend": 12559.22, "Cost/Message": 8.25, "Reach": 33642, "Impressions": 89869, "CTR": 10.54, "CPM": 139.75, "CPC": 7.20, "Frequency": 2.67},
+    {"Ad": "D", "Messages": 2181, "Spend": 18188.88, "Cost/Message": 8.34, "Reach": 24193, "Impressions": 84516, "CTR": 13.13, "CPM": 215.21, "CPC": 6.89, "Frequency": 3.49},
+    {"Ad": "E", "Messages": 867, "Spend": 7534.37, "Cost/Message": 8.69, "Reach": 23080, "Impressions": 47283, "CTR": 9.39, "CPM": 159.35, "CPC": 5.86, "Frequency": 2.05},
+    {"Ad": "F", "Messages": 1497, "Spend": 13322.62, "Cost/Message": 8.90, "Reach": 19891, "Impressions": 46390, "CTR": 11.44, "CPM": 287.19, "CPC": 7.90, "Frequency": 2.33},
+    {"Ad": "G", "Messages": 469, "Spend": 4648.82, "Cost/Message": 9.91, "Reach": 17321, "Impressions": 30289, "CTR": 8.88, "CPM": 153.48, "CPC": 5.60, "Frequency": 1.75},
+    {"Ad": "H", "Messages": 542, "Spend": 5698.00, "Cost/Message": 10.51, "Reach": 10026, "Impressions": 23721, "CTR": 10.28, "CPM": 240.21, "CPC": 6.48, "Frequency": 2.37},
+    {"Ad": "I", "Messages": 69, "Spend": 811.32, "Cost/Message": 11.76, "Reach": 9133, "Impressions": 11788, "CTR": 10.40, "CPM": 68.82, "CPC": 8.11, "Frequency": 1.29},
+    {"Ad": "J", "Messages": 17480, "Spend": 212.27, "Cost/Message": 12.14, "Reach": 17480, "Impressions": 17480, "CTR": 12.14, "CPM": 12.14, "CPC": 6.82, "Frequency": 1.00},
 ])
 
 st.markdown(
@@ -211,25 +222,41 @@ with t2:
     st.markdown("</div>", unsafe_allow_html=True)
 
 with t3:
-    section("03. PERFORMANCE: BUSINESS LOAN ADS", "Message Funnel Performance Dashboard", "แปลงรายงาน Meta ฝั่งสินเชื่อธุรกิจให้เป็นชาร์ตพรีเซนต์ โดยเน้นจำนวนข้อความทัก ยอดจ่ายรวม และต้นทุนต่อข้อความ เพื่อแสดงการอ่าน Lead Quality จาก Message Funnel")
+    section("03. PERFORMANCE: BUSINESS LOAN ADS", "Message Funnel Performance Dashboard", "พอร์ตผลงานแคมเปญสินเชื่อธุรกิจจากข้อมูล Meta Ads รวม 2 ชุด ใช้เพื่อโชว์การอ่านภาพรวม Funnel, Cost Efficiency และ Volume Pattern")
     m1, m2, m3, m4 = st.columns(4)
-    with m1: metric("Total Messages", "39,254", "ข้อความทักรวมจากชุดแคมเปญ")
-    with m2: metric("Total Spend", "฿106,776", "ยอดจ่ายรวมโดยประมาณ")
-    with m3: metric("Avg Cost / Message", "฿2.72", "ต้นทุนเฉลี่ยต่อข้อความทัก")
-    with m4: metric("Best Cost / Message", "฿7.80", "แคมเปญที่คุมต้นทุนดีที่สุด")
+    with m1: metric("Total Spend", f"฿{loan_summary['total_spend']:,.0f}", "งบประมาณรวมจาก 2 ชุดข้อมูล")
+    with m2: metric("Total Messages", f"{loan_summary['total_messages']:,.0f}", "ข้อความทักรวมโดยประมาณ")
+    with m3: metric("Avg Cost / Message", f"฿{loan_summary['avg_cost']:,.2f}", "ต้นทุนเฉลี่ยต่อข้อความ")
+    with m4: metric("Total Reach", f"{loan_summary['total_reach']:,.0f}", "จำนวนคนที่เข้าถึงรวม")
 
-    st.markdown("<div class='section'><div class='num'>LOAN ADS PATTERN</div><div class='title'>ข้อความทักและยอดจ่ายรวม</div><div class='body'>กราฟแท่งสำหรับพรีเซนต์ Pattern ของแคมเปญสินเชื่อธุรกิจ โดยดูทั้ง Volume ของข้อความทักและ Cost Efficiency</div></div>", unsafe_allow_html=True)
+    k1, k2, k3, k4 = st.columns(4)
+    with k1: metric("Impressions", f"{loan_summary['total_impressions']:,.0f}", "จำนวนครั้งที่แสดงผลรวม")
+    with k2: metric("Avg CTR", f"{loan_summary['avg_ctr']:.2f}%", "CTR เฉลี่ยโดยประมาณ")
+    with k3: metric("Avg CPM", f"฿{loan_summary['avg_cpm']:.2f}", "CPM เฉลี่ยโดยประมาณ")
+    with k4: metric("Avg CPC", f"฿{loan_summary['avg_cpc']:.2f}", "CPC เฉลี่ยโดยประมาณ")
+
     chart_col1, chart_col2 = st.columns(2)
     with chart_col1:
-        fig_msg = px.bar(loan_data.sort_values('Messages', ascending=False), x='Campaign', y='Messages', text='Messages', title='Message Volume by Campaign')
-        fig_msg.update_traces(textposition='outside')
-        fig_msg.update_layout(height=430, template='plotly_dark', margin=dict(l=20, r=20, t=60, b=40))
+        fig_msg = px.bar(loan_data.sort_values('Messages', ascending=False), x='Ad', y='Messages', text='Messages', color='Messages', color_continuous_scale='Viridis', title='Message Volume Heat Pattern')
+        fig_msg.update_traces(texttemplate='%{text:,.0f}', textposition='outside')
+        fig_msg.update_layout(height=430, template='plotly_dark', margin=dict(l=20, r=20, t=60, b=40), xaxis_title='', coloraxis_showscale=False)
         st.plotly_chart(fig_msg, use_container_width=True)
     with chart_col2:
-        fig_cost = px.bar(loan_data.sort_values('Cost/Message'), x='Campaign', y='Cost/Message', text='Cost/Message', title='Cost per Message • Lower is Better')
+        fig_cost = px.bar(loan_data.sort_values('Cost/Message'), x='Ad', y='Cost/Message', text='Cost/Message', color='Cost/Message', color_continuous_scale='Turbo', title='Cost per Message Heat Pattern • Lower is Better')
         fig_cost.update_traces(texttemplate='฿%{text:.2f}', textposition='outside')
-        fig_cost.update_layout(height=430, template='plotly_dark', margin=dict(l=20, r=20, t=60, b=40))
+        fig_cost.update_layout(height=430, template='plotly_dark', margin=dict(l=20, r=20, t=60, b=40), xaxis_title='', coloraxis_showscale=False)
         st.plotly_chart(fig_cost, use_container_width=True)
+
+    chart_col3, chart_col4 = st.columns(2)
+    with chart_col3:
+        fig_spend = px.pie(loan_data, values='Spend', names='Ad', hole=.55, title='Spend Distribution by Ad Set')
+        fig_spend.update_layout(height=430, template='plotly_dark', margin=dict(l=20, r=20, t=60, b=40), showlegend=True)
+        st.plotly_chart(fig_spend, use_container_width=True)
+    with chart_col4:
+        efficiency_data = loan_data[['Ad', 'CTR', 'CPM', 'CPC', 'Frequency']].sort_values('CTR', ascending=False)
+        fig_eff = px.bar(efficiency_data, x='Ad', y=['CTR', 'CPC', 'Frequency'], barmode='group', title='Engagement & Efficiency Snapshot')
+        fig_eff.update_layout(height=430, template='plotly_dark', margin=dict(l=20, r=20, t=60, b=40), xaxis_title='')
+        st.plotly_chart(fig_eff, use_container_width=True)
 
 with t4:
     section("04. STRATEGY: HIGH-VALUE RETAIL", "The Hybrid Closing Model", "วางระบบ Multi-touchpoint Funnel สำหรับสินค้ากลุ่มเครื่องใช้ไฟฟ้ามูลค่าสูง เชื่อมจากแอด → แชท → เว็บไซต์/หน้าร้าน และใช้ข้อมูลเพื่อดู Pattern ของแคมเปญ")
