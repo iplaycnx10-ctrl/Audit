@@ -85,7 +85,7 @@ st.markdown(
     <div class="cover">
       <div class="kicker">Strategic Portfolio</div>
       <h1>CHAYANON NANTAVIJAN</h1>
-      <div class="role">Performance Marketing &<br>AI Automation Specialist</div>
+      <div class="role">Performance Marketing & AI Workflow Specialist<br>สร้างระบบวิเคราะห์โฆษณา + Dashboard + Automation เพื่อช่วยธุรกิจตัดสินใจจากข้อมูลจริง</div>
       <div class="est">ESTABLISHED 2026 | PERFORMANCE-DRIVEN</div>
     </div>
     """,
