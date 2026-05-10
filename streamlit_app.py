@@ -43,13 +43,13 @@ st.markdown(
     .tool-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;align-items:center;}
     .tool-card.analytics .tool-list{grid-template-columns:repeat(2,minmax(0,1fr));}
     .tool-pill{display:flex;align-items:center;justify-content:center;height:34px;padding:0 10px;border:1px solid rgba(82,255,154,.22);border-radius:999px;background:rgba(82,255,154,.075);color:#d7ffe6;font-size:12px;font-weight:850;line-height:1;text-align:center;white-space:nowrap;box-sizing:border-box;}
-    .ci-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:16px;}
-    .ci-card{border:1px solid rgba(82,255,154,.20);border-radius:22px;padding:16px;background:rgba(255,255,255,.035);min-height:290px;box-sizing:border-box;}
-    .ci-card h3{font-size:16px;color:#fff;margin:0 0 10px 0;line-height:1.25;}
-    .ci-frame{height:170px;border:1px dashed rgba(82,255,154,.28);border-radius:16px;background:rgba(82,255,154,.045);display:flex;align-items:center;justify-content:center;text-align:center;color:#9fb5a8;font-size:12px;font-weight:800;line-height:1.45;padding:12px;box-sizing:border-box;overflow:hidden;margin-bottom:12px;}
-    .ci-frame img{width:100%;height:100%;object-fit:cover;border-radius:13px;display:block;}
-    .ci-link{color:#52ff9a;font-size:13px;font-weight:900;text-decoration:none;}
-    @media(max-width:900px){.tool-grid,.ci-grid{grid-template-columns:repeat(2,1fr)}.tool-list{grid-template-columns:repeat(2,minmax(0,1fr));}.cover h1{font-size:42px;white-space:normal;}}
+    .ci-card{border:1px solid rgba(82,255,154,.20);border-radius:20px;padding:14px;background:rgba(255,255,255,.035);height:255px;box-sizing:border-box;overflow:hidden;}
+    .ci-card h3{font-size:15px;color:#fff;margin:0 0 8px 0;line-height:1.2;}
+    .ci-frame{height:135px;border:1px dashed rgba(82,255,154,.28);border-radius:14px;background:rgba(82,255,154,.045);display:flex;align-items:center;justify-content:center;text-align:center;color:#9fb5a8;font-size:11px;font-weight:800;line-height:1.35;padding:10px;box-sizing:border-box;overflow:hidden;margin-bottom:10px;}
+    .ci-frame img{width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;}
+    .ci-desc{color:#bfd1c5;font-size:12.5px;line-height:1.42;margin:0 0 8px 0;}
+    .ci-link{color:#52ff9a;font-size:12.5px;font-weight:900;text-decoration:none;}
+    @media(max-width:900px){.tool-grid{grid-template-columns:repeat(2,1fr)}.tool-list{grid-template-columns:repeat(2,minmax(0,1fr));}.cover h1{font-size:42px;white-space:normal;}}
     .green{color:var(--green);font-weight:950;}
     .stTabs [data-baseweb="tab-list"]{gap:8px;flex-wrap:wrap;background:rgba(255,255,255,.035);border:1px solid rgba(82,255,154,.18);border-radius:20px;padding:10px;margin-bottom:18px;}
     .stTabs [data-baseweb="tab"]{height:44px;border-radius:14px;color:#bfd1c5;background:rgba(255,255,255,.035);font-weight:900;padding:0 14px;}
@@ -85,7 +85,7 @@ def ci_showcase(title, url, note):
     else:
         frame = "วาง Google Drive image link<br>ตรงตัวแปร CI_DESIGN_LINK ในโค้ด"
         link = "<span class='ci-link'>Waiting for Drive link</span>"
-    st.markdown(f"<div class='ci-card'><div class='ci-frame'>{frame}</div><h3>{title}</h3><p style='color:#bfd1c5;font-size:13px;line-height:1.55;margin:0 0 10px 0;'>{note}</p>{link}</div>", unsafe_allow_html=True)
+    st.markdown(f"<div class='ci-card'><div class='ci-frame'>{frame}</div><h3>{title}</h3><p class='ci-desc'>{note}</p>{link}</div>", unsafe_allow_html=True)
 
 CI_DESIGN_LINK_1 = ""
 CI_DESIGN_LINK_2 = ""
@@ -168,17 +168,17 @@ with t2:
         st.markdown("<div class='card'><h3>Streamer & Gaming Content Creator</h3><p>มีประสบการณ์ทำคอนเทนต์และไลฟ์สตรีมบน TikTok ในนาม <b>KhunlunGamer</b> เข้าใจ Real-time Engagement และ Audience Relationship</p><p style='margin-top:12px;'><a href='https://www.tiktok.com/@khunlungamer?is_from_webapp=1&sender_device=pc' target='_blank' style='color:#52ff9a;font-weight:900;text-decoration:none;'>View TikTok Profile →</a></p></div>", unsafe_allow_html=True)
     st.markdown("</div>", unsafe_allow_html=True)
 
-    st.markdown("<div class='section'><div class='num'>CREATIVE DESIGN SHOWCASE</div><div class='title'>CI ที่เคยออกแบบ</div><div class='body'>พื้นที่สำหรับแสดงตัวอย่างงานออกแบบ CI / Key Visual / Creative Direction จาก Google Drive</div><div class='ci-grid'>", unsafe_allow_html=True)
+    st.markdown("<div class='section'><div class='num'>CREATIVE DESIGN SHOWCASE</div><div class='title'>CI ที่เคยออกแบบ</div><div class='body'>พื้นที่สำหรับแสดงตัวอย่างงานออกแบบ CI / Key Visual / Creative Direction จาก Google Drive</div>", unsafe_allow_html=True)
     c1, c2, c3, c4 = st.columns(4)
     with c1:
-        ci_showcase("CI Design 01", CI_DESIGN_LINK_1, "ตัวอย่าง Key Visual / Brand Direction")
+        ci_showcase("CI Design 01", CI_DESIGN_LINK_1, "Key Visual / Brand Direction")
     with c2:
-        ci_showcase("CI Design 02", CI_DESIGN_LINK_2, "ตัวอย่าง Creative Layout / Campaign Visual")
+        ci_showcase("CI Design 02", CI_DESIGN_LINK_2, "Creative Layout / Campaign Visual")
     with c3:
-        ci_showcase("CI Design 03", CI_DESIGN_LINK_3, "ตัวอย่าง Social Visual / Content Design")
+        ci_showcase("CI Design 03", CI_DESIGN_LINK_3, "Social Visual / Content Design")
     with c4:
-        ci_showcase("CI Design 04", CI_DESIGN_LINK_4, "ตัวอย่าง Ad Creative / Performance Visual")
-    st.markdown("</div></div>", unsafe_allow_html=True)
+        ci_showcase("CI Design 04", CI_DESIGN_LINK_4, "Ad Creative / Performance Visual")
+    st.markdown("</div>", unsafe_allow_html=True)
 
 with t3:
     section("03. PERFORMANCE: BUSINESS LOAN ADS", "Message Funnel Performance Dashboard", "แปลงรายงาน Meta ฝั่งสินเชื่อธุรกิจให้เป็นชาร์ตพรีเซนต์ โดยเน้นจำนวนข้อความทัก ยอดจ่ายรวม และต้นทุนต่อข้อความ เพื่อแสดงการอ่าน Lead Quality จาก Message Funnel")
