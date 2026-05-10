@@ -13,11 +13,11 @@ APP_IMAGE_LINKS = [
 ]
 
 
-def app_image_card(link, alt="APP Preview"):
-    img = drive_image_url(link)
+def inject_gallery_style():
     st.markdown(
-        f"""
-        <div style="
+        """
+        <style>
+        .app-zoom-card{
             border:1px solid rgba(82,255,154,.20);
             border-radius:22px;
             padding:10px;
@@ -30,14 +30,54 @@ def app_image_card(link, alt="APP Preview"):
             overflow:hidden;
             box-sizing:border-box;
             margin-bottom:18px;
-        ">
-            <img src="{img}" alt="{alt}" referrerpolicy="no-referrer" style="
-                width:100%;
-                height:100%;
-                object-fit:cover;
-                border-radius:15px;
-                display:block;
-            " />
+            cursor:zoom-in;
+            transition:transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+        }
+        .app-zoom-card:hover{
+            transform:scale(1.035);
+            border-color:rgba(82,255,154,.55);
+            box-shadow:0 22px 80px rgba(82,255,154,.12),0 18px 54px rgba(0,0,0,.35);
+            z-index:5;
+        }
+        .app-zoom-card img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            border-radius:15px;
+            display:block;
+            transition:transform .22s ease;
+        }
+        .app-zoom-card:hover img{transform:scale(1.04);}
+        .app-zoom-card:active{
+            position:fixed;
+            inset:5vh 5vw;
+            width:90vw;
+            height:90vh;
+            z-index:9999;
+            background:rgba(3,8,5,.96);
+            cursor:zoom-out;
+            padding:16px;
+        }
+        .app-zoom-card:active img{
+            object-fit:contain;
+            transform:none;
+        }
+        @media(max-width:900px){
+            .app-zoom-card{height:210px;}
+            .app-zoom-card:active{inset:6vh 4vw;width:92vw;height:88vh;}
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
+def app_image_card(link, alt="APP Preview"):
+    img = drive_image_url(link)
+    st.markdown(
+        f"""
+        <div class="app-zoom-card">
+            <img src="{img}" alt="{alt}" referrerpolicy="no-referrer" />
         </div>
         """,
         unsafe_allow_html=True,
@@ -45,6 +85,8 @@ def app_image_card(link, alt="APP Preview"):
 
 
 def render_app_gallery():
+    inject_gallery_style()
+
     st.markdown(
         """
         <div class='section' style='margin-top:28px;'>
