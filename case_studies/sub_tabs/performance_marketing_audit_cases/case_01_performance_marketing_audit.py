@@ -38,10 +38,10 @@ render_conclusion = load_render(
 def render():
     st.markdown(
         """
-        <div class="section" style="padding:22px 24px;">
-          <div class="num">CASE 1</div>
-          <div class="title" style="font-size:24px;margin-bottom:8px;">Medical Aesthetic Funnel Analysis</div>
-          <div class="body" style="font-size:14.5px;line-height:1.65;color:#d7e8dd;max-width:860px;">
+        <div style="padding:8px 2px 6px 2px;margin-top:10px;margin-bottom:12px;">
+          <div class="num" style="margin-bottom:8px;">CASE 1</div>
+          <div class="title" style="font-size:25px;margin-bottom:10px;">Medical Aesthetic Funnel Analysis</div>
+          <div class="body" style="font-size:14px;line-height:1.65;color:#d7e8dd;max-width:860px;">
             <b>กิจการ:</b> Medical Aesthetic<br><br>
             <b>ปัญหาหลักที่ตรวจพบ</b>
           </div>
