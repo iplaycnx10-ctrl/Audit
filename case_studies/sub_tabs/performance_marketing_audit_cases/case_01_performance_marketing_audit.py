@@ -38,31 +38,33 @@ render_conclusion = load_render(
 def render():
     st.markdown(
         """
-        <div style="padding:8px 2px 6px 2px;margin-top:10px;margin-bottom:12px;">
-          <div class="num" style="margin-bottom:8px;">CASE 1</div>
-          <div class="title" style="font-size:25px;margin-bottom:10px;">Medical Aesthetic Funnel Analysis</div>
-          <div class="body" style="font-size:14px;line-height:1.65;color:#d7e8dd;max-width:860px;">
-            <b>กิจการ:</b> Medical Aesthetic<br><br>
-            <b>ปัญหาหลักที่ตรวจพบ</b>
+        <div style="display:grid;grid-template-columns:0.95fr 1.05fr;gap:28px;align-items:start;margin-top:10px;margin-bottom:18px;">
+          <div style="padding:8px 2px 6px 2px;">
+            <div class="num" style="margin-bottom:8px;">CASE 1</div>
+            <div class="title" style="font-size:25px;margin-bottom:10px;">Medical Aesthetic Funnel Analysis</div>
+            <div class="body" style="font-size:14px;line-height:1.65;color:#d7e8dd;max-width:500px;">
+              <b>กิจการ:</b> Medical Aesthetic<br><br>
+              <b>ปัญหาหลักที่ตรวจพบ</b>
+            </div>
           </div>
-        </div>
 
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:14px;margin-bottom:18px;">
-          <div style="height:112px;min-height:112px;padding:14px 15px;border-radius:20px;border:1px solid rgba(239,68,68,.42);background:linear-gradient(135deg,rgba(127,29,29,.42),rgba(11,26,18,.55));box-sizing:border-box;overflow:hidden;">
-            <div style="font-size:13px;font-weight:900;color:#fff;line-height:1.3;margin-bottom:18px;">❌ High Lead Cost</div>
-            <div style="font-size:11.5px;color:#ffd5d5;line-height:1.55;">ค่า Lead สูง แต่คุณภาพไม่สม่ำเสมอ</div>
-          </div>
-          <div style="height:112px;min-height:112px;padding:14px 15px;border-radius:20px;border:1px solid rgba(249,115,22,.38);background:linear-gradient(135deg,rgba(154,52,18,.34),rgba(11,26,18,.55));box-sizing:border-box;overflow:hidden;">
-            <div style="font-size:13px;font-weight:900;color:#fff;line-height:1.3;margin-bottom:18px;">❌ Weak Retargeting Structure</div>
-            <div style="font-size:11.5px;color:#ffe1c7;line-height:1.55;">ไม่มีระบบ Follow-up สำหรับคนที่สนใจบริการ</div>
-          </div>
-          <div style="height:112px;min-height:112px;padding:14px 15px;border-radius:20px;border:1px solid rgba(245,158,11,.36);background:linear-gradient(135deg,rgba(146,64,14,.30),rgba(11,26,18,.55));box-sizing:border-box;overflow:hidden;">
-            <div style="font-size:13px;font-weight:900;color:#fff;line-height:1.3;margin-bottom:18px;">❌ Creative Fatigue</div>
-            <div style="font-size:11.5px;color:#ffe9bd;line-height:1.55;">ยิงโปรเดิมซ้ำจน CTR ตก และ Frequency สูง</div>
-          </div>
-          <div style="height:112px;min-height:112px;padding:14px 15px;border-radius:20px;border:1px solid rgba(234,179,8,.32);background:linear-gradient(135deg,rgba(113,63,18,.26),rgba(11,26,18,.55));box-sizing:border-box;overflow:hidden;">
-            <div style="font-size:13px;font-weight:900;color:#fff;line-height:1.3;margin-bottom:18px;">❌ Poor Conversion Journey</div>
-            <div style="font-size:11.5px;color:#fff1bd;line-height:1.55;">คนทักเยอะ แต่ไม่จองคิว</div>
+          <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;">
+            <div style="height:96px;min-height:96px;padding:12px 13px;border-radius:18px;border:1px solid rgba(239,68,68,.42);background:linear-gradient(135deg,rgba(127,29,29,.42),rgba(11,26,18,.55));box-sizing:border-box;overflow:hidden;">
+              <div style="font-size:12px;font-weight:900;color:#fff;line-height:1.25;margin-bottom:13px;">❌ High Lead Cost</div>
+              <div style="font-size:10.8px;color:#ffd5d5;line-height:1.45;">ค่า Lead สูง แต่คุณภาพไม่สม่ำเสมอ</div>
+            </div>
+            <div style="height:96px;min-height:96px;padding:12px 13px;border-radius:18px;border:1px solid rgba(249,115,22,.38);background:linear-gradient(135deg,rgba(154,52,18,.34),rgba(11,26,18,.55));box-sizing:border-box;overflow:hidden;">
+              <div style="font-size:12px;font-weight:900;color:#fff;line-height:1.25;margin-bottom:13px;">❌ Weak Retargeting Structure</div>
+              <div style="font-size:10.8px;color:#ffe1c7;line-height:1.45;">ไม่มีระบบ Follow-up สำหรับคนที่สนใจบริการ</div>
+            </div>
+            <div style="height:96px;min-height:96px;padding:12px 13px;border-radius:18px;border:1px solid rgba(245,158,11,.36);background:linear-gradient(135deg,rgba(146,64,14,.30),rgba(11,26,18,.55));box-sizing:border-box;overflow:hidden;">
+              <div style="font-size:12px;font-weight:900;color:#fff;line-height:1.25;margin-bottom:13px;">❌ Creative Fatigue</div>
+              <div style="font-size:10.8px;color:#ffe9bd;line-height:1.45;">ยิงโปรเดิมซ้ำจน CTR ตก และ Frequency สูง</div>
+            </div>
+            <div style="height:96px;min-height:96px;padding:12px 13px;border-radius:18px;border:1px solid rgba(234,179,8,.32);background:linear-gradient(135deg,rgba(113,63,18,.26),rgba(11,26,18,.55));box-sizing:border-box;overflow:hidden;">
+              <div style="font-size:12px;font-weight:900;color:#fff;line-height:1.25;margin-bottom:13px;">❌ Poor Conversion Journey</div>
+              <div style="font-size:10.8px;color:#fff1bd;line-height:1.45;">คนทักเยอะ แต่ไม่จองคิว</div>
+            </div>
           </div>
         </div>
         """,
