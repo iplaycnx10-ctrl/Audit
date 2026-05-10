@@ -30,6 +30,12 @@ st.markdown(
     .card{height:310px;min-height:310px;border:1px solid rgba(82,255,154,.18);border-radius:24px;padding:22px;background:rgba(255,255,255,.035);box-sizing:border-box;display:flex;flex-direction:column;justify-content:flex-start;overflow:hidden;}
     .card h3{margin:0 0 14px 0;color:#fff;font-size:20px;line-height:1.25;min-height:58px;}
     .card p,.card li{color:#bfd1c5;font-size:14.5px;line-height:1.62;margin:0;}
+    .experience-timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:44px;align-items:center;margin:4px 8px 14px 8px;}
+    .timeline-step{position:relative;min-height:46px;display:flex;align-items:center;justify-content:center;}
+    .timeline-badge{width:34px;height:34px;border-radius:999px;background:rgba(82,255,154,.13);border:1px solid rgba(82,255,154,.55);color:#52ff9a;font-weight:950;display:flex;align-items:center;justify-content:center;box-shadow:0 0 24px rgba(82,255,154,.18);z-index:2;}
+    .timeline-step:not(:last-child)::after{content:"";position:absolute;left:calc(50% + 20px);right:calc(-50% - 24px);top:50%;height:1px;background:linear-gradient(90deg,rgba(82,255,154,.8),rgba(82,255,154,.18));}
+    .timeline-step:not(:last-child)::before{content:"›";position:absolute;right:calc(-50% - 34px);top:calc(50% - 17px);color:#52ff9a;font-size:30px;font-weight:950;line-height:1;}
+    .timeline-year{position:absolute;top:-10px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.12em;color:#9fb5a8;font-weight:950;white-space:nowrap;text-transform:uppercase;}
     .metric{border:1px solid rgba(82,255,154,.22);border-radius:20px;padding:16px;background:rgba(82,255,154,.06);height:130px;min-height:130px;box-sizing:border-box;}
     .metric-label{font-size:11px;color:var(--muted);font-weight:900;text-transform:uppercase;letter-spacing:.13em;margin-bottom:8px;}
     .metric-value{font-size:28px;color:#fff;font-weight:950;line-height:1.05;}
@@ -46,7 +52,7 @@ st.markdown(
     .ci-card{border:1px solid rgba(82,255,154,.20);border-radius:22px;padding:12px;background:rgba(255,255,255,.035);height:300px;box-sizing:border-box;overflow:hidden;margin-bottom:18px;}
     .ci-frame{height:274px;border:1px dashed rgba(82,255,154,.28);border-radius:16px;background:rgba(82,255,154,.045);display:flex;align-items:center;justify-content:center;box-sizing:border-box;overflow:hidden;}
     .ci-frame img{width:100%;height:100%;object-fit:cover;border-radius:13px;display:block;}
-    @media(max-width:900px){.tool-grid{grid-template-columns:repeat(2,1fr)}.tool-list{grid-template-columns:repeat(2,minmax(0,1fr));}.cover h1{font-size:42px;white-space:normal;}}
+    @media(max-width:900px){.tool-grid,.experience-timeline{grid-template-columns:repeat(2,1fr)}.timeline-step:before,.timeline-step:after{display:none}.tool-list{grid-template-columns:repeat(2,minmax(0,1fr));}.cover h1{font-size:42px;white-space:normal;}}
     .green{color:var(--green);font-weight:950;}
     .stTabs [data-baseweb="tab-list"]{gap:8px;flex-wrap:wrap;background:rgba(255,255,255,.035);border:1px solid rgba(82,255,154,.18);border-radius:20px;padding:10px;margin-bottom:18px;}
     .stTabs [data-baseweb="tab"]{height:44px;border-radius:14px;color:#bfd1c5;background:rgba(255,255,255,.035);font-weight:900;padding:0 14px;}
@@ -171,6 +177,14 @@ with t1:
 
 with t2:
     st.markdown("<div class='section'><div class='num'>02. INDUSTRY EXPERIENCE</div><div class='title'>Industry Experience</div>", unsafe_allow_html=True)
+    st.markdown("""
+    <div class='experience-timeline'>
+      <div class='timeline-step'><div class='timeline-year'>2018-2024</div><div class='timeline-badge'>1</div></div>
+      <div class='timeline-step'><div class='timeline-year'>2024-2025</div><div class='timeline-badge'>2</div></div>
+      <div class='timeline-step'><div class='timeline-year'>2026</div><div class='timeline-badge'>3</div></div>
+      <div class='timeline-step'><div class='timeline-year'>2026</div><div class='timeline-badge'>4</div></div>
+    </div>
+    """, unsafe_allow_html=True)
     c1, c2, c3, c4 = st.columns(4)
     with c1:
         exp_card("Financial Services", "Lead Generation สำหรับสินเชื่อธุรกิจ วางระบบคัดกรองผ่าน Message Funnel และอ่านสัญญาณความพร้อมจากพฤติกรรมแชท", "View Loan Ads", "#")
