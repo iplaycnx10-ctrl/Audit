@@ -20,22 +20,6 @@ render_performance_audit = load_render(
 
 
 def render():
-    st.markdown(
-        """
-        <div class="section">
-          <div class="num">02 Case Study</div>
-          <div class="title">Case Studies — Performance Thinking in Action</div>
-          <div class="body">
-            พื้นที่นี้จะใช้เล่าเคสแบบมนุษย์อ่านง่าย: ปัญหา → สิ่งที่วิเคราะห์ → สิ่งที่ทำ → ผลลัพธ์ → KPI
-          </div>
-          <div class="quote">
-            เป้าหมายของหน้านี้ไม่ใช่โชว์ Dashboard ก่อน แต่คือทำให้คนอ่านเข้าใจว่าเราแก้ปัญหาธุรกิจด้วย Data, Funnel Logic และ Performance Strategy ยังไง
-          </div>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
     s1, s2, s3, s4, s5 = st.tabs([
         "📈 Performance Marketing Audit",
         "🧠 AI Audit Workflow",
