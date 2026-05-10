@@ -15,26 +15,30 @@ def render():
     st.markdown(
         """
         <style>
-        div[data-testid="column"] .stButton > button {
-            height: 30px !important;
-            min-height: 30px !important;
-            padding: 0 13px !important;
+        div[data-testid="column"] .stButton > button,
+        div[data-testid="column"] .stButton > button[kind="secondary"] {
+            height: 32px !important;
+            min-height: 32px !important;
+            padding: 0 14px !important;
             border-radius: 10px !important;
             font-size: 12px !important;
             font-weight: 850 !important;
             white-space: nowrap !important;
-            background: #050806 !important;
+            background: rgba(255,255,255,.035) !important;
             color: #f8fafc !important;
-            border: 1px solid rgba(250,204,21,.22) !important;
+            border: 1px solid rgba(255,255,255,.10) !important;
             box-shadow: none !important;
         }
-        div[data-testid="column"] .stButton > button:hover {
+        div[data-testid="column"] .stButton > button:hover,
+        div[data-testid="column"] .stButton > button[kind="secondary"]:hover {
             color: #facc15 !important;
             border-color: rgba(250,204,21,.55) !important;
             background: rgba(250,204,21,.08) !important;
         }
+        div[data-testid="column"] .stButton > button p {
+            color: inherit !important;
+        }
         </style>
-        <div style="background:#020302;border:1px solid rgba(250,204,21,.34);border-radius:14px;padding:8px 10px;margin:8px auto 8px auto;max-width:900px;box-sizing:border-box;box-shadow:0 10px 28px rgba(0,0,0,.22);"></div>
         """,
         unsafe_allow_html=True,
     )
