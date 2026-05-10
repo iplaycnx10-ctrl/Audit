@@ -57,7 +57,18 @@ def render():
     with right_col:
         st.markdown(
             """
-            <div style="min-height:512px;margin-top:12px;border-radius:20px;border:1px dashed rgba(82,255,154,.16);background:rgba(255,255,255,.015);"></div>
+            <div style="min-height:512px;margin-top:12px;border-radius:20px;border:1px solid rgba(82,255,154,.18);background:linear-gradient(135deg,rgba(255,255,255,.045),rgba(255,255,255,.018));padding:22px 24px;box-sizing:border-box;box-shadow:0 14px 34px rgba(0,0,0,.10);">
+              <div style="font-size:12px;color:#52ff9a;font-weight:950;letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px;">Insight</div>
+              <div style="font-size:13px;color:#d7e8dd;line-height:1.75;margin-bottom:16px;">
+                แม้แคมเปญจะสามารถเข้าถึงผู้คนได้ในวงกว้าง แต่คุณภาพของ Traffic ที่ได้รับยังไม่สอดคล้องกับกลุ่มลูกค้าที่มีความต้องการใช้บริการจริง โดยพบว่าโฆษณายังไม่สามารถสร้างแรงจูงใจหรือดึงความสนใจได้มากพอที่จะผลักดันให้เกิดการตัดสินใจใช้งานบริการ
+              </div>
+              <div style="font-size:13px;color:#bfd1c5;line-height:1.75;margin-bottom:18px;">
+                หลักฐานสำคัญคือ ผู้ชม 1 คน เห็นโฆษณาซ้ำเฉลี่ยมากกว่า 5 ครั้ง แต่ยังไม่เกิดการตอบสนองเพิ่มเติม สะท้อนว่า Audience ที่เข้าถึงอาจยังไม่ตรงกับความต้องการของธุรกิจ และ Creative ที่ใช้ยังไม่สามารถสร้าง Intent ได้ดีเพียงพอ
+              </div>
+              <div style="font-size:12px;color:#9fb5a8;line-height:1.7;padding-top:16px;border-top:1px solid rgba(82,255,154,.12);">
+                <b style="color:#facc15;">หมายเหตุ:</b> การประเมินนี้เป็นเพียงการวิเคราะห์เบื้องต้นในส่วนของ Traffic Signal เท่านั้น โดยยังไม่ได้เปรียบเทียบกับข้อมูลเชิงลึกในส่วนของ Funnel, Conversion และ Performance Efficiency ในขั้นตอนถัดไป
+              </div>
+            </div>
             """,
             unsafe_allow_html=True,
         )
