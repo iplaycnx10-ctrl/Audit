@@ -14,7 +14,7 @@ def render():
           <div style="font-size:15px;color:#fff;font-weight:900;line-height:1.55;margin-bottom:10px;">
             ❌ High Lead Cost / Creative Fatigue / Poor Conversion Journey
           </div>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;">
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px;">
             <div style="font-size:12.5px;color:#ffd5d5;line-height:1.55;padding:10px 12px;border-radius:14px;border:1px solid rgba(239,68,68,.22);background:rgba(239,68,68,.055);">
               <b style="color:#fff;">High Lead Cost</b><br>ค่า Lead สูง และคุณภาพ Lead ไม่สม่ำเสมอ
             </div>
@@ -25,17 +25,32 @@ def render():
               <b style="color:#fff;">Poor Conversion Journey</b><br>คนทักเยอะ แต่ไม่จองคิว
             </div>
           </div>
-          <div style="font-size:13px;color:#52ff9a;font-weight:950;letter-spacing:.08em;text-transform:uppercase;margin:16px 0 8px 0;">
-            ✅ แนวทางกลยุทธ์
+
+          <div style="padding:16px 18px;border-radius:18px;border:1px solid rgba(82,255,154,.18);background:rgba(82,255,154,.045);margin-bottom:14px;">
+            <div style="font-size:12px;color:#facc15;font-weight:950;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;">ข้อ 1</div>
+            <div style="font-size:13px;color:#52ff9a;font-weight:950;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;">✅ แนวทางกลยุทธ์</div>
+            <div style="font-size:14px;color:#d7e8dd;line-height:1.8;margin-bottom:14px;">
+              ปรับจากการยิงโฆษณาแบบกว้าง ไปสู่การคัดกรองกลุ่มเป้าหมายที่มี Intent สูงตั้งแต่ต้นทาง โดยใช้ Creative และ Message ที่เจาะ Pain Point ชัดเจน เช่น ปัญหาริ้วรอย กรอบหน้า หรือความกังวลเรื่องผลลัพธ์ เพื่อแยกคนที่ “แค่เห็นโฆษณา” ออกจากคนที่ “มีแนวโน้มใช้บริการจริง”
+            </div>
+            <div style="font-size:13px;color:#facc15;font-weight:950;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;">🎯 เป้าหมาย</div>
+            <div style="font-size:14px;color:#bfd1c5;line-height:1.75;">
+              ลด Reach ที่ไม่มีคุณภาพ ลดต้นทุนต่อ Lead และเพิ่มโอกาสได้ Lead ที่มีแนวโน้มจองจริงมากขึ้น.
+            </div>
           </div>
-          <div style="font-size:14px;color:#d7e8dd;line-height:1.8;margin-bottom:14px;">
-            ปรับจากการยิงโฆษณาแบบกว้าง ไปสู่การคัดกรองกลุ่มเป้าหมายที่มี Intent สูงตั้งแต่ต้นทาง โดยใช้ Creative และ Message ที่เจาะ Pain Point ชัดเจน เช่น ปัญหาริ้วรอย กรอบหน้า หรือความกังวลเรื่องผลลัพธ์ เพื่อแยกคนที่ “แค่เห็นโฆษณา” ออกจากคนที่ “มีแนวโน้มใช้บริการจริง”
-          </div>
-          <div style="font-size:13px;color:#facc15;font-weight:950;letter-spacing:.08em;text-transform:uppercase;margin:16px 0 8px 0;">
-            🎯 เป้าหมาย
-          </div>
-          <div style="font-size:14px;color:#bfd1c5;line-height:1.75;">
-            ลด Reach ที่ไม่มีคุณภาพ ลดต้นทุนต่อ Lead และเพิ่มโอกาสได้ Lead ที่มีแนวโน้มจองจริงมากขึ้น.
+
+          <div style="padding:16px 18px;border-radius:18px;border:1px solid rgba(82,255,154,.18);background:rgba(82,255,154,.045);">
+            <div style="font-size:12px;color:#facc15;font-weight:950;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;">ข้อ 2</div>
+            <div style="font-size:13px;color:#52ff9a;font-weight:950;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;">✅ แนวทางกลยุทธ์</div>
+            <div style="font-size:14px;color:#d7e8dd;line-height:1.8;margin-bottom:14px;">
+              ใช้กลยุทธ์ Low-Ticket Booking Offer เพื่อดึงกลุ่มที่มี Intent สูงเข้าสู่ระบบก่อน โดยออกแบบข้อเสนอให้ลูกค้าจ่ายค่าจอง/มัดจำจำนวนเล็กน้อย แทนการให้ทักแชทหรือกรอก Lead ฟรีอย่างเดียว
+            </div>
+            <div style="font-size:14px;color:#d7e8dd;line-height:1.8;margin-bottom:14px;">
+              เมื่อลูกค้ากดจองหรือยืนยันคำสั่งซื้อ ระบบจะส่งสัญญาณ Conversion ที่มีคุณภาพกลับไปให้ Meta เรียนรู้พฤติกรรมของกลุ่มลูกค้าที่ “พร้อมจ่ายจริง” ทำให้แคมเปญมีโอกาสค้นหากลุ่มคนลักษณะใกล้เคียงกันได้แม่นยำขึ้นในระยะถัดไป
+            </div>
+            <div style="font-size:13px;color:#facc15;font-weight:950;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;">🎯 เป้าหมาย</div>
+            <div style="font-size:14px;color:#bfd1c5;line-height:1.75;">
+              ลด Lead ฟรีที่ไม่มีคุณภาพ เพิ่มสัดส่วนลูกค้าที่มีความตั้งใจจองจริง และช่วยให้ Meta Optimize ไปหาคนที่มีแนวโน้มจ่ายเงินมากขึ้น แทนที่จะหาแค่คนที่ทักหรือคลิกเฉย ๆ.
+            </div>
           </div>
         </div>
 
