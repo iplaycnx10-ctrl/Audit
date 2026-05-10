@@ -262,9 +262,30 @@ with t4:
     section("04. STRATEGY: HIGH-VALUE RETAIL", "The Hybrid Closing Model", "วางระบบ Multi-touchpoint Funnel สำหรับสินค้ากลุ่มเครื่องใช้ไฟฟ้ามูลค่าสูง เชื่อมจากแอด → แชท → เว็บไซต์/หน้าร้าน และใช้ข้อมูลเพื่อดู Pattern ของแคมเปญ")
 
 with t5:
-    section("05. AUTOMATION ARCHITECTURE",
+    with t5:
+    section(
+        "05. AUTOMATION ARCHITECTURE",
         "Marketing Brain with AI Agent Workflows",
-        "ออกแบบ Workflow เชื่อม n8n, AI API, Google Sheets และ Dashboard เพื่อเปลี่ยนข้อมูลโฆษณาเป็น Insight และ Action แบบอัตโนมัติ")
+        "ออกแบบ Workflow เชื่อม n8n, AI API, Google Sheets และ Dashboard เพื่อเปลี่ยนข้อมูลโฆษณาเป็น Insight และ Action แบบอัตโนมัติ"
+    )
+
+    automation_img = drive_image_url(
+        "https://drive.google.com/file/d/1AbMY2zz7NsRYsRKRFssASMMRsJycO_Z2/view?usp=sharing"
+    )
+
+    st.markdown(
+        f"""
+        <div class='section'>
+            <div class='num'>WORKFLOW ARCHITECTURE</div>
+            <div class='title'>AI Agent Workflow Structure</div>
+
+            <div style='margin-top:20px;border-radius:24px;overflow:hidden;border:1px solid rgba(82,255,154,.18);'>
+                <img src='{automation_img}' style='width:100%;display:block;' referrerpolicy='no-referrer' />
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 with t6:
     section("06. CONTENT FACTORY", "Organic Growth & TikTok Strategy", "ประสบการณ์ทำ TikTok / Streaming / Content Workflow เพื่อเข้าใจ Attention, Engagement, Hook และ Audience Retention")
     c1, c2, c3 = st.columns(3)
