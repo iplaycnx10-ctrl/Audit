@@ -38,7 +38,7 @@ def render():
             </div>
           </div>
 
-          <div style="padding:16px 18px;border-radius:18px;border:1px solid rgba(82,255,154,.18);background:rgba(82,255,154,.045);">
+          <div style="padding:16px 18px;border-radius:18px;border:1px solid rgba(82,255,154,.18);background:rgba(82,255,154,.045);margin-bottom:14px;">
             <div style="font-size:12px;color:#facc15;font-weight:950;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;">ข้อ 2</div>
             <div style="font-size:13px;color:#52ff9a;font-weight:950;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;">✅ แนวทางกลยุทธ์</div>
             <div style="font-size:14px;color:#d7e8dd;line-height:1.8;margin-bottom:14px;">
@@ -50,6 +50,19 @@ def render():
             <div style="font-size:13px;color:#facc15;font-weight:950;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;">🎯 เป้าหมาย</div>
             <div style="font-size:14px;color:#bfd1c5;line-height:1.75;">
               ลด Lead ฟรีที่ไม่มีคุณภาพ เพิ่มสัดส่วนลูกค้าที่มีความตั้งใจจองจริง และช่วยให้ Meta Optimize ไปหาคนที่มีแนวโน้มจ่ายเงินมากขึ้น แทนที่จะหาแค่คนที่ทักหรือคลิกเฉย ๆ.
+            </div>
+          </div>
+
+          <div style="padding:16px 18px;border-radius:18px;border:1px solid rgba(82,255,154,.18);background:rgba(82,255,154,.045);">
+            <div style="font-size:12px;color:#facc15;font-weight:950;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;">ข้อ 3</div>
+            <div style="font-size:13px;color:#52ff9a;font-weight:950;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;">✅ LINE CRM Capture</div>
+            <div style="font-size:13px;color:#ffb4b4;font-weight:900;margin-bottom:10px;">❌ Weak Retargeting Structure</div>
+            <div style="font-size:14px;color:#d7e8dd;line-height:1.8;margin-bottom:14px;">
+              ดึงลูกค้าที่มี Intent เข้าสู่ LINE OA เพื่อสร้างระบบ Follow-up และ CRM ต่อเนื่อง ทำให้สามารถสื่อสารซ้ำ เสนอโปรโมชัน และดูแลลูกค้าหลังจากสนใจบริการได้
+            </div>
+            <div style="font-size:13px;color:#facc15;font-weight:950;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;">🎯 เป้าหมาย</div>
+            <div style="font-size:14px;color:#bfd1c5;line-height:1.75;">
+              เพิ่มโอกาสสร้าง LTV ที่สม่ำเสมอ ลดการปล่อย Lead ให้หลุดหาย และลดต้นทุนจากการต้องยิงแอดหาลูกค้าใหม่ตลอดเวลา.
             </div>
           </div>
         </div>
