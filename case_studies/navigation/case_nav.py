@@ -15,8 +15,9 @@ def render():
     st.markdown(
         """
         <style>
-        div[data-testid="column"] .stButton > button,
-        div[data-testid="column"] .stButton > button[kind="secondary"] {
+        button[data-testid="stBaseButton-secondary"],
+        div.stButton > button,
+        div.stButton > button[kind="secondary"] {
             height: 32px !important;
             min-height: 32px !important;
             padding: 0 14px !important;
@@ -25,18 +26,25 @@ def render():
             font-weight: 850 !important;
             white-space: nowrap !important;
             background: rgba(255,255,255,.035) !important;
+            background-color: rgba(255,255,255,.035) !important;
             color: #f8fafc !important;
             border: 1px solid rgba(255,255,255,.10) !important;
             box-shadow: none !important;
         }
-        div[data-testid="column"] .stButton > button:hover,
-        div[data-testid="column"] .stButton > button[kind="secondary"]:hover {
+        button[data-testid="stBaseButton-secondary"]:hover,
+        div.stButton > button:hover,
+        div.stButton > button[kind="secondary"]:hover {
             color: #facc15 !important;
             border-color: rgba(250,204,21,.55) !important;
             background: rgba(250,204,21,.08) !important;
+            background-color: rgba(250,204,21,.08) !important;
         }
-        div[data-testid="column"] .stButton > button p {
+        button[data-testid="stBaseButton-secondary"] p,
+        div.stButton > button p,
+        div.stButton > button[kind="secondary"] p {
             color: inherit !important;
+            font-size: 12px !important;
+            font-weight: 850 !important;
         }
         </style>
         """,
