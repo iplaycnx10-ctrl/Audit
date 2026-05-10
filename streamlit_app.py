@@ -1,12 +1,25 @@
+import importlib.util
+from pathlib import Path
 import streamlit as st
 
-from pages_section.page_01_strategist import render as render_strategist
-from pages_section.page_02_experience import render as render_experience
-from pages_section.page_03_loan_ads import render as render_loan_ads
-from pages_section.page_04_retail import render as render_retail
-from pages_section.page_05_automation import render as render_automation
-from pages_section.page_06_content import render as render_content
-from pages_section.page_07_contact import render as render_contact
+BASE_DIR = Path(__file__).resolve().parent
+
+
+def load_render(relative_path: str, module_key: str):
+    module_path = BASE_DIR / relative_path
+    spec = importlib.util.spec_from_file_location(module_key, module_path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module.render
+
+
+render_strategist = load_render("pages_section/page_01_strategist.py", "page_01_strategist")
+render_experience = load_render("pages_section/page_02_experience.py", "page_02_experience")
+render_loan_ads = load_render("pages_section/page_03_loan_ads.py", "page_03_loan_ads")
+render_retail = load_render("pages_section/page_04_retail.py", "page_04_retail")
+render_automation = load_render("pages_section/page_05_automation.py", "page_05_automation")
+render_content = load_render("pages_section/page_06_content.py", "page_06_content")
+render_contact = load_render("pages_section/page_07_contact.py", "page_07_contact")
 
 st.set_page_config(
     page_title="Strategic Portfolio | Chayanon Nantavijan",
