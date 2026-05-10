@@ -1,8 +1,15 @@
-import importlib
 import streamlit as st
 
+from pages_section.page_01_strategist import render as render_strategist
+from pages_section.page_02_experience import render as render_experience
+from pages_section.page_03_loan_ads import render as render_loan_ads
+from pages_section.page_04_retail import render as render_retail
+from pages_section.page_05_automation import render as render_automation
+from pages_section.page_06_content import render as render_content
+from pages_section.page_07_contact import render as render_contact
+
 st.set_page_config(
-    page_title="Strategic Portfolio | Chayanon Nantawijan",
+    page_title="Strategic Portfolio | Chayanon Nantavijan",
     page_icon="⚡",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -64,23 +71,13 @@ st.markdown(
     """
     <div class="cover">
       <div class="kicker">Strategic Portfolio</div>
-      <h1>CHAYANON NANTAWIJAN</h1>
+      <h1>CHAYANON NANTAVIJAN</h1>
       <div class="role">Performance Marketing &<br>AI Automation Specialist</div>
       <div class="est">ESTABLISHED 2026 | PERFORMANCE-DRIVEN</div>
     </div>
     """,
     unsafe_allow_html=True,
 )
-
-
-def safe_render(module_name: str):
-    try:
-        module = importlib.import_module(module_name)
-        module.render()
-    except Exception as exc:
-        st.error(f"This section could not load: {module_name}")
-        st.exception(exc)
-
 
 t1, t2, t3, t4, t5, t6, t7 = st.tabs([
     "01 Strategist",
@@ -93,22 +90,22 @@ t1, t2, t3, t4, t5, t6, t7 = st.tabs([
 ])
 
 with t1:
-    safe_render("pages_section.page_01_strategist")
+    render_strategist()
 
 with t2:
-    safe_render("pages_section.page_02_experience")
+    render_experience()
 
 with t3:
-    safe_render("pages_section.page_03_loan_ads")
+    render_loan_ads()
 
 with t4:
-    safe_render("pages_section.page_04_retail")
+    render_retail()
 
 with t5:
-    safe_render("pages_section.page_05_automation")
+    render_automation()
 
 with t6:
-    safe_render("pages_section.page_06_content")
+    render_content()
 
 with t7:
-    safe_render("pages_section.page_07_contact")
+    render_contact()
