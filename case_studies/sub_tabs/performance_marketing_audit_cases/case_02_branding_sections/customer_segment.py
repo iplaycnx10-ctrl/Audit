@@ -61,3 +61,18 @@ def render_customer_segment():
             "พื้นที่พร้อมขาย สำหรับร้านค้าที่อยากเริ่มหรือเพิ่มจุดขายทันที",
             "#facc15",
         )
+
+    st.markdown(
+        """
+        <div style="margin-top:22px;border-radius:22px;border:1px solid rgba(250,204,21,.20);background:linear-gradient(135deg,rgba(250,204,21,.055),rgba(255,255,255,.018));padding:22px 24px;box-sizing:border-box;box-shadow:0 14px 34px rgba(0,0,0,.10);">
+          <div style="font-size:13px;font-weight:950;letter-spacing:.16em;text-transform:uppercase;color:#facc15;margin-bottom:12px;">Customer Segment Insight</div>
+          <div style="font-size:14px;color:#d7e8dd;line-height:1.85;max-width:1000px;margin-bottom:14px;">
+            ผู้เช่าแต่ละกลุ่มมีมูลค่าทางธุรกิจและรอบการตัดสินใจไม่เหมือนกัน กลุ่มเช่าตึกเป็นกลุ่ม High LTV ที่ต้องใช้เวลาในการสร้างความเชื่อมั่นและมองเห็นโอกาสทำกำไร ส่วนกลุ่มร้านค้า บูธ และลานกิจกรรมเป็นกลุ่ม Fast Lead ที่ช่วยสร้าง Cashflow ระหว่างทางและลดพื้นที่ว่าง
+          </div>
+          <div style="font-size:14px;color:#bfd1c5;line-height:1.85;max-width:1000px;">
+            ดังนั้นการตลาดไม่ควรใช้ข้อความเดียวกันกับทุกกลุ่ม แต่ควรออกแบบ Message และ Funnel ตามบทบาทของผู้เช่าแต่ละประเภท เพื่อให้แคมเปญไม่ได้แค่สร้าง Lead แต่สร้าง Lead ที่สัมพันธ์กับรายได้จริงของธุรกิจ
+          </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
