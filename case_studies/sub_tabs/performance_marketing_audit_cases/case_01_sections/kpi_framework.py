@@ -11,9 +11,19 @@ def render():
           <div style="font-size:13px;font-weight:950;letter-spacing:.16em;text-transform:uppercase;color:#facc15;margin-bottom:16px;">
             แนวทางแก้ไขเบื้องต้นและกลยุทธ์ที่จะปรับใช้
           </div>
-          <div style="font-size:15px;color:#fff;font-weight:900;line-height:1.55;margin-bottom:12px;">
-            ❌ High Lead Cost<br>
-            <span style="font-size:13px;color:#ffd5d5;font-weight:750;">ค่า Lead สูง และคุณภาพ Lead ไม่สม่ำเสมอ</span>
+          <div style="font-size:15px;color:#fff;font-weight:900;line-height:1.55;margin-bottom:10px;">
+            ❌ High Lead Cost / Creative Fatigue / Poor Conversion Journey
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;">
+            <div style="font-size:12.5px;color:#ffd5d5;line-height:1.55;padding:10px 12px;border-radius:14px;border:1px solid rgba(239,68,68,.22);background:rgba(239,68,68,.055);">
+              <b style="color:#fff;">High Lead Cost</b><br>ค่า Lead สูง และคุณภาพ Lead ไม่สม่ำเสมอ
+            </div>
+            <div style="font-size:12.5px;color:#ffe9bd;line-height:1.55;padding:10px 12px;border-radius:14px;border:1px solid rgba(245,158,11,.22);background:rgba(245,158,11,.055);">
+              <b style="color:#fff;">Creative Fatigue</b><br>ยิงโปรเดิมซ้ำจน CTR ตก และ Frequency สูง
+            </div>
+            <div style="font-size:12.5px;color:#fff1bd;line-height:1.55;padding:10px 12px;border-radius:14px;border:1px solid rgba(234,179,8,.22);background:rgba(234,179,8,.055);">
+              <b style="color:#fff;">Poor Conversion Journey</b><br>คนทักเยอะ แต่ไม่จองคิว
+            </div>
           </div>
           <div style="font-size:13px;color:#52ff9a;font-weight:950;letter-spacing:.08em;text-transform:uppercase;margin:16px 0 8px 0;">
             ✅ แนวทางกลยุทธ์
