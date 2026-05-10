@@ -1,12 +1,5 @@
+import importlib
 import streamlit as st
-
-from pages_section.page_01_strategist import render as render_strategist
-from pages_section.page_02_experience import render as render_experience
-from pages_section.page_03_loan_ads import render as render_loan_ads
-from pages_section.page_04_retail import render as render_retail
-from pages_section.page_05_automation import render as render_automation
-from pages_section.page_06_content import render as render_content
-from pages_section.page_07_contact import render as render_contact
 
 st.set_page_config(
     page_title="Strategic Portfolio | Chayanon Nantawijan",
@@ -79,6 +72,16 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+
+def safe_render(module_name: str):
+    try:
+        module = importlib.import_module(module_name)
+        module.render()
+    except Exception as exc:
+        st.error(f"This section could not load: {module_name}")
+        st.exception(exc)
+
+
 t1, t2, t3, t4, t5, t6, t7 = st.tabs([
     "01 Strategist",
     "02 Experience",
@@ -90,22 +93,22 @@ t1, t2, t3, t4, t5, t6, t7 = st.tabs([
 ])
 
 with t1:
-    render_strategist()
+    safe_render("pages_section.page_01_strategist")
 
 with t2:
-    render_experience()
+    safe_render("pages_section.page_02_experience")
 
 with t3:
-    render_loan_ads()
+    safe_render("pages_section.page_03_loan_ads")
 
 with t4:
-    render_retail()
+    safe_render("pages_section.page_04_retail")
 
 with t5:
-    render_automation()
+    safe_render("pages_section.page_05_automation")
 
 with t6:
-    render_content()
+    safe_render("pages_section.page_06_content")
 
 with t7:
-    render_contact()
+    safe_render("pages_section.page_07_contact")
