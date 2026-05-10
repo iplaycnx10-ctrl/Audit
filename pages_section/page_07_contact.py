@@ -14,7 +14,9 @@ def render():
         <div class='section'>
             <div class='title'>Contact Information</div>
             <div class='body'>
-                Email: your@email.com<br><br>
+                Name: Chayanon Nantavijan<br><br>
+                Email: <a href='mailto:iplaycnx.10@gmail.com' style='color:#52ff9a;font-weight:950;text-decoration:none;'>iplaycnx.10@gmail.com</a><br><br>
+                Phone: <a href='tel:0980935022' style='color:#52ff9a;font-weight:950;text-decoration:none;'>0980935022</a><br><br>
                 TikTok: @khunlungamer<br><br>
                 Location: Chiang Mai, Thailand
             </div>
